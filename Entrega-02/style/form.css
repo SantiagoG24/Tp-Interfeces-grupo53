@@ -3,12 +3,19 @@ body {
     background-image: url(../assets/fondo-registro.png);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif
+    font-family: "Roboto", sans-serif;
+   
+    
+    
 }
 
 .fondo-login{
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;  
+    margin-top: 5%;  
     width: 500px;
-    height: 400px;
+    height: 550px;
     background-color: #010822;
     color: #f3eff0;
     text-align: center;
@@ -33,7 +40,7 @@ body {
   }
 
 .input-login {
-    margin-left: 45px;
+    margin-left: 15px;
     margin-bottom: 15px;
     width: 417px;
     height: 40px;
@@ -75,16 +82,16 @@ body {
 
 .btn-redes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    
   }
 .social-btn img {
     width: 40px; /* Tamaño del icono */
     height: 40px;
+    margin: 10px;
   }
 
   .social-btn:hover {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
-
- 

@@ -9,7 +9,7 @@ body {
     
 }
 
-.recuadro-login{
+.fondo-login{
     display: flex;
     justify-content: center;
     margin-left: 30%;  

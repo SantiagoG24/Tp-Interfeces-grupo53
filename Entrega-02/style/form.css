@@ -3,10 +3,17 @@ body {
     background-image: url(../assets/fondo-registro.png);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif
+    font-family: "Roboto", sans-serif;
+   
+    
+    
 }
 
 .fondo-login{
+    position: relative;
+    left: 50%;
+    right: 50%;
+    
     width: 500px;
     height: 500px;
     background-color: #010822;
@@ -89,7 +96,4 @@ body {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
 
-  .texto-link{
-    display: flex;
-    
-  }
+  

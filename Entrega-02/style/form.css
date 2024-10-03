@@ -75,12 +75,14 @@ body {
 
 .btn-redes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    
   }
 .social-btn img {
     width: 40px; /* Tamaño del icono */
     height: 40px;
+    margin: 10px;
   }
 
   .social-btn:hover {

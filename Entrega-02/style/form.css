@@ -10,12 +10,12 @@ body {
 }
 
 .fondo-login{
-    position: relative;
-    left: 50%;
-    right: 50%;
-    
+    display: flex;
+    justify-content: center;
+    margin-left: 30%;  
+    margin-top: 5%;  
     width: 500px;
-    height: 500px;
+    height: 550px;
     background-color: #010822;
     color: #f3eff0;
     text-align: center;
@@ -40,7 +40,7 @@ body {
   }
 
 .input-login {
-    margin-left: 45px;
+    margin-left: 15px;
     margin-bottom: 15px;
     width: 417px;
     height: 40px;

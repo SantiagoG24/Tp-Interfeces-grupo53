@@ -88,3 +88,8 @@ body {
   .social-btn:hover {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
+
+  .texto-link{
+    display: flex;
+    
+  }

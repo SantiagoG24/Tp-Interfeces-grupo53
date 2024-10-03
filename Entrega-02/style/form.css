@@ -75,7 +75,7 @@ body {
 
 .btn-redes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 .social-btn img {

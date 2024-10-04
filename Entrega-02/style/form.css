@@ -4,22 +4,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
-   
-    
-    
-}
-
-.fondo-login{
-    display: flex;
-    justify-content: center;
-    margin-left: 30%;  
-    margin-top: 5%;  
-=======
 }
 
 .fondo-login {
->>>>>>> santi-home
     width: 500px;
     height: 550px;
     background-color: #010822;
@@ -106,11 +93,9 @@ body {
     /* Aumentar el tamaño al pasar el mouse */
 }
 
-<<<<<<< HEAD
-  
-=======
-.texto-link {
+<<<<<<< HEAD=======.texto-link {
     display: flex;
 
 }
->>>>>>> santi-home
+
+>>>>>>>santi-home

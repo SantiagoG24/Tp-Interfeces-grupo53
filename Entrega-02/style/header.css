@@ -18,7 +18,7 @@ nav .header {
 
 .header-izq {
     padding: 0px;
-    width: 350px;
+    width: 250px;
     display: flex;
     /* gap: 5%; */
 
@@ -83,9 +83,6 @@ input.buscar {
     height: 100%;
 }
 
-.header-user img :hover {
-    border-radius: 0%;
-}
 
 div.header-der div {
 

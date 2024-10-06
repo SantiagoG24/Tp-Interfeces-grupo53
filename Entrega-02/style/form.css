@@ -7,6 +7,23 @@ body {
     font-optical-sizing: auto;    
 }
 
+/*Fuentes tamaño*/
+
+h1 {
+    font-size: 24px;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: medium;
+    letter-spacing: 0.02em;
+}
+
+p {
+    font-size: 14px;
+}
+
 .cuadro-login,.registro-recuadro{
     display: flex;
     justify-content: center;

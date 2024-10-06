@@ -123,16 +123,21 @@ span {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    margin-left: 15px;
-    height: 50px;
+    margin-left: 20px;
+    height: 53px;
     width: 212px;
   }
 
   .registro-input input {
     border: none;
     border-radius: 9px;
-    height: 25px;
-    
+    height: 35px; 
+  }
+
+  .registro-input input::placeholder {
+    font-size: 12px;
+    font-weight: medium;
+    letter-spacing: 0.02em;
   }
 
   .registro-input label {
@@ -182,6 +187,10 @@ span {
   /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
    #img-captcha:hover {
     transform: rotate(180deg);
+  }
+
+  #btn-confirmar {
+    background-color: #338F3E;
   }
   
 /*Recuperar Cuenta*/

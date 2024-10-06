@@ -3,13 +3,14 @@ body {
     box-sizing: content-box;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
    
     
     
 }
 
-.fondo-login{
+.cuadro-login{
     display: flex;
     justify-content: center;
     margin-left: 30%;  

@@ -90,12 +90,6 @@ p {
     letter-spacing: 0.05em;
 }
 
-.fondo-login p {
-    font-family: "Roboto", sans-serif;
-    
-    font-style: normal;
-    font-size: 13px;
-}
 
 .btn-redes {
     display: flex;
@@ -104,8 +98,7 @@ p {
     
   }
 .social-btn img {
-    width: 40px;
-    /* Tamaño del icono */
+    width: 40px; /* Tamaño del icono */
     height: 40px;
     margin: 10px;
   }
@@ -114,4 +107,18 @@ p {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
 
-  
+  #login-registro,#recuperar-contraseña {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+  }
+
+
+  a{
+    margin-left: 5px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    border-bottom: 1px solid;
+  }

@@ -23,13 +23,18 @@ p {
     font-size: 14px;
 }
 
-.cuadro-login{
+span {
+  color: #2887D1;
+  font-size: 13px;
+  font-weight: bold;
+}
+.login-recuadro,.registro-recuadro, .password-recuadro{
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     width: 500px;
-    height: 500px;
+    height: 450px;
     background-color: #010822;
     color: #f3eff0;
     text-align: center;
@@ -96,27 +101,21 @@ p {
 
   }
 
-  a{
+  .link-pagina{
     margin-left: 5px;
     text-decoration: none;
     color: #2887D1;
   }
-
+  
+  .link-pagina :hover {
+    text-decoration: underline;
+  }
 
   /*Registro Usuario*/
 
-  .registro-recuadro {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  .registro-recuadro {  
     width: 600px;
     height: 700px;
-    background-color: #010822;
-    color: #f3eff0;
-    text-align: center;
-    border: none;
-    border-radius: 12px;    
   }
 
   .registro-input {
@@ -150,8 +149,32 @@ p {
     font-size: 10px;
   }
   
- .nombre-registro, .cuenta-identificacion, .registro-contraseña{
+ .nombre-registro, .cuenta-identificacion, .registro-contraseña,.captcha{
     display: flex;
     flex-direction: row;
   }
- 
+  .captcha {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    align-items: center;
+    background-color:#f5f5f5;
+    color:#102a3f;
+    width: 215px;
+    font-size: 14px;
+    font-weight: bold;   
+  }
+  
+  #img-captcha {
+  width: 33px;
+  height: 33px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+  

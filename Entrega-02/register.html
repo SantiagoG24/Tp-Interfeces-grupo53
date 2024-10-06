@@ -17,34 +17,34 @@
                <div class="nombre-registro" >
                 <div class="registro-input">
                     <label>Nombre</label>
-                    <input type="text"  placeholder="Nombre">
+                    <input type="text"  placeholder="Nombre" required>
                </div>
                <div class="registro-input">
                    <label>Apellido</label>
-                   <input type="text"  placeholder="Apellido">
+                   <input type="text"  placeholder="Apellido" required>
                </div>
                </div>           
                 <div class="registro-input">
                     <label>Fecha de Nacimiento</label>
-                    <input type="date" name="" min="1940-12-31" max="2024-12-31" id="date" />
+                    <input type="date" name="" min="1940-12-31" max="2024-12-31" id="date" required />
                 </div>
            
           
                 <h2 class="h2-registro">Tu Cuenta</h2>        
                 <div class="cuenta-identificacion">
                     <div class="registro-input">
-                        <label>Nickname</label>
+                        <label>Nickname<span> Opcional</span></label>
                         <input type="text"  placeholder="Nickname">
                      </div>    
                     <div class="registro-input">
                         <label >Mail</label>
-                        <input type="mail" placeholder="nombreejemplo@gmail.com.ar"/>
+                        <input type="mail" placeholder="nombreejemplo@gmail.com.ar" required/>
                     </div>
                 </div>         
                 <div class="registro-contraseña">
                     <div class="registro-input">
                         <label >Contraseña</label>
-                        <input type="password"/>
+                        <input type="password" required/>
                     </div>
 
                     <div>
@@ -52,16 +52,20 @@
                     </div>
                     <div class="registro-input">
                         <label >Repetir Contraseña</label>
-                        <input type="password"/>
+                        <input type="password" required/>
                     </div>
                 </div>
                 <ul>
-                    <li>h</li>
-                    <li>h</li>
+                    <li>Minimo 10 caracteres  a-Z$%&/</li>
+                    <li>Al menos un letra en MAYUSCULA</li>
                 </ul>
         
         <div class="captcha">
-            <p>aca va captcha</p>
+            <img id="img-captcha" src="/Entrega-02/iconos/captcha.png">
+            <div class="captcha-input">
+                <Label>No soy un robot</Label>
+                <input type="checkbox" class="checkbox">
+            </div>
         </div>          
         <button id="btn-confirmar">Confirmar</button>
  
@@ -77,7 +81,7 @@
             </div>
             <div id="registro-sesion">
                 <p>¿Ya sos usuario de Marvelcito?</p>
-                <a  href="/Entrega-02/login.html"><p><b>Inicia sesíon</b></p></a>
+                <a  href="/Entrega-02/login.html" class="link-pagina"><p><b>Inicia sesíon</b></p></a>
             </div>   
         </form>
     </div>

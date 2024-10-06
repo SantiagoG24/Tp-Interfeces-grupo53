@@ -14,42 +14,39 @@
         <form>
             <h1>CREA TU CUENTA</h1>
             <h2 class="h2-registro">Datos Personales</h2>
+               <div class="nombre-registro" >
                 <div class="registro-input">
-                     <label>Nombre</label>
-                     <input type="text"  placeholder="Nombre">
-                </div>
-                <div class="registro-input">
-                    <label>Apellido</label>
-                    <input type="text"  placeholder="Apellido">
-                </div>
-
-            
+                    <label>Nombre</label>
+                    <input type="text"  placeholder="Nombre">
+               </div>
+               <div class="registro-input">
+                   <label>Apellido</label>
+                   <input type="text"  placeholder="Apellido">
+               </div>
+               </div>           
                 <div class="registro-input">
                     <label>Fecha de Nacimiento</label>
                     <input type="date" name="" min="1940-12-31" max="2024-12-31" id="date" />
                 </div>
            
-            <div class="tu-cuenta">
+          
                 <h2 class="h2-registro">Tu Cuenta</h2>        
-                <div>
+                <div class="cuenta-identificacion">
                     <div class="registro-input">
                         <label>Nickname</label>
                         <input type="text"  placeholder="Nickname">
                      </div>    
                     <div class="registro-input">
                         <label >Mail</label>
-                        <input type="mail" placeholder="mali"/>
+                        <input type="mail" placeholder="nombreejemplo@gmail.com.ar"/>
                     </div>
-                </div>
-           
-           
+                </div>         
                 <div class="registro-contraseña">
                     <div class="registro-input">
                         <label >Contraseña</label>
                         <input type="password"/>
                     </div>
-                    <p class="requisito-contreña">Minimo 10 caracteres  a-Z$%&/</p>
-                    <p class="requisito-contreña">Al menos un letra en MAYUSCULA</p>
+
                     <div>
                         
                     </div>
@@ -58,10 +55,14 @@
                         <input type="password"/>
                     </div>
                 </div>
-            </div>
+                <ul>
+                    <li>h</li>
+                    <li>h</li>
+                </ul>
         
-            
-        
+        <div class="captcha">
+            <p>aca va captcha</p>
+        </div>          
         <button id="btn-confirmar">Confirmar</button>
  
 
@@ -74,7 +75,7 @@
                      <img src="iconos/facebook.png" alt="">
                    </a>
             </div>
-            <div class="registro-sesion">
+            <div id="registro-sesion">
                 <p>¿Ya sos usuario de Marvelcito?</p>
                 <a  href="/Entrega-02/login.html"><p><b>Inicia sesíon</b></p></a>
             </div>   

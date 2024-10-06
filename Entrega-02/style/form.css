@@ -88,14 +88,20 @@ p {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
 
+  #login-registro,#recuperar-contraseña,#registro-sesion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+  }
+
   a{
     margin-left: 5px;
     text-decoration: none;
+    color: #2887D1;
   }
 
-  a:hover {
-    border-bottom: 1px solid;
-  }
 
   /*Registro Usuario*/
 
@@ -104,7 +110,7 @@ p {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 600px;
     height: 700px;
     background-color: #010822;
     color: #f3eff0;
@@ -118,19 +124,34 @@ p {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    margin-left: 15px;
     height: 50px;
-    width: 208px;
+    width: 212px;
   }
 
   .registro-input input {
     border: none;
     border-radius: 9px;
     height: 25px;
+    
   }
 
   .registro-input label {
     margin-top: 3px;
     margin-bottom: 3px;
   }
-
+  .h2-registro,li {
+    text-align: left;
+  }
+  ul{
+    list-style-type: none;
+    padding-left: 19px;
+    align-self: flex-start; /* Alineamos la lista con los inputs */
+    font-size: 10px;
+  }
+  
+ .nombre-registro, .cuenta-identificacion, .registro-contraseña{
+    display: flex;
+    flex-direction: row;
+  }
  

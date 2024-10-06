@@ -10,7 +10,7 @@ body {
     
 }
 
-.cuadro-login{
+.cuadro-login,.registro-recuadro{
     display: flex;
     justify-content: center;
     margin-left: 30%;  

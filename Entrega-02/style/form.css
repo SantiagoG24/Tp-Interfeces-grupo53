@@ -3,13 +3,33 @@ body {
     background-image: url(../assets/fondo-registro.png);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
-   
-    
-    
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;    
 }
 
-.fondo-login{
+/*Configuracion Fuentes*/
+h1 {  
+    font-weight: 500;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+h2{   
+    font-weight: 500;
+    font-size: 17px;
+    font-weight: medium;
+}
+
+
+ p {
+    font-size: 13px;
+}
+/*--*/
+
+.cuadro-login,.registro-recuadro{
     display: flex;
     justify-content: center;
     margin-left: 30%;  
@@ -23,13 +43,14 @@ body {
     border-radius: 12px;
 }
 
-#btn-ingresar {
+#btn-ingresar, #btn-confirmar {
     width: 114px;
     height: 30px;
     background-color: #2887D1;
     color: #ffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     font-style: normal;
     border: none;
     border-radius: 12px;
@@ -43,8 +64,7 @@ body {
     margin-left: 15px;
     margin-bottom: 15px;
     width: 417px;
-    height: 40px;
-   
+    height: 40px;   
 }
 
 .campo-completar{    
@@ -55,43 +75,81 @@ body {
     border-radius: 16px;
 }
 
-#h1-iniciar {
-    font-family: "Roboto", sans-serif;
-    font-weight: 450;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: 0.05em;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-#h2-iniciar{
-    font-family: "Roboto", sans-serif;
-    font-weight: 450;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: 0.05em;
-}
-
-.fondo-login p {
-    font-family: "Roboto", sans-serif;
-    
-    font-style: normal;
-    font-size: 13px;
-}
-
 .btn-redes {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-  }
+    align-items: center;    
+}
+
 .social-btn img {
     width: 40px; /* Tamaño del icono */
     height: 40px;
-    margin: 10px;
-  }
+    margin: 15px;
+}
 
-  .social-btn:hover {
+.social-btn:hover {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
   }
+
+.login-registro {
+    display: flex;
+    justify-content:center;   
+}
+
+a {
+    margin-left: 6px;
+    text-decoration: none;
+    color:#2887D1;
+}
+
+a :hover {
+  border-bottom: 1.5px solid;
+}
+  /*REGISTRO USUARIO*/
+
+.registro-recuadro {  
+    width: 480px;
+    height: 700px;
+   
+  }
+
+.h2-registro{
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+.registro-nombre,.registro-contraseña,.registro-mail,.registro-fecha,.registro-sesion {
+    display: flex;
+    flex-direction: row;
+}
+
+.registro-recuadro label{
+    margin-bottom: 2px;
+}
+
+
+.input-register{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 25px;
+    width: 190px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;    
+  }
+ul{
+    list-style: none;
+    text-align: left;
+    font-size: 12px;
+}
+ #btn-confirmar{
+    background-color: #338F3E;
+    margin-top: 25px;
+  }
+
+.registro-sesion {
+    justify-content:center;
+}

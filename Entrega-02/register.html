@@ -6,13 +6,74 @@
     <link rel="stylesheet" href="/Entrega-02/style/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
 <body>
     <div class="registro-recuadro">
-        <form action="">
+        <form>
+            <h1>CREA TU CUENTA</h1>
+            <h2 class="h2-registro">Datos Personales</h2>
+            <div class="registro-nombre">
+                <div class="input-register">
+                     <label>Nombre</label>
+                     <input type="text"  placeholder="Nombre">
+                </div>
+                <div class="input-register">
+                    <label>Apellido</label>
+                    <input type="text"  placeholder="Apellido">
+               </div>
+            </div>
+            <div class="registro-fecha">
+                <div class="input-register">
+                    <label>Fecha de Nacimiento</label>
+                    <input type="date" name="" min="1940-12-31" max="2024-12-31" id="date" />
+                </div>
+            </div>
+            <h2 class="h2-registro">Tu Cuenta</h2>
+            <div class="registro-nickname">
+                <div class="input-register">
+                    <label>Nickname</label>
+                    <input type="text"  placeholder="Nickname">
+                 </div>
+            </div>
+            <div class="registro-mail">
+                <div class="input-register">
+                    <label >Mail</label>
+                    <input type="text"/>
+                </div>
+            </div>
+           
+            <div class="registro-contraseña">
+                 <div class="input-register">
+                    <label >Contraseña</label>
+                     <input type="text"/>
+                 </div>
+                 
+                 <div class="input-register">
+                    <label >Repetir Contraseña</label>
+                     <input type="text"/>
+                 </div>
+            </div>
+        
+            
+        
+        <button id="btn-confirmar">Confirmar</button>
+ 
 
+        <h2>INICIA CON</h2>
+            <div class="btn-redes">
+                 <a href="#" class="social-btn">
+                     <img src="iconos/google.png">
+                 </a>
+                 <a href="#" class="social-btn">
+                     <img src="iconos/facebook.png" alt="">
+                   </a>
+            </div>
+            <div class="registro-sesion">
+                <p>¿Ya sos usuario de Marvelcito?</p>
+                <a  href="/Entrega-02/login.html"><p><b>Inicia sesíon</b></p></a>
+            </div>   
         </form>
     </div>
    

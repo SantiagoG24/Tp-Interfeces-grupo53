@@ -4,10 +4,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Roboto Condensed", sans-serif;
-    font-optical-sizing: auto;
-   
-    
-    
+    font-optical-sizing: auto;    
 }
 
 .cuadro-login,.registro-recuadro{

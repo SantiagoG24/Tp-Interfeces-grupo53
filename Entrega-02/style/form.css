@@ -1,14 +1,40 @@
 body {
     background-image: url(../assets/fondo-registro.png);
-    box-sizing: content-box;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;    
 }
 
-.fondo-login {
+/*Fuentes tamaño*/
+
+h1 {
+    font-size: 24px;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: medium;
+    letter-spacing: 0.02em;
+}
+
+p {
+    font-size: 14px;
+}
+
+span {
+  color: #2887D1;
+  font-size: 13px;
+  font-weight: bold;
+}
+.login-recuadro,.registro-recuadro, .password-recuadro{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 500px;
-    height: 550px;
+    height: 450px;
     background-color: #010822;
     color: #f3eff0;
     text-align: center;
@@ -16,13 +42,14 @@ body {
     border-radius: 12px;
 }
 
-#btn-ingresar {
+#btn-ingresar, #btn-confirmar, #btn-recuperar{
     width: 114px;
     height: 30px;
     background-color: #2887D1;
     color: #ffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
     font-style: normal;
     border: none;
     border-radius: 12px;
@@ -38,7 +65,7 @@ body {
     margin-bottom: 15px;
     width: 417px;
     height: 40px;
-
+   
 }
 
 .campo-completar {
@@ -49,46 +76,129 @@ body {
     border-radius: 16px;
 }
 
-#h1-iniciar {
-    font-family: "Roboto", sans-serif;
-    font-weight: 450;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: 0.05em;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-
-#h2-iniciar {
-    font-family: "Roboto", sans-serif;
-    font-weight: 450;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: 0.05em;
-}
-
-.fondo-login p {
-    font-family: "Roboto", sans-serif;
-
-    font-style: normal;
-    font-size: 13px;
-}
 
 .btn-redes {
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-
+    
+  }
 .social-btn img {
-    width: 40px;
-    /* Tamaño del icono */
+    width: 40px; /* Tamaño del icono */
     height: 40px;
     margin: 10px;
+  }
+
+  .social-btn:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
+  }
+
+  #login-registro,#recuperar-contraseña,#registro-sesion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .link-pagina{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #2887D1;
+  }
+  
+  .link-pagina :hover {
+    text-decoration: underline;
+  }
+
+  /*Registro Usuario*/
+
+  .registro-recuadro {  
+    width: 600px;
+    height: 700px;
+  }
+
+  .registro-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 20px;
+    height: 53px;
+    width: 212px;
+  }
+
+  .registro-input input {
+    border: none;
+    border-radius: 9px;
+    height: 35px; 
+  }
+
+  .registro-input input::placeholder {
+    font-size: 12px;
+    font-weight: medium;
+    letter-spacing: 0.02em;
+  }
+
+  .registro-input label {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .h2-registro,li {
+    text-align: left;
+  }
+  ul{
+    list-style-type: none;
+    padding-left: 19px;
+    align-self: flex-start; /* Alineamos la lista con los inputs */
+    font-size: 10px;
+  }
+  
+ .nombre-registro, .cuenta-identificacion, .registro-contraseña,.captcha{
+    display: flex;
+    flex-direction: row;
+  }
+  .captcha {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    align-items: center;
+    background-color:#f5f5f5;
+    color:#102a3f;
+    width: 215px;
+    font-size: 14px;
+    font-weight: bold;   
+  }
+  
+  #img-captcha {
+  width: 33px;
+  height: 33px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  }
+
+ 
+  /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
+   #img-captcha:hover {
+    transform: rotate(180deg);
+  }
+
+  #btn-confirmar {
+    background-color: #338F3E;
+  }
+  
+/*Recuperar Cuenta*/
+
+.password-recuadro {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  height: 300px;
 }
 
-.social-btn:hover {
-    transform: scale(1.1);
-    /* Aumentar el tamaño al pasar el mouse */
-}

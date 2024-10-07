@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
-<body>
+<body id="body-register">
     <div class="register-conteiner">
         <form>
             <h1>CREA TU CUENTA</h1>
@@ -23,9 +23,9 @@
                     <input type="date">
                 </div>
     
-                <div class="form-group">
+                <div class="register-group">
                     <h2 class="h2-register">Tu Cuenta</h2>
-                    <label for="nickname">Nickname (Opcional)</label>
+                    <label for="nickname">Nickname <span>(Opcional)</span></label>
                     <input type="text" id="nickname" name="nickname" placeholder="Ingresa tu nickname">
     
                     <label for="email">Correo Electrónico</label>
@@ -48,23 +48,22 @@
          <input type="checkbox" class="checkbox">
      </div>
                     
-        <button id="btn-confirmar">Confirmar</button>
- 
-
-        <h2>INICIA CON</h2>
-            <div class="btn-redes">
-                 <a href="#" class="social-btn">
-                     <img src="iconos/google.png">
-                 </a>
-                 <a href="#" class="social-btn">
-                     <img src="iconos/facebook.png" alt="">
-                   </a>
-            </div>
-            <div id="registro-sesion">
-                <p>¿Ya sos usuario de Marvelcito?</p>
-                <a  href="/Entrega-02/login.html" class="link-pagina"><p><b>Inicia sesíon</b></p></a>
-            </div>   
+        <button id="btn-confirmar" type="submit">Confirmar</button>
         </form>
+        <h2>INICIA CON</h2>
+        <div class="btn-redes">
+             <a href="#" class="social-btn">
+                 <img src="iconos/google.png">
+             </a>
+             <a href="#" class="social-btn">
+                 <img src="iconos/facebook.png" alt="">
+               </a>
+        </div>
+        <div id="registro-sesion">
+            <p>¿Ya sos usuario de Marvelcito?</p>
+            <a  href="/Entrega-02/login.html" class="link-pagina"><p><b>Inicia sesíon</b></p></a>
+        </div>   
     </div>  
+ <script src="/Entrega-02/register.js"></script>
 </body>
 </html>

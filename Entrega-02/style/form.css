@@ -1,6 +1,6 @@
 body {
     background-image: url(../assets/fondo-registro.png);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;    
@@ -28,7 +28,8 @@ span {
   font-size: 13px;
   font-weight: bold;
 }
-.login-recuadro,.registro-recuadro, .password-recuadro{
+
+.login-recuadro,.register-conteiner, .password-recuadro{
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -113,52 +114,60 @@ span {
 
   /*Registro Usuario*/
 
-  .registro-recuadro {  
-    width: 600px;
-    height: 700px;
-  }
 
-  .registro-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.register-conteiner {
+  width: 525px;
+  height: 1090px;
+}
+
+.h2-register {
     text-align: left;
-    margin-left: 20px;
-    height: 53px;
-    width: 212px;
-  }
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 3px;
+    border-bottom: 1px solid #333;
+}
 
-  .registro-input input {
-    border: none;
-    border-radius: 9px;
-    height: 35px; 
-  }
+.register-group {
+    width: 400px;
+    margin-bottom: 30px;
+}
 
-  .registro-input input::placeholder {
-    font-size: 12px;
-    font-weight: medium;
-    letter-spacing: 0.02em;
-  }
-
-  .registro-input label {
-    margin-top: 3px;
-    margin-bottom: 3px;
-  }
-  .h2-registro,li {
+.register-conteiner label {
     text-align: left;
-  }
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.register-conteiner input[type="text"],
+.register-conteiner input[type="email"],
+.register-conteiner input[type="password"],
+.register-conteiner input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+ .register-conteiner input::placeholder {
+    color: #aaa;
+}
+
+
   ul{
+    text-align: left;
     list-style-type: none;
-    padding-left: 19px;
-    align-self: flex-start; /* Alineamos la lista con los inputs */
     font-size: 10px;
   }
   
- .nombre-registro, .cuenta-identificacion, .registro-contraseña,.captcha{
+  .captcha {
     display: flex;
     flex-direction: row;
-  }
-  .captcha {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;

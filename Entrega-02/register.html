@@ -11,7 +11,7 @@
 </head>
 <body id="body-register">
     <div class="register-conteiner">
-        <form>
+        <form id="form-register">
             <h1>CREA TU CUENTA</h1>
                 <div class="register-group">
                     <h2 class="h2-register">Datos Personales</h2>
@@ -32,23 +32,25 @@
                     <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
     
                     <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="*********">
+                    <input type="password" id= "password" name="contrasena" placeholder="*********">
                     <ul>
                         <li>Minimo 10 caracteres  a-Z$%&/</li>
                         <li>Al menos un letra en MAYUSCULA</li>
                     </ul>
                     <label for="repetir-contrasena">Repetir Contraseña</label>
-                    <input type="password" id="repetir-contrasena" name="repetir-contrasena">
+                    <input type="password" id="repetir-password" name="repetir-contrasena">
                 </div>
     
-        
+                <div class="alert-password">
+                    <p><b>CONTRASEÑAS NO COINCIDEN</b></p>
+                </div>
       <div class="captcha">
          <img id="img-captcha" src="/Entrega-02/iconos/captcha.png" alt="Captcha">
          <label>No soy un robot</label>
          <input type="checkbox" class="checkbox">
      </div>
                     
-        <button id="btn-confirmar" type="submit">Confirmar</button>
+        <button id="btn-confirmar">Confirmar</button>
         </form>
         <h2>INICIA CON</h2>
         <div class="btn-redes">

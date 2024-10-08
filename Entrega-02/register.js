@@ -1,4 +1,10 @@
 "use strict"
+let form_register = document.querySelector ('form-register');
 
-let btn_confirmar = document.querySelector ('btn-confirmar');
+function checkPassword (){
 
+    let password = document.getElementById ('password').value;
+    console.log(password);
+}
+
+checkPassword();

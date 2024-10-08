@@ -35,10 +35,9 @@ span {
   font-weight: bold;
 }
 
-.login-recuadro,.register-conteiner, .password-recuadro{
+.login-recuadro,.register-conteiner, .password-recuadro,.password-conteiner{
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -50,7 +49,7 @@ span {
     border-radius: 12px;
 }
 
-#btn-ingresar, #btn-confirmar, #btn-recuperar{
+#btn-ingresar, #btn-confirmar, #btn-recuperar,#btn-instrucciones{
     width: 114px;
     height: 30px;
     background-color: #2887D1;
@@ -146,7 +145,7 @@ span {
 .register-group {
     align-content: center;
     width: 400px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .register-conteiner label {
@@ -176,7 +175,7 @@ span {
 
 
   ul{
-    text-align: left;
+    text-align: left;   
     list-style-type: none;
     font-size: 10px;
   }
@@ -209,6 +208,19 @@ span {
   margin-bottom: 10px;
   
   }
+  
+
+  .alert-password {
+    width: 300;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #e01a21a4; /* Color de fondo semi-transparente */
+    border: 1px solid #E01A21; /* Borde sólido */
+    color: white;
+    font-size: 14px; 
+   
+  }
+
 
  
   /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
@@ -222,10 +234,45 @@ span {
   
 /*Recuperar Cuenta*/
 
-.password-recuadro {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 80px;
-  height: 300px;
+.password-conteiner {
+  margin-top: 50px;
+   height: 300px;
+   flex-direction: column;   
 }
+
+
+.password-conteiner p {
+  font-size: 14px;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.password-conteiner label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.password-conteiner input[type="text"] {
+  width: 300px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #f0f0f0;
+  font-size: 16px;
+  outline: none;
+}
+
+#btn-instrucciones {
+  width: 200px;
+  padding: 10px;
+}
+
 

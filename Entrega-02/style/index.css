@@ -178,7 +178,16 @@ h1 {
 }
 
 .descripcion button {
-    padding: 0px;
+    width: 114px;
+    height: 30px;
+    background-color: #2887D1;
+    color: #ffff;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
 }
 
 /* carrousel-mini */

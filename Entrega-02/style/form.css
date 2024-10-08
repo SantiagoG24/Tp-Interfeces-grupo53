@@ -235,9 +235,11 @@ span {
 /*Recuperar Cuenta*/
 
 .password-conteiner {
-  margin-top: 50px;
-   height: 300px;
    flex-direction: column;   
+   text-align: center;
+   margin-top: 50px;
+   height: 300px;
+   
 }
 
 
@@ -271,7 +273,7 @@ span {
 }
 
 #btn-instrucciones {
-  width: 200px;
+  width: 150px;
   padding: 10px;
 }
 

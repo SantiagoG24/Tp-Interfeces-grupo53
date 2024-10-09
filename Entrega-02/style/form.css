@@ -48,10 +48,11 @@ span {
     border-radius: 12px;
 }
 
-#btn-ingresar, #btn-confirmar, #btn-recuperar,#btn-instrucciones{
+#btn-ingresar, #btn-confirmar, #btn-recuperar,#btn-instrucciones,#btn-password{
     width: 114px;
     height: 30px;
     background-color: #2887D1;
+    transition: background-color, .3s ease-out;
     color: #ffff;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
@@ -62,7 +63,11 @@ span {
 }
 
 #btn-ingresar:hover {
-    background-color: #0d2d41;
+    width: 120px;
+    height: 33px;
+    font-size: 16px;
+    background-color: #338F3E;
+    transition: background-color,font-size,width,height, .3s ease-in;
     /* Color de fondo al pasar el mouse */
 }
 
@@ -96,9 +101,9 @@ span {
     margin: 10px;
   }
 
-.social-btn:hover {
+/*.social-btn:hover {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
-  }
+  
 
 #login-registro,#recuperar-contraseña,#registro-sesion{
     display: flex;
@@ -223,16 +228,7 @@ span {
 }
 
  
-  /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
-   #img-captcha:hover {
-    animation: rotate ;
-    transform: rotate(180deg);
-  }
-@keyframes captcha-rotate{
-  from{
 
-  }
-}
   #btn-confirmar {
     background-color: #338F3E;
   }
@@ -243,7 +239,8 @@ span {
   margin-right: auto;
   width: 500px;
   height: 300px;
-  color: #251379;
+  background-color: #010B2A;
+  color:white;
   text-align: center;
   border: none;
   border-radius: 12px;
@@ -267,54 +264,74 @@ span {
   font-size: 15px;
 }
 
+
 #medalla-popover {
   width: 110px;
   height: 110px;
+  animation: latir 4s infinite ease-in-out;
+  
+  
 }
+@keyframes latir {
+  0%, 100% {
+    transform: scale(1);
+    border-radius :50px;
+
+}
+50% {
+    transform:scale(1.1);
+    shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(65, 9, 129);
+    border-radius :40px;
+    
+}}
+
+
+
 
 /*Recuperar Cuenta*/
 
-.password-conteiner {
-   flex-direction: column;   
-   text-align: center;
-   margin-top: 50px;
-   height: 300px;
-   
+.password-conteiner,.form-password {
+    margin-top: 150px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+  .form-password {
+    margin-top: 0;
+  }
+
+
+.form-password p {
+  width: 350px;
 }
 
-
-.password-conteiner p {
+.form-password input[type="email"] {
+  width:250px;
+  padding: 10px;
   font-size: 14px;
-  width: 400px;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #cccccc;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-.password-conteiner label {
-  font-size: 18px;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.password-conteiner input[type="text"] {
-  width: 300px;
-  text-align: center;
   border: none;
-  padding: 10px;
-  border-radius: 5px;
-  color: #f0f0f0;
-  font-size: 16px;
-  outline: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+
 }
 
-#btn-instrucciones {
+
+#btn-password {
   width: 150px;
-  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+#login-link {
+  padding: 5px;
+  font-size: 14px;
+  color: #1e90ff;
+  text-decoration: none;
 }
 
 

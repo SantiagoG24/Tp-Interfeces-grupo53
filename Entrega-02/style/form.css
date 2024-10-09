@@ -16,7 +16,6 @@ h1 {
     font-size: 24px;
     letter-spacing: 0.02em;
     margin-top: 30px;
-    margin-bottom: 5px;
 }
 
 h2 {
@@ -37,12 +36,7 @@ span {
 
 .login-recuadro,.register-conteiner, .password-recuadro,.password-conteiner{
     display: flex;
-<<<<<<< HEAD
-    justify-content: center;    
-=======
     justify-content: center;
-    margin-top: 100px;    
->>>>>>> main
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -135,8 +129,13 @@ span {
   flex-direction: column;
   align-items: center;
   width: 525px;
-  height: 1090px;
+  height: 900px;
   
+}
+
+#logo-register {
+  width: 150px;
+  border-radius: 9px;
 }
 
 .h2-register {
@@ -150,7 +149,6 @@ span {
 .register-group {
     align-content: center;
     width: 400px;
-    margin-bottom: 15px;
 }
 
 .register-conteiner label {
@@ -166,7 +164,7 @@ span {
 .register-conteiner input[type="date"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: none;
     border-radius: 5px;
     background-color: #0d4c80bb;
@@ -179,10 +177,10 @@ span {
 }
 
 
-  ul{
-    text-align: left;   
+.requisitos-password{
     list-style-type: none;
-    font-size: 10px;
+    text-align: left;
+    align-items: flex-start;
   }
   
   .captcha {
@@ -214,18 +212,15 @@ span {
   
   }
   
-
-  .alert-password {
-    width: 300;
-    height: 60px;
-    border-radius: 5px;
-    background-color: #e01a21a4; /* Color de fondo semi-transparente */
-    border: 1px solid #E01A21; /* Borde sólido */
+  .error-message {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
     color: white;
-    font-size: 14px; 
-   
-  }
-
+    background-color: #e74c3c;
+    border-radius: 4px;
+    text-align: center;
+}
 
  
   /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
@@ -241,7 +236,42 @@ span {
   #btn-confirmar {
     background-color: #338F3E;
   }
-  
+/*Pop over registro exitoso*/  
+
+#popover-register {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 300px;
+  color: #251379;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+
+}
+
+::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+#popover-btn {
+  display: inline-block; 
+  padding: 10px 20px;   
+  background-color: #4CAF50; 
+  color: white;            
+  text-align: center;      
+  text-decoration: none;   
+  border-radius: 19px;     
+  border: none;            
+  cursor: pointer;         
+  font-size: 15px;
+}
+
+#medalla-popover {
+  width: 110px;
+  height: 110px;
+}
+
 /*Recuperar Cuenta*/
 
 .password-conteiner {

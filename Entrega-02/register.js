@@ -1,10 +1,10 @@
 "use strict"
-let form_register = document.querySelector ('form-register');
+ let form_register = document.querySelector('#form-register');
+ let popover = document.querySelector('#popover-register');
 
-function checkPassword (){
+ form_register.addEventListener ('submit', (event) => {
+    event.preventDefault();
+    popover.showPopover();
+ }
+);
 
-    let password = document.getElementById ('password').value;
-    console.log(password);
-}
-
-checkPassword();

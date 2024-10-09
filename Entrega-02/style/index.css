@@ -132,6 +132,8 @@ h1 {
     position: relative;
 }
 
+.card-imagen-mini {}
+
 .destacado {
     position: absolute;
     background-color: #2887D1;
@@ -142,12 +144,14 @@ h1 {
     padding-top: 3px;
     padding-bottom: 3px;
     z-index: 1;
+    border-radius: 10px 10px 10px 0px;
 }
 
 .div-img {
     width: 217px;
     height: 191px;
     overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .div-img img {
@@ -164,6 +168,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .descripcion h2 {
@@ -178,7 +183,15 @@ h1 {
 }
 
 .descripcion button {
-    padding: 0px;
+    width: 114px;
+    height: 30px;
+    background-color: #2887D1;
+    color: #ffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
 }
 
 /* carrousel-mini */

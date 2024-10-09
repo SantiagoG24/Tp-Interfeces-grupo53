@@ -38,7 +38,7 @@ span {
 .login-recuadro,.register-conteiner, .password-recuadro{
     display: flex;
     justify-content: center;
-    
+    margin-top: 100px;    
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -213,9 +213,14 @@ span {
  
   /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
    #img-captcha:hover {
+    animation: rotate ;
     transform: rotate(180deg);
   }
+@keyframes captcha-rotate{
+  from{
 
+  }
+}
   #btn-confirmar {
     background-color: #338F3E;
   }

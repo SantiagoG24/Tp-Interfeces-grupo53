@@ -1,4 +1,10 @@
 "use strict"
+ let form_register = document.querySelector('#form-register');
+ let popover = document.querySelector('#popover-register');
 
-let btn_confirmar = document.querySelector ('btn-confirmar');
+ form_register.addEventListener ('submit', (event) => {
+    event.preventDefault();
+    popover.showPopover();
+ }
+);
 

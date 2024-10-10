@@ -11,8 +11,8 @@
 </head>
 <body id="body-register">
     <div class="register-conteiner">
-        <form>
-            <h1>CREA TU CUENTA</h1>
+        <form id="form-register">
+            <img id="logo-register" src="/Entrega-02/assets/Marvelcito.jpg">
                 <div class="register-group">
                     <h2 class="h2-register">Datos Personales</h2>
                     <label for="nombre">Nombre</label>
@@ -32,33 +32,34 @@
                     <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
     
                     <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="*********">
-                    <ul>
-                        <li>Minimo 10 caracteres  a-Z$%&/</li>
-                        <li>Al menos un letra en MAYUSCULA</li>
-                    </ul>
+                    <input type="password" id= "password" name="contrasena" placeholder="">
+                    <div class="requisitos-password">
+                        <p>Minimo 10 caracteres  a-Z$%&/</p>
+                        <p>Al menos un letra en MAYUSCULA</p>
+                    </div>
                     <label for="repetir-contrasena">Repetir Contraseña</label>
-                    <input type="password" id="repetir-contrasena" name="repetir-contrasena">
+                    <input type="password" id="repetir-password" name="repetir-contrasena">               
                 </div>
-    
-        
+                <div id="error-message" class="error-message">Las contraseñas no coinciden.</div>
       <div class="captcha">
          <img id="img-captcha" src="/Entrega-02/iconos/captcha.png" alt="Captcha">
          <label>No soy un robot</label>
          <input type="checkbox" class="checkbox">
      </div>
                     
-        <button id="btn-confirmar" type="submit">Confirmar</button>
+        <button type="submit" id="btn-confirmar">Confirmar</button>
         </form>
-        <h2>INICIA CON</h2>
-        <div class="btn-redes">
-             <a href="#" class="social-btn">
-                 <img src="iconos/google.png">
-             </a>
-             <a href="#" class="social-btn">
-                 <img src="iconos/facebook.png" alt="">
-               </a>
-        </div>
+   <!--POPOVER-->
+   <div id="popover-register" popover="manual">
+    <div class="popover-conteiner">
+        <h1>Felicitaciones</h1>
+        <img src="/Entrega-02/iconos/medalla.png" id="medalla-popover">
+        <p>Te has registrado con exito</p>
+        <a href="/Entrega-02/index.html" id="popover-btn">Comenzar</a>
+    </div>
+   </div>
+    <!--POPOVER-->
+
         <div id="registro-sesion">
             <p>¿Ya sos usuario de Marvelcito?</p>
             <a  href="/Entrega-02/login.html" class="link-pagina"><p><b>Inicia sesíon</b></p></a>

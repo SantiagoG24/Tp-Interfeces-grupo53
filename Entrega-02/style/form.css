@@ -16,7 +16,6 @@ h1 {
     font-size: 24px;
     letter-spacing: 0.02em;
     margin-top: 30px;
-    margin-bottom: 5px;
 }
 
 h2 {
@@ -35,10 +34,9 @@ span {
   font-weight: bold;
 }
 
-.login-recuadro,.register-conteiner, .password-recuadro{
+.login-recuadro,.register-conteiner, .password-recuadro,.password-conteiner{
     display: flex;
     justify-content: center;
-    
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -50,10 +48,11 @@ span {
     border-radius: 12px;
 }
 
-#btn-ingresar, #btn-confirmar, #btn-recuperar{
+#btn-ingresar, #btn-confirmar, #btn-recuperar,#btn-instrucciones,#btn-password{
     width: 114px;
     height: 30px;
     background-color: #2887D1;
+    transition: background-color, .3s ease-out;
     color: #ffff;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
@@ -64,7 +63,11 @@ span {
 }
 
 #btn-ingresar:hover {
-    background-color: #0d2d41;
+    width: 120px;
+    height: 33px;
+    font-size: 16px;
+    background-color: #338F3E;
+    transition: background-color,font-size,width,height, .3s ease-in;
     /* Color de fondo al pasar el mouse */
 }
 
@@ -98,9 +101,9 @@ span {
     margin: 10px;
   }
 
-.social-btn:hover {
+/*.social-btn:hover {
     transform: scale(1.1); /* Aumentar el tamaño al pasar el mouse */
-  }
+  
 
 #login-registro,#recuperar-contraseña,#registro-sesion{
     display: flex;
@@ -131,8 +134,13 @@ span {
   flex-direction: column;
   align-items: center;
   width: 525px;
-  height: 1090px;
+  height: 900px;
   
+}
+
+#logo-register {
+  width: 150px;
+  border-radius: 9px;
 }
 
 .h2-register {
@@ -146,7 +154,6 @@ span {
 .register-group {
     align-content: center;
     width: 400px;
-    margin-bottom: 30px;
 }
 
 .register-conteiner label {
@@ -162,7 +169,7 @@ span {
 .register-conteiner input[type="date"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     border: none;
     border-radius: 5px;
     background-color: #0d4c80bb;
@@ -175,10 +182,10 @@ span {
 }
 
 
-  ul{
-    text-align: left;
+.requisitos-password{
     list-style-type: none;
-    font-size: 10px;
+    text-align: left;
+    align-items: flex-start;
   }
   
   .captcha {
@@ -209,23 +216,122 @@ span {
   margin-bottom: 10px;
   
   }
+  
+  .error-message {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    color: white;
+    background-color: #e74c3c;
+    border-radius: 4px;
+    text-align: center;
+}
 
  
-  /* Aplica la rotación de 180 grados cuando el checkbox esté marcado */
-   #img-captcha:hover {
-    transform: rotate(180deg);
-  }
 
   #btn-confirmar {
     background-color: #338F3E;
   }
+/*Pop over registro exitoso*/  
+
+#popover-register {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 300px;
+  background-color: #010B2A;
+  color:white;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+
+}
+
+::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+#popover-btn {
+  display: inline-block; 
+  padding: 10px 20px;   
+  background-color: #4CAF50; 
+  color: white;            
+  text-align: center;      
+  text-decoration: none;   
+  border-radius: 19px;     
+  border: none;            
+  cursor: pointer;         
+  font-size: 15px;
+}
+
+
+#medalla-popover {
+  width: 110px;
+  height: 110px;
+  animation: latir 4s infinite ease-in-out;
   
+  
+}
+@keyframes latir {
+  0%, 100% {
+    transform: scale(1);
+    border-radius :50px;
+
+}
+50% {
+    transform:scale(1.1);
+    shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(65, 9, 129);
+    border-radius :40px;
+    
+}}
+
+
+
+
 /*Recuperar Cuenta*/
 
-.password-recuadro {
-  flex-direction: column;
-  align-items: center;
-  margin-top: 80px;
-  height: 300px;
+.password-conteiner,.form-password {
+    margin-top: 150px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+  .form-password {
+    margin-top: 0;
+  }
+
+
+.form-password p {
+  width: 350px;
 }
+
+.form-password input[type="email"] {
+  width:250px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+
+#btn-password {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+
+
+#login-link {
+  padding: 5px;
+  font-size: 14px;
+  color: #1e90ff;
+  text-decoration: none;
+}
+
 

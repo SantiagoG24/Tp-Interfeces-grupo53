@@ -230,6 +230,10 @@ h1 {
 
 }
 
+.log-out {
+    padding-left: 15px;
+}
+
 .descripcion button {
     width: 114px;
     height: 30px;

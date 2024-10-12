@@ -217,15 +217,13 @@ span {
   
   }
   
-  .error-message {
+  .error-mensaje {
     display: none;
-    margin-top: 15px;
-    padding: 10px;
-    color: white;
-    background-color: #e74c3c;
-    border-radius: 4px;
-    text-align: center;
+    color: red;
+    margin: 10px;
+     /* Ocultar por defecto */
 }
+
 
  
 

@@ -9,6 +9,7 @@ body {
     position: relative;
 }
 
+<<<<<<< HEAD
 
 h1 {
     size: 12px;
@@ -190,10 +191,50 @@ h1 {
 
 }
 
+=======
+.contenido {
+    width: 100%;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    position: absolute;
+    align-items: center;
+    padding-top: 70px;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.nav-bar {
+    background-color: #1F1E1E;
+    opacity: 0%;
+    position: sticky;
+    top: 40px;
+    z-index: 2;
+    display: none;
+    transition: opacity 2s ease, transform 0.5s ease;
+}
+
+.visible {
+
+    display: flex;
+    flex-direction: column;
+    animation: nav-bar 1s 1 linear both;
+}
+
+.categoria {
+    width: 100%;
+    height: 46px;
+    border-bottom: #656565;
+}
+
+
+>>>>>>> santi-home
 .log-out {
     padding-left: 15px;
 }
 
+<<<<<<< HEAD
 .descripcion button {
     width: 114px;
     height: 30px;
@@ -208,3 +249,17 @@ h1 {
 }
 
 /* carrousel-mini */
+=======
+@keyframes nav-bar {
+    0% {
+        width: 186px;
+        height: 1080px;
+    }
+
+    100% {
+        width: 186px;
+        height: 1080px;
+        opacity: 90%;
+    }
+}
+>>>>>>> santi-home

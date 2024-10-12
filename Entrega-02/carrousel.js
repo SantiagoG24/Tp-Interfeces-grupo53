@@ -1,51 +1,30 @@
-// const carrouseles = document.querySelector('.carrousel-div');
-// const btn_izq = document.querySelector('.div-flecha-izq');
-// const btn_der = document.querySelector('.div-flecha-der');
-// const contenido = document.querySelector('.carrousel-card-grandes');
-// const ancho_card = contenido.querySelector('.card-grande');
-// let counter = 0;
+const carrousel = document.querySelector("#card-container");
+const btn_next = document.querySelector("#btn_next");
+btn_next.addEventListener('click', next);
+const btn_prev = document.querySelector("#btn_prev");
+btn_prev.addEventListener('click', prev);
 
-// // const scrollRight = () => {
-// //     console.log("btn-der");
-// //     const maxScrollLeft = contenido.scrollWidth - contenido.clientWidth; // tope de deplazamiento
-// //     if (contenido.scrollLeft + ancho_card >= maxScrollLeft) {
-// //         contenido.scrollLeft = maxScrollLeft;
-// //     } else {
-// //         contenido.classList.add("tope");
-// //         setTimeout(() => {
-// //             contenido.classList.remove("tope");
-// //         }, 350);
-// //         contenido.scrollLeft += ancho_card;
-// //     }
-// // };
-// const scrollRight = () => {
-//     console.log("btn-der");
-//     if (counter >= 2) return; // Evitar ir más allá de la última imagen
-//     contenido.classList.add('mover-der')
-//     counter++;
-// };
+function next() {
+    carrousel.style = "transform: translateX(-42%)"
+    console.log("next btn")
+}
+function prev() {
+    carrousel.style = "transform: translateX(0%)"
+    console.log("prev btn");
+}
 
 
-// // const scrollLeft = () => {
-// //     console.log("btn-izq");
-// //     if (contenido.scrollLeft - ancho_card <= 0) {
-// //         contenido.scrollLeft = 0;
-// //     } else {
-// //         contenido.classList.add("skew1");
-// //         setTimeout(() => {
-// //             contenido.classList.remove("skew1");
-// //         }, 350);
-// //         contenido.scrollLeft -= ancho_card;
-// //     }
-// // };
-// const scrollLeft = () => {
-//     console.log("btn-izq");
-//     if (counter <= 0) return; // Evitar ir más allá de la primera imagen
-//     contenido.classList.add('mover-izq')
-//     counter--;
-// };
-// btn_izq.addEventListener("click", scrollLeft);
-// btn_der.addEventListener("click", scrollRight);
 
-// //     carrouseles.forEach((carrousel) => {
-// // });
+const car_mini = document.querySelector("#cont-carrousel-mini");
+const btn_next_m = document.querySelector("#btn_next1");
+btn_next_m.addEventListener('click', nextm);
+const btn_prev_m = document.querySelector("#btn_prev1");
+btn_prev_m.addEventListener('click', prevm);
+function nextm() {
+    car_mini.style = "transform: translateX(-36%)";
+    console.log("next btn")
+}
+function prevm() {
+    car_mini.style = "transform: translateX(0%)";
+    console.log("prev btn");
+} 

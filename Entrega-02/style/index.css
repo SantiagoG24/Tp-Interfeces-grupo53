@@ -33,7 +33,6 @@ body {
 }
 
 .visible {
-
     display: flex;
     flex-direction: column;
     animation: nav-bar 1s 1 linear both;

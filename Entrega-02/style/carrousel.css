@@ -229,18 +229,15 @@ a.log-out {
 
 .descripcion h2 {
     margin: 0;
-    margin-top: 8px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 10px;
     color: black;
-    width: 85%;
     text-align: center;
     font-size: 18px;
-    margin-bottom: 5px;
-
+    letter-spacing: 0.02em;
 }
 
 .descripcion button {
-    width: 100px;
+    width: 114px;
     height: 30px;
     background-color: #2887D1;
     color: #ffff;
@@ -251,4 +248,41 @@ a.log-out {
     border: none;
     border-radius: 12px;
     margin-bottom: 15px;
+
+}
+
+
+#btn-jugar-card {
+    width: 114px;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    background-color: #2887D1;
+    color: #ffff;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-play {
+    width: 30px;
+}
+
+#btn-jugar-card p {
+    padding-right: 5px;
+}
+#btn-jugar-card:hover {
+    transition-duration: 0.6s;
+    width: 40px;
+    padding: 5px;
+}
+#btn-jugar-card:hover p {
+    display: none;
 }

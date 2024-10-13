@@ -49,11 +49,20 @@
     gap: 10px;
 }
 
+a.log-out {
+    display: flex;
+    text-decoration: none;
+    color: #FBFAFA;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-left: 0px;
+}
 
 .bar-categoria {
     background-color: #656565;
     height: 5px;
     width: 1700px;
+    z-index: 1;
 }
 
 
@@ -107,11 +116,11 @@
 }
 
 @keyframes hover-card1 {
-    0% {
+    from {
         opacity: 10%;
     }
 
-    100% {
+    to {
         opacity: 90%;
     }
 }
@@ -173,7 +182,7 @@
 
 .card-imagen-mini {
     display: block;
-    width: auto;
+    width: 218px;
     height: 191px;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;

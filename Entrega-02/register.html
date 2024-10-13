@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Entrega-02/style/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <title>Registro</title>
 </head>
+
 <body id="body-register">
     <div class="register-conteiner">
         <form id="form-register">
             <img id="logo-register" src="/Entrega-02/assets/Marvelcito.jpg">
-                <div class="register-group">
-                    <h2 class="h2-register">Datos Personales</h2>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
-                    <label for="apellido">Fecha de Nacimiento</label>
-                    <input type="date">
+            <div class="register-group">
+                <h2 class="h2-register">Datos Personales</h2>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+                <label for="apellido">Fecha de Nacimiento</label>
+                <input type="date">
+            </div>
+
+            <div class="register-group">
+                <h2 class="h2-register">Tu Cuenta</h2>
+                <label for="nickname">Nickname <span>(Opcional)</span></label>
+                <input type="text" id="nickname" name="nickname" placeholder="Ingresa tu nickname">
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contraseña" name="contrasena" placeholder="">
+                <div class="requisitos-password">
+                    <p>Minimo 10 caracteres a-Z$%&/</p>
+                    <p>Al menos un letra en MAYUSCULA</p>
                 </div>
-    
-                <div class="register-group">
-                    <h2 class="h2-register">Tu Cuenta</h2>
-                    <label for="nickname">Nickname <span>(Opcional)</span></label>
-                    <input type="text" id="nickname" name="nickname" placeholder="Ingresa tu nickname">
-    
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com">
-    
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id= "contraseña" name="contrasena" placeholder="">
-                    <div class="requisitos-password">
-                        <p>Minimo 10 caracteres  a-Z$%&/</p>
-                        <p>Al menos un letra en MAYUSCULA</p>
-                    </div>
-                    <label for="repetir-contrasena">Repetir Contraseña</label>
-                    <input type="password" id="repetir-contraseña" name="repetir-contrasena">               
-                </div>
-                <div id="error-mensaje" class="error-mensaje">Las contraseñas no coinciden.</div>
-      <div class="captcha">
-         <img id="img-captcha" src="/Entrega-02/iconos/captcha.png" alt="Captcha">
-         <label>No soy un robot</label>
-         <input type="checkbox" class="checkbox">
-     </div>
-                    
-        <button type="submit" id="btn-confirmar">Confirmar</button>
+                <label for="repetir-contrasena">Repetir Contraseña</label>
+                <input type="password" id="repetir-contraseña" name="repetir-contrasena">
+            </div>
+            <div id="error-mensaje" class="error-mensaje">Las contraseñas no coinciden.</div>
+            <div class="captcha">
+                <img id="img-captcha" src="/Entrega-02/iconos/captcha.png" alt="Captcha">
+                <label>No soy un robot</label>
+                <input type="checkbox" class="checkbox">
+            </div>
+
+            <button type="submit" id="btn-confirmar">Confirmar</button>
         </form>
-   <!--POPOVER-->
-   <div id="popover-register" popover="manual">
-    <div class="popover-conteiner">
-        <h2>FELICITACIONES</h2>
-        <img src="/Entrega-02/iconos/medalla.png" id="medalla-popover">
-        <p>Te has registrado con exito</p>
-        <a href="/Entrega-02/index.html" id="popover-btn">Comenzar</a>
-    </div>
-   </div>
-    <!--POPOVER-->
+        <!--POPOVER-->
+        <div id="popover-register" popover="manual">
+            <div class="popover-conteiner">
+                <h2>FELICITACIONES</h2>
+                <img src="/Entrega-02/iconos/medalla.png" id="medalla-popover">
+                <p>Te has registrado con exito</p>
+                <a href="/Entrega-02/loading.html" id="popover-btn">Comenzar</a>
+            </div>
+        </div>
+        <!--POPOVER-->
 
         <div id="registro-sesion">
             <p>¿Ya sos usuario de Marvelcito?</p>
-            <a  href="/Entrega-02/login.html" class="link-pagina"><p><b>Inicia sesíon</b></p></a>
-        </div>   
-    </div>  
- <script src="/Entrega-02/register.js"></script>
+            <a href="/Entrega-02/login.html" class="link-pagina">
+                <p><b>Inicia sesíon</b></p>
+            </a>
+        </div>
+    </div>
+    <script src="/Entrega-02/register.js"></script>
 </body>
+
 </html>

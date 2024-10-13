@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/Fondo.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    margin: 0px;
+    position: relative;
+    align-items: center;
+}
+
+
+.loading-contenedor {
+    margin-top: 200px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #0d4c80bb;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin linear 2s infinite;
+    margin-bottom: 45px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.barra {
+    width: 300px;
+    height: 35px;
+    box-sizing: content-box;
+    border: 1px black solid;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.carga {
+    height: 28px;
+    width: 0px;
+    background-color: #0d4c80bb;
+    border-radius: 15px;
+    border: 1px white solid;
+    padding: 2px;
+    box-sizing: content-box;
+    animation: carga-loading 5s .5s cubic-bezier(0.07, 0.48, 0.63, 0.26) forwards;
+}
+
+
+@keyframes carga-loading {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}

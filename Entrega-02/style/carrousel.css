@@ -80,7 +80,7 @@ a.log-out {
 }
 
 .card-grande {
-    display: block;
+    display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,32 @@ a.log-out {
     flex-shrink: 0;
 }
 
-.hover-card {
+#btn-jugar {
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 240px;
+    width: 95px;
+    height: 30px;
+    background-color: #2887D1;
+    color: #ffff;
+    font-family: "Roboto Condensed", sans-serif; 
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    visibility: hidden;
+}
+.card-grande:hover .card-imagen {
+   opacity: 50%;
+}
+.card-grande:hover #btn-jugar {
+    visibility: visible;
+}
+
+
+/*.hover-card {
     background-color: #0000008c;
     opacity: 100%;
     width: 470px;
@@ -113,7 +138,7 @@ a.log-out {
 .hover-card :hover {
     animation: hover-card1 1s 1 linear both;
     background-color: #2887D1;
-}
+}*/
 
 @keyframes hover-card1 {
     from {

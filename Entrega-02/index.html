@@ -142,78 +142,69 @@
             </div>
         </div>
         <div class="categoria">
-            <div class="text-categoria">
-                <h2 class="log-out">Log out</h2>
-            </div>
-            <div class="icon-categoria"><img src="/Entrega-02/iconos/StreamlineLogout1Solid.png" alt=""></div>
+            <a class="log-out" href="/Entrega-02/login.html">
+                <div class="text-categoria">
+                    <h2 class="log-out">Log out</h2>
+                </div>
+                <div class="icon-categoria"><img src="/Entrega-02/iconos/StreamlineLogout1Solid.png" alt=""></div>
+            </a>
         </div>
 
 
     </nav>
     <div class="contenido">
-        <section class="carrousel-grande">
-            <div class="div-categoria">
-                <h1 class="h1-categoria">Destacados</h1>
-                <div class="bar-categoria"></div>
+        <div class="div-categoria">
+            <h1 class="h1-categoria">Destacados</h1>
+            <div class="bar-categoria"></div>
+        </div>
+        <div class="carrousel-grande">
+            <div id="btn_prev" class="btn-prev" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
             </div>
-            <div class="carrousel">
-                <div class="div-flecha">
-                    <svg class="flecha-der" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 1024 1024">
-                        <path fill="white"
-                            d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
-                    </svg>
-                </div>
-                <div class="carrousel-card-grandes">
+            <div class="carrousel-container">
+                <div class="card-container" id="card-container">
                     <div class="card-grande">
                         <img class="card-imagen" src="/Entrega-02/assets/juegos/Ghost-TB.jpg" alt="Ghost-TB">
-                        <button id="btn-jugar">Jugar</button>
+                        <div class="hover-card">
+                            <div class="destacado">Gratis</div>
+                            <button>Jugar</button>
+                        </div>
                     </div>
-                    <div class="card-grande">
-                        <img class="card-imagen" src="/Entrega-02/assets/juegos/maxresdefault (1).jpg" alt="Ghost-TB">
-                    </div>
-                    <div class="card-grande">
-                        <img class="card-imagen" src="/Entrega-02/assets/juegos/spider-man-2-.jpg" alt="Ghost-TB">
-                    </div>
-                    <div class="card-grande">
-                        <img class="card-imagen" src="/Entrega-02/assets/juegos/super-mario-game.jpg" alt="Ghost-TB">
-                    </div>
-                    <div class="card-grande">
-                        <img class="card-imagen" src="/Entrega-02/assets/juegos/fortnite-5154590.jpg" alt="Ghost-TB">
-                    </div>
-                    <div class="card-grande">
-                        <img class="card-imagen" src="/Entrega-02/assets/juegos/R.jpg" alt="Ghost-TB">
-                    </div>
-                </div>
-                <div class="div-flecha">
-                    <svg class="flecha-izq" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 1024 1024">
-                        <path fill="white"
-                            d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
-                    </svg>
+                    <img class="card-imagen" src="/Entrega-02/assets/juegos/maxresdefault (1).jpg" alt="Ghost-TB">
+                    <img class="card-imagen" src="/Entrega-02/assets/juegos/spider-man-2-.jpg" alt="Ghost-TB">
+                    <img class="card-imagen" src="/Entrega-02/assets/juegos/super-mario-game.jpg" alt="Ghost-TB">
+                    <img class="card-imagen" src="/Entrega-02/assets/juegos/Grounded.jpg" alt="Ghost-TB">
+                    <img class="card-imagen" src="/Entrega-02/assets/juegos/R.jpg" alt="Ghost-TB">
                 </div>
             </div>
-        </section>
-        <section class="carrousel-mini">
-            <!-- TITULO DE LA CATEGORIA -->
-            <div class="div-categoria">
-                <h1 class="h1-categoria">Destacados</h1>
-                <div class="bar-categoria"></div>
+            <div id="btn_next" class="btn-next" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
             </div>
-            <!-- TITULO DE LA CATEGORIA -->
-            <div class="cont-carrousel-mini">
-                <!-- FLECHA IZQ -->
-                <div class="div-flecha">
-                    <svg class="flecha-der" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 1024 1024">
-                        <path fill="white"
-                            d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
-                    </svg>
-                </div>
-                <!-- FLECHA IZQ -->
-                <div class="carrousel-card-mini">
+        </div>
+        <!-- TITULO DE LA CATEGORIA -->
+        <div class="div-categoria">
+            <h1 class="h1-categoria">Destacados</h1>
+            <div class="bar-categoria"></div>
+        </div>
+        <div class="carrousel-card-mini">
+            <!-- FLECHA IZQ -->
+            <div id="btn_prev1" class="btn-prev" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+            <!-- FLECHA IZQ -->
+            <div class="carrousel-container">
+                <div class="cont-carrousel-mini" id="cont-carrousel-mini">
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
                             <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/Ghost-TB.jpg" alt="Ghost-TB">
                         </div>
@@ -223,81 +214,121 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
                             <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/maxresdefault (1).jpg"" alt="
                                 Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>Marvel Avengers</h2>
                             <button>Jugar</button>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
                             <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/super-mario-game.jpg"
                                 alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>Super Mario</h2>
                             <button>Jugar</button>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
-                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/super-mario-game.jpg"
+                            <img class="card-imagen-mini"
+                                src="/Entrega-02/assets/juegos/God-of-War-Ragnarok-Featured-image-9998438-850x491.jpg"
                                 alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>God of War Ragnarok</h2>
                             <button>Jugar</button>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
                             <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/Grounded.jpg" alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>Grounded</h2>
                             <button>Jugar</button>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
-                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/R.jpg" alt="Ghost-TB">
+                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/4 en linea.jpg" alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>4 en linea </h2>
                             <button>Jugar</button>
                         </div>
                     </div>
                     <div class="card">
-                        <div class="div-img">
+                        <div class="img-container">
                             <div class="destacado">Gratis</div>
                             <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/R.jpg" alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Call of duty moder warfare II</h2>
+                            <h2>FC 24</h2>
                             <button>Jugar</button>
                         </div>
                     </div>
-                </div>
-                <div class="div-flecha">
-                    <svg class="flecha-izq" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 1024 1024">
-                        <path fill="white"
-                            d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
-                    </svg>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/cuphead.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Cuphead</h2>
+                            <button>Jugar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/valorant-portada.jpg"
+                                alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Valorant</h2>
+                            <button>Jugar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/gofofwar.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>God of War</h2>
+                            <button>Jugar</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="/Entrega-02/assets/juegos/isaac.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Isaac rebirth </h2>
+                            <button>Jugar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
+            <div id="btn_next1" class="btn-next" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+        </div>
     </div>
-
+    <script src="carrousel.js"></script>
     <script src="index.js"></script>
 </body>
 

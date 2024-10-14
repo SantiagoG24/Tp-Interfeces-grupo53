@@ -231,6 +231,8 @@ a.log-out {
     height: 191px;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    flex-grow: 1;
 
 }
 
@@ -301,7 +303,7 @@ a.log-out {
 
 #btn-jugar-card:hover {
     transition-duration: 0.6s;
-    width: 40px;
+    width: 70px;
     padding: 5px;
 }
 

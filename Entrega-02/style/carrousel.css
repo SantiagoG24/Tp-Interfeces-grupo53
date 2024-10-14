@@ -194,16 +194,17 @@ a.log-out {
 
 .destacado {
     position: absolute;
-    background-color: #2887D1;
+    background-color: #206ba8;
     top: 0px;
     left: 0px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-right: 13px;
+    padding-left: 13px;
+    padding-top: 4px;
+    padding-bottom: px;
     z-index: 1;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 8px 0px 8px 0px;
 }
+
 
 .card-imagen-mini {
     display: block;
@@ -251,17 +252,22 @@ a.log-out {
 
 }
 
+.agregar #btn-jugar-card {
+    background-color: #28d13e;
+}
+
 
 #btn-jugar-card {
-    width: 114px;
-    height: 40px;
+    width: 120px;
+    height: 43px;
     padding: 5px;
     margin: 0;
     background-color: #2887D1;
     color: #ffff;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.02em;
     font-style: normal;
+    font-weight:bold;
     border: none;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -271,17 +277,34 @@ a.log-out {
     justify-content: center;
 }
 
-#img-play {
-    width: 30px;
+.agregar #btn-jugar-card {
+    background-color: #338F3E;
+} 
+
+.quitar  #btn-jugar-card {
+    background-color: #E01A21;
 }
 
-#btn-jugar-card p {
+ #img-play {
+    width: 36px;
+}
+
+#btn-jugar-card p, #btn-agregar-card p{
     padding-right: 5px;
 }
 #btn-jugar-card:hover {
     transition-duration: 0.6s;
     width: 40px;
     padding: 5px;
+}
+
+#btn-agregar-card:hover {
+    transition-duration: 0.6s;
+    width: 40px;
+    padding: 5px;
+}
+#btn-agregar-card:hover p  {
+    display: none;
 }
 #btn-jugar-card:hover p {
     display: none;

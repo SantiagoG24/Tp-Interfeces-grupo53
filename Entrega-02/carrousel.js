@@ -5,7 +5,7 @@ const btn_prev = document.querySelector("#btn_prev");
 btn_prev.addEventListener('click', prev);
 
 function next() {
-    carrousel.style = "transform: translateX(-42%)"
+    carrousel.style = "transform: translateX(-44%)"
     console.log("next btn")
 }
 function prev() {
@@ -21,7 +21,7 @@ btn_next_m.addEventListener('click', nextm);
 const btn_prev_m = document.querySelector("#btn_prev1");
 btn_prev_m.addEventListener('click', prevm);
 function nextm() {
-    car_mini.style = "transform: translateX(-36%)";
+    car_mini.style = "transform: translateX(-37%)";
     console.log("next btn")
 }
 function prevm() {

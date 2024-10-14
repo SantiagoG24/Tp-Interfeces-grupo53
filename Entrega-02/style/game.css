@@ -4,6 +4,9 @@ body {
     background-repeat: no-repeat;
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .div-superior {

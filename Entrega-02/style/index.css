@@ -21,18 +21,3 @@ body {
     justify-content: flex-start;
     margin-top: 30px;
 }
-
-
-
-@keyframes nav-bar {
-    0% {
-        width: 186px;
-        height: 1080px;
-    }
-
-    100% {
-        width: 186px;
-        height: 1080px;
-        opacity: 90%;
-    }
-}

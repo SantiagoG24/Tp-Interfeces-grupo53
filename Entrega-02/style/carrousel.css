@@ -306,12 +306,3 @@
 #btn-jugar-card:hover p {
     display: none;
 }
-
-a.log-out {
-    display: flex;
-    text-decoration: none;
-    color: #FBFAFA;
-    gap: 20px;
-    justify-content: flex-end;
-    padding-left: 0px;
-}

@@ -22,31 +22,7 @@ body {
     margin-top: 30px;
 }
 
-.nav-bar {
-    background-color: #1F1E1E;
-    opacity: 0%;
-    position: sticky;
-    top: 40px;
-    z-index: 2;
-    display: none;
-    transition: opacity 2s ease, transform 0.5s ease;
-}
 
-.visible {
-    display: flex;
-    flex-direction: column;
-    animation: nav-bar 1s 1 linear both;
-}
-
-.categoria {
-    width: 100%;
-    height: 46px;
-    border-bottom: #656565;
-}
-
-.log-out {
-    padding-left: 15px;
-}
 
 @keyframes nav-bar {
     0% {

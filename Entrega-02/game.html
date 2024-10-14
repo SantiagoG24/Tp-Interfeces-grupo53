@@ -1,11 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Marvelcito</title>
+    <link rel="stylesheet" href="/Entrega-02/style/game.css">
+    <link rel="stylesheet" href="/Entrega-02/style/header.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <!-- div de la izquierda -->
+        <div class="header-izq">
+            <div id="header-menu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none">
+                        <path
+                            d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                        <path fill="#ffffff"
+                            d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z" />
+                    </g>
+                </svg>
+            </div>
+            <!-- hasta aca el menu -->
+
+            <img src="/Entrega-02/assets/Marvelcito.jpg" alt="logo de Marvelcito">
+
+        </div>
+        <!-- div del medio -->
+        <div class="header-buscar">
+            <svg class="header-lupa" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <g fill="white">
+                    <path d="M192 112a80 80 0 1 1-80-80a80 80 0 0 1 80 80" opacity="0.2" />
+                    <path
+                        d="m229.66 218.34l-50.06-50.06a88.21 88.21 0 1 0-11.32 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32M40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72" />
+                </g>
+            </svg>
+            <input class="buscar" type="text" name="buscar" id="busqueda" placeholder="¿A que jugamos hoy?...">
+        </div>
+        <!-- /div derecha -->
+        <div class="header-der">
+            <div class="header-cart"><img src="/Entrega-02/assets/carrito.png" alt="cart-compras"></div>
+            <div class="header-user"><img src="/Entrega-02/iconos/Groot.png" alt="user-logo"></div>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-user-defoult.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Mi perfil</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-libreria.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Mi juegos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-reloj.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Ultimos jugados</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-tendencia.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Tendencia</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/MdiGift.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Nuevos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-accion.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Accion</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-autos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Autos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-aventura.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Aventuras</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-carreras.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Carreras</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-cartas.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Cartas</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-deportes.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Deportes</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-disparos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Disparos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-estrategia.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Estrategia</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-towerdefense.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Defensa de torres</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="/Entrega-02/iconos/icon-vestidos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Vestidos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <a class="log-out" href="/Entrega-02/login.html">
+                <div class="text-categoria">
+                    <h2 class="log-out">Log out</h2>
+                </div>
+                <div class="icon-categoria"><img src="/Entrega-02/iconos/StreamlineLogout1Solid.png" alt=""></div>
+            </a>
+        </div>
+
+
+    </nav>
+    <div class="div-superior">
+        <div class="breadcrumb">
+            <a href="/Entrega-02/index.html">Inicio</a>
+            <img src="/Entrega-02//iconos/Flechita-bc.png" alt="">
+            <a href="/Entrega-02/index.html">Estrategia</a>
+            <img src="/Entrega-02//iconos/Flechita-bc.png" alt="">
+            <a href="/Entrega-02/game.html">4 en linea</a>
+        </div>
+    </div>
+    <div class="game">
+        <div class="game-box">
+            <img src="/Entrega-02//assets/juego.png" alt="">
+        </div>
+    </div>
+    <div class="pie-game">
+        <div class="pie-container">
+            <button id="btn-compartir">Compartir <span><img src="/Entrega-02//iconos/share.png" alt=""></span></button>
+            <div class="likes">
+                <div>
+                    <img src="/Entrega-02//iconos/like.png" alt="">
+                    <p>3</p>
+                </div>
+                <div>
+                    <img src="/Entrega-02//iconos/dislike.png" alt="">
+                    <p>13</p>
+                </div>
+            </div>
+        </div>
+        <div class="config">
+            <img src="/Entrega-02//iconos/sonido.png" alt="">
+            <img src="/Entrega-02//iconos/full-screen.png" alt="">
+        </div>
+    </div>
+    <div class="data-game">
+        <div class="seccion">
+            <div class="titulo">
+                <h4>¿Cómo jugar al 4 en linea</h4>
+            </div>
+            <div class="texto">
+                <p> Las normas del cuatro en raya son muy sencillas. Se juega siempre entre 2 jugadores y sobre un
+                    tablero de 7x6 casillas. En cada turno cada jugador coloca una ficha de su color en una columna y
+                    esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del mismo color
+                    seguidas en horizontal, vertical u oblicuo gana. Si nadie lo consigue la partida termina en empate
+                </p>
+            </div>
+            <div class="sub-titulo">
+                <h3>Controles</h3>
+            </div>
+            <div class="data">
+                <div class="controles">
+                    <img src="/Entrega-02//iconos/mouse.png" alt="">
+                    <p>seleccionar</p>
+                </div>
+            </div>
+        </div>
+        <div class="seccion">
+            <div class="titulo">
+                <h4>Gameplays y capturas del juego</h4>
+            </div>
+            <div class="multimedia">
+                <img src="/Entrega-02//assets/otraconecta.png" alt="">
+                <img src="/Entrega-02//assets/4enlines.png" alt="">
+                <img src="/Entrega-02//assets/conectaEdit.png" alt="">
+                <img src="/Entrega-02//assets/linea 1.png" alt="">
+            </div>
+        </div>
+        <div class="seccion">
+            <div class="titulo">
+                <h4>Tambien podras jugarlo aqui:</h4>
+                <div class="multimedia">
+                    <img src="/Entrega-02//iconos/SVGRepo_iconCarrier.png" alt="">
+                    <img src="/Entrega-02//iconos/SVGRepo_iconCarrier2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comentarios">
+        <div class="nuevo-comentario">
+            <div class="img-usuario">
+                <img src="/Entrega-02//iconos/Groot.png" alt="">
+            </div>
+            <div class="comment-container">
+                <p class="comment-label">Tú</p>
+                <input type="text" placeholder="Añade un comentario..." class="comment-input">
+            </div>
+            <div class="botones-comentarios">
+                <button id="btn-comentar">Comentar</button>
+                <button id="btn-cancelar">Cancelar</button>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="fecha-comentario">
+                <p>13/09/2024</p>
+            </div>
+            <div class="coment-container">
+                <div class="img-usuario">
+                    <img src="/Entrega-02//iconos/Groot.png" alt="">
+                </div>
+                <div class="espacio-comentario">
+                    <h4 class="nombre-usuario-coment">huevo123</h4>
+                    <p class="texto-comentario">Gran conceptito el Olga Desk. La rapidez de la producción de armar una
+                        banda de Jazz de una búsqueda que salió en menos de 48 hs..</p>
+                </div>
+            </div>
+            <div class="info-comentario">
+                <div class="botonera-comentario">
+                    <div class="botonera-container">
+                        <div>
+                            <img src="/Entrega-02//iconos/like.png" alt="">
+                            <p>9</p>
+                        </div>
+                        <div>
+                            <img src="/Entrega-02//iconos/dislike.png" alt="">
+                            <p>12</p>
+                        </div>
+                        <button id="btn-responder">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="fecha-comentario">
+                <p>13/09/2024</p>
+            </div>
+            <div class="coment-container">
+                <div class="img-usuario">
+                    <img src="/Entrega-02//iconos/Groot.png" alt="">
+                </div>
+                <div class="espacio-comentario">
+                    <h4 class="nombre-usuario-coment">huevo123</h4>
+                    <p class="texto-comentario">Gran conceptito el Olga Desk. La rapidez de la producción de armar una
+                        banda de Jazz de una búsqueda que salió en menos de 48 hs..</p>
+                </div>
+            </div>
+            <div class="info-comentario">
+                <div class="botonera-comentario">
+                    <div class="botonera-container">
+                        <div>
+                            <img src="/Entrega-02//iconos/like.png" alt="">
+                            <p>9</p>
+                        </div>
+                        <div>
+                            <img src="/Entrega-02//iconos/dislike.png" alt="">
+                            <p>12</p>
+                        </div>
+                        <button id="btn-responder">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="fecha-comentario">
+                <p>13/09/2024</p>
+            </div>
+            <div class="coment-container">
+                <div class="img-usuario">
+                    <img src="/Entrega-02//iconos/Groot.png" alt="">
+                </div>
+                <div class="espacio-comentario">
+                    <h4 class="nombre-usuario-coment">huevo123</h4>
+                    <p class="texto-comentario">Gran conceptito el Olga Desk. La rapidez de la producción de armar una
+                        banda de Jazz de una búsqueda que salió en menos de 48 hs..</p>
+                </div>
+            </div>
+            <div class="info-comentario">
+                <div class="botonera-comentario">
+                    <div class="botonera-container">
+                        <div>
+                            <img src="/Entrega-02//iconos/like.png" alt="">
+                            <p>9</p>
+                        </div>
+                        <div>
+                            <img src="/Entrega-02//iconos/dislike.png" alt="">
+                            <p>12</p>
+                        </div>
+                        <button id="btn-responder">Responder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="row">
+            <div class="col-1">
+                <h4>Categorías de juegos</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Acción</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Carreras</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Estrategia</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Aventura</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">De mesa</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1">
+                <h4>Políticas de privacidad</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Datos personales</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Procesamiento de datos</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Información financiera</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Protección de datos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1">
+                <h4>Términos y condiciones</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Términos de uso</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Uso de la página</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Aplicaciones de terceros</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Responsabilidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-central">
+            <h3>Marvel Entertainment, LLC</h3>
+            <p>a wholly-owned subsidiary of The Walt Disney Company, is one of the world's most prominent
+                character-based entertainment companies, built on a proven library of more than 8,000 characters
+                featured in a variety of media over seventy-five years. Marvel utilizes its character franchises in
+                entertainment, licensing and publishing. For more information visit <a href="">marvel.com</a>. © 2024
+                MARVEL</p>
+
+
+
+            <div class="logos">
+                <img src="/Entrega-02//iconos/stanlee 1.png" alt="Stan Lee" class="stanlee">
+                <div class="iconos-redes">
+                    <a href="https://www.instagram.com" target="">
+                        <img src="/Entrega-02//iconos/logoIG.png" alt="">
+                    </a>
+                    <a href="https://www.facebook.com" target="">
+                        <img src="/Entrega-02/iconos/logoFB.png" alt="">
+                    </a>
+                    <a href="https://www.x.com" target="">
+                        <img src="/Entrega-02//iconos/logoX.png" alt="">
+                    </a>
+                </div>
+                <img src="/Entrega-02/iconos/Marvel_logo.png" alt="" class="marvel">
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>

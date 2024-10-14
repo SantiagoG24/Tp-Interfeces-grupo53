@@ -49,14 +49,10 @@
     gap: 10px;
 }
 
-a.log-out {
-    display: flex;
-    text-decoration: none;
-    color: #FBFAFA;
-    gap: 20px;
-    justify-content: flex-end;
-    padding-left: 0px;
+.h1-categoria {
+    font-size: 26px;
 }
+
 
 .bar-categoria {
     background-color: #656565;
@@ -105,7 +101,7 @@ a.log-out {
     height: 30px;
     background-color: #2887D1;
     color: #ffff;
-    font-family: "Roboto Condensed", sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
     letter-spacing: 0.02em;
     font-style: normal;
@@ -114,13 +110,33 @@ a.log-out {
     margin-bottom: 15px;
     visibility: hidden;
 }
+
 .card-grande:hover .card-imagen {
-   opacity: 50%;
+    opacity: 50%;
 }
+
 .card-grande:hover #btn-jugar {
     visibility: visible;
 }
 
+.dest-grande-azul {
+    font-size: 20px;
+    position: absolute;
+    background-color: #2887D1;
+    top: 0px;
+    left: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    z-index: 1;
+    border-radius: 10px 10px 10px 0px;
+    visibility: hidden;
+}
+
+.card-grande:hover .dest-grande-azul {
+    visibility: visible;
+}
 
 /*.hover-card {
     background-color: #0000008c;
@@ -212,6 +228,8 @@ a.log-out {
     height: 191px;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    flex-grow: 1;
 
 }
 
@@ -292,20 +310,13 @@ a.log-out {
 #btn-jugar-card p, #btn-agregar-card p{
     padding-right: 5px;
 }
+
 #btn-jugar-card:hover {
     transition-duration: 0.6s;
-    width: 40px;
+    width: 70px;
     padding: 5px;
 }
 
-#btn-agregar-card:hover {
-    transition-duration: 0.6s;
-    width: 40px;
-    padding: 5px;
-}
-#btn-agregar-card:hover p  {
-    display: none;
-}
 #btn-jugar-card:hover p {
     display: none;
 }

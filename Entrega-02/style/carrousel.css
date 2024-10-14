@@ -138,24 +138,6 @@
     visibility: visible;
 }
 
-/*.hover-card {
-    background-color: #0000008c;
-    opacity: 100%;
-    width: 470px;
-    height: 266px;
-    padding: 0px;
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    border-radius: 5%;
-    z-index: 2;
-}
-
-.hover-card :hover {
-    animation: hover-card1 1s 1 linear both;
-    background-color: #2887D1;
-}*/
-
 @keyframes hover-card1 {
     from {
         opacity: 10%;
@@ -189,14 +171,6 @@
     gap: 24px;
     transition: all 0.5s cubic-bezier(0.07, 0.48, 0.63, 0.26);
 }
-
-/* .carrousel-card-mini {
-    width: 95%;
-    max-width: 99%;
-    display: flex;
-    overflow: hidden;
-}*/
-
 
 /* div de la card */
 .card {

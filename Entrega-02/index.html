@@ -253,11 +253,13 @@
                                 Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>Marvel Avengers</h2>
-                            <button id="btn-jugar-card">
-                                <p>Jugar</p>
-                                <img id="img-play" src="/Entrega-02/iconos/boton-de-play.png">
-                            </button>
+                            <h2>4 en linea</h2>
+                            <a href="/Entrega-02/game.html">
+                                <button id="btn-jugar-card">
+                                    <p>Jugar</p>
+                                    <img id="img-play" src="/Entrega-02/iconos/boton-de-play.png">
+                                </button>
+                            </a>
                         </div>
                     </div>
                     <div class="card">
@@ -268,12 +270,17 @@
                         </div>
                         <div class="descripcion">
                             <h2>Super Mario</h2>
-                            <div class="quitar">
-                                <button id="btn-jugar-card">
-                                    <p>Quitar</p>
-                                    <img id="img-play" src="/Entrega-02/iconos/quitar-carrito.png">
+                            <div id="contenedor-botones">
+                                <button id="btn-agregar-card" type="button">
+                                    <p>Agregar</p>
+                                    <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
                                 </button>
-                               </div>
+                            
+                                <button id="btn-quitar-card" style="display: none;">
+                                    <p>Quitar</p>
+                                    <img id="img-play" src="/Entrega-02/iconos/quitar-carrito.png" alt="Carrito Quitar">
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -311,7 +318,7 @@
                                 alt="Ghost-TB">
                         </div>
                         <div class="descripcion">
-                            <h2>4 en linea </h2>
+                            <h2>Marvel Avengers</h2>
                             <button id="btn-jugar-card">
                                 <p>Jugar</p>
                                 <img id="img-play" src="/Entrega-02/iconos/boton-de-play.png">
@@ -480,6 +487,7 @@
     </footer>
     <script src="carrousel.js"></script>
     <script src="index.js"></script>
+    <script src="botones.js"></script>
 </body>
 
 </html>

@@ -244,10 +244,6 @@
 
 }
 
-.agregar #btn-jugar-card {
-    background-color: #28d13e;
-}
-
 
 #btn-jugar-card {
     width: 120px;
@@ -293,4 +289,32 @@
 
 #btn-jugar-card:hover p {
     display: none;
+}
+#btn-agregar-card, #btn-quitar-card {
+    width: 114px;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    color: #ffff;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-agregar-card {
+    background-color: rgba(51, 143, 62, 1);
+}
+
+#btn-quitar-card {
+    background-color: rgba(236, 29, 36, 1);
+}
+.descripcion a{
+    text-decoration: none;
 }

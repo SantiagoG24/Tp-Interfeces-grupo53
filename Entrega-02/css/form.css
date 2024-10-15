@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url(../assets/fondo-registro.png);
+  background-image: url(assets/fondo-registro.png);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Roboto Condensed", sans-serif;

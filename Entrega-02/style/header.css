@@ -1,9 +1,8 @@
 header {
     background-color: #030303;
-    width: 1890px;
-    height: 40px;
+    width: 100%;
+    height: 60px;
     padding-top: 5px;
-    margin-top: 5px;
     color: rgb(243, 246, 248);
     top: 0%;
     display: flex;
@@ -28,6 +27,130 @@ header {
     display: none;
     transition: opacity 2s ease, transform 0.5s ease;
 }
+
+.header-menu {
+    align-self: center;
+}
+
+.header-buscar {
+    padding: 0px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.header-izq {
+    padding: 0px;
+    width: 150px;
+    display: flex;
+    gap: 10%;
+}
+
+svg.header-lupa {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 5%;
+    padding: 0px 3px;
+    width: 30px;
+    border-right: 0.5px solid #2b2a2a11;
+    background-color: #0d4c80bb;
+}
+
+input.buscar {
+    font-family: "Roboto", sans-serif;
+    width: 150px;
+    background-color: #0d4c80bb;
+    color: #ffff;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    height: 30px;
+}
+
+.header-izq img {
+    width: auto;
+    height: 40px;
+    object-fit: fill;
+    text-decoration: none;
+}
+
+.marvelcito-logo {}
+
+.header-der {
+    width: 150px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5%;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
+
+    /* header {
+        width: 57%;
+    } */
+
+    .nav-bar {
+        height: 100%;
+    }
+
+    .contenido {
+        width: 100%;
+    }
+
+    .header-izq,
+    .header-buscar,
+    .header-der {
+        width: auto;
+    }
+
+    .header-buscar {
+        display: none;
+        /* Ocultamos la barra de búsqueda en pantallas más pequeñas */
+    }
+
+    header {
+        height: 50px;
+    }
+
+    .header-izq img {
+        height: 30px;
+    }
+
+    input.buscar {
+        width: 100px;
+    }
+
+    .visible {
+        animation: nav-bar1 1s 1 linear both;
+    }
+
+    @keyframes nav-bar1 {
+        0% {
+            width: 160px;
+            height: 1180px;
+        }
+
+        100% {
+            width: 160px;
+            height: 1180px;
+            opacity: 90%;
+        }
+    }
+
+    .div-categoria {
+        max-width: 71%;
+    }
+
+    .carrousel-grande {
+        width: 370px;
+    }
+}
+
 
 .visible {
     display: flex;
@@ -63,59 +186,15 @@ header .header {
     box-sizing: border-box;
 }
 
-.header-menu {
-    align-self: center;
-}
-
-.header-buscar {
-    padding: 0px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-}
-
-.header-izq {
-    padding: 0px;
-    width: 250px;
-    display: flex;
-    gap: 10%;
-
-}
-
-svg.header-lupa {
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5%;
-    padding: 0px 3px;
-    width: 30px;
-    border-right: 0.5px solid #2b2a2a11;
-    background-color: #0d4c80bb;
-}
-
 input.buscar {
     font-family: "Roboto", sans-serif;
     width: 180px;
-
     background-color: #0d4c80bb;
     color: #ffff;
     border: none;
     border-radius: 0px 10px 10px 0px;
     height: 30px;
 
-}
-
-.header-izq img {
-    width: auto;
-    height: 40px;
-}
-
-.header-der {
-    width: 250px;
-    padding: 0px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 5%;
 }
 
 .header-cart {

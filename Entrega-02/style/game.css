@@ -1,5 +1,5 @@
 body {
-    background-image: url(assets/fondo-juego.png);
+    background-image: url(../assets/fondo-juego.png);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Roboto Condensed", sans-serif;

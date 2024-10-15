@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(assets/Fondo.jpg);
+    background-image: url(../assets/Fondo.jpg);
     background-size: cover;
     background-repeat: repeat;
     font-family: "Roboto", sans-serif;

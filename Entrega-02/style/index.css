@@ -21,3 +21,106 @@ body {
     justify-content: flex-start;
     margin-top: 30px;
 }
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 1000px;
+    width: 100%;
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-around;
+    gap: 62px;
+    max-width: 594px;
+    margin: auto;
+    text-align: left;
+
+}
+
+footer .col-1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .col-1 li {
+    margin-bottom: 1px;
+}
+
+footer .col-1 a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer .row .col-1 h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+footer .col-1 a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .div-central {
+    margin-bottom: 15px;
+}
+
+footer .div-central h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+
+footer .div-central p {
+    font-size: 15px;
+    line-height: 1.4;
+    max-width: 810px;
+    margin: 0 auto 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .div-central .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .div-central .iconos-redes img {
+    width: 25px;
+}
+
+footer .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .logos .stanlee {
+    width: 90px;
+}
+
+footer .logos .marvel {
+    width: 90px;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}

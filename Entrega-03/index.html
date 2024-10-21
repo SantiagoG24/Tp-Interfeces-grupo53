@@ -4,17 +4,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/carrousel.css">
+    <link rel="preconnect" href="Tp-Interfeces-grupo53https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Marvelcito</title>
 </head>
 
 <body>
-    <h1><a href="https://www.figma.com/design/e31iTvc270QNkH6pWIJADF/InterfacesGrupo53?node-id=0-1&t=nuN4UnpsbK4bO7Dt-1"
-            target="_blank">Figma</a>
-    </h1>
+    <header class="header">
+        <!-- div de la izquierda -->
+        <div class="header-izq">
+            <div id="header-menu"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <g fill="none">
+                        <path
+                            d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                        <path fill="#ffffff"
+                            d="M20 17.5a1.5 1.5 0 0 1 .144 2.993L20 20.5H4a1.5 1.5 0 0 1-.144-2.993L4 17.5zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 0 1 0-3zm0-7a1.5 1.5 0 0 1 0 3H4a1.5 1.5 0 1 1 0-3z" />
+                    </g>
+                </svg>
+            </div>
+            <!-- hasta aca el menu -->
 
-    <a target="_blank"
-        href="https://www.figma.com/proto/e31iTvc270QNkH6pWIJADF/InterfacesGrupo53?node-id=447-1501&node-type=frame&t=HSivmGAPgtPjx2lC-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A3">Figma
-        modo presantacion</a>
+            <a href="marvelcito-logo"></a><img src="assets/Marvelcito.jpg" alt="logo de Marvelcito"></a>
+
+        </div>
+        <!-- div del medio -->
+        <div class="header-buscar">
+            <svg class="header-lupa" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256">
+                <g fill="white">
+                    <path d="M192 112a80 80 0 1 1-80-80a80 80 0 0 1 80 80" opacity="0.2" />
+                    <path
+                        d="m229.66 218.34l-50.06-50.06a88.21 88.21 0 1 0-11.32 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32M40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72" />
+                </g>
+            </svg>
+            <input class="buscar" type="text" name="buscar" id="busqueda" placeholder="¿A que jugamos hoy?...">
+        </div>
+        <!-- /div derecha -->
+        <div class="header-der">
+            <div class="header-cart"><img src="assets/carrito.png" alt="cart-compras"></div>
+            <div class="header-user"><img src="iconos/Groot.png" alt="user-logo"></div>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-user-defoult.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Mi perfil</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-libreria.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Mi juegos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-reloj.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Ultimos jugados</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-tendencia.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Tendencia</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/MdiGift.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Nuevos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-accion.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Accion</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-autos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Autos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-aventura.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Aventuras</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-carreras.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Carreras</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-cartas.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Cartas</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-deportes.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Deportes</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-disparos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Disparos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-estrategia.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Estrategia</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-towerdefense.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Defensa de torres</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <div class="icon-categoria"><img src="iconos/icon-vestidos.png" alt=""></div>
+            <div class="text-categoria">
+                <h2>Vestidos</h2>
+            </div>
+        </div>
+        <div class="categoria">
+            <a class="log-out" href="login.html">
+                <div class="text-categoria">
+                    <h2 class="log-out">Log out</h2>
+                </div>
+                <div class="icon-categoria"><img src="iconos/StreamlineLogout1Solid.png" alt=""></div>
+            </a>
+        </div>
+
+
+    </nav>
+    <div class="contenido">
+        <div class="div-categoria">
+            <h1 class="h1-categoria">Destacados</h1>
+            <div class="bar-categoria"></div>
+        </div>
+        <div class="carrousel-grande">
+            <div id="btn_prev" class="btn-prev" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+            <div class="carrousel-container">
+                <div class="card-container" id="card-container">
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/Ghost-TB.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/maxresdefault (1).jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/cuphead.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/Grounded.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/gofofwar.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/R.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/spider-man-2-.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                    <div class="card-grande">
+                        <img class="card-imagen" src="assets/juegos/super-mario-game.jpg" alt="Ghost-TB">
+                        <button id="btn-jugar">Jugar</button>
+                        <div class="dest-grande-azul">Gratis</div>
+                    </div>
+                </div>
+            </div>
+            <div id="btn_next" class="btn-next" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+        </div>
+        <!-- TITULO DE LA CATEGORIA -->
+        <div class="div-categoria">
+            <h1 class="h1-categoria">Destacados</h1>
+            <div class="bar-categoria"></div>
+        </div>
+        <div class="carrousel-card-mini">
+            <!-- FLECHA IZQ -->
+            <div id="btn_prev1" class="btn-prev" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+            <!-- FLECHA IZQ -->
+            <div class="carrousel-container">
+                <div class="cont-carrousel-mini" id="cont-carrousel-mini">
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/Ghost-TB.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Call of duty moder warfare II</h2>
+                            <div>
+                                <button id="btn-jugar-card">
+                                    <p>Jugar</p>
+                                    <img id="img-play" src="iconos/boton-de-play.png">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/4 en linea.jpg"" alt=" Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>4 en linea</h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <a href="game.html"><img id="img-play" src="iconos/boton-de-play.png"></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">$25.000</div>
+                            <img class="card-imagen-mini" src="assets/juegos/super-mario-game.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Super Mario</h2>
+                            <div id="contenedor-botones">
+                                <button id="btn-agregar-card" type="button">
+                                    <p>Agregar</p>
+                                    <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
+                                </button>
+
+                                <button id="btn-quitar-card" style="display: none;">
+                                    <p>Quitar</p>
+                                    <img id="img-play" src="iconos/quitar-carrito.png">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini"
+                                src="assets/juegos/God-of-War-Ragnarok-Featured-image-9998438-850x491.jpg"
+                                alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>God of War Ragnarok</h2>
+                            <div class="agregar">
+                                <button id="btn-jugar-card">
+                                    <p>Agregar</p>
+                                    <img id="img-play" src="iconos/carrito.png">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/Grounded.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Grounded</h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <img id="img-play" src="iconos/boton-de-play.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/maxresdefault (1).jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Marvel Avengers</h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <img id="img-play" src="iconos/boton-de-play.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/R.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>FC 24</h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <img id="img-play" src="iconos/boton-de-play.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">$10.000</div>
+                            <img class="card-imagen-mini" src="assets/juegos/cuphead.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Cuphead</h2>
+                            <div class="agregar">
+                                <button id="btn-jugar-card">
+                                    <p>Agregar</p>
+                                    <img id="img-play" src="iconos/carrito.png">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">$50.000</div>
+                            <img class="card-imagen-mini" src="assets/juegos/valorant-portada.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>Valorant</h2>
+                            <div class="quitar">
+                                <button id="btn-jugar-card">
+                                    <p>Quitar</p>
+                                    <img id="img-play" src="iconos/quitar-carrito.png">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/gofofwar.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>God of War</h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <img id="img-play" src="iconos/boton-de-play.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-container">
+                            <div class="destacado">Gratis</div>
+                            <img class="card-imagen-mini" src="assets/juegos/isaac.jpg" alt="Ghost-TB">
+                        </div>
+                        <div class="descripcion">
+                            <h2>The Binding of Isaac rebirth </h2>
+                            <button id="btn-jugar-card">
+                                <p>Jugar</p>
+                                <img id="img-play" src="iconos/boton-de-play.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="btn_next1" class="btn-next" class="flecha-izq"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 1024 1024">
+                    <path fill="white"
+                        d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-1">
+                <h4>Categorías de juegos</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Acción</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Carreras</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Estrategia</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Aventura</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">De mesa</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1">
+                <h4>Políticas de privacidad</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Datos personales</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Procesamiento de datos</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Información financiera</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Protección de datos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-1">
+                <h4>Términos y condiciones</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Términos de uso</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Uso de la página</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Aplicaciones de terceros</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Responsabilidad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div-central">
+            <h3>Marvel Entertainment, LLC</h3>
+            <p>a wholly-owned subsidiary of The Walt Disney Company, is one of the world's most prominent
+                character-based entertainment companies, built on a proven library of more than 8,000 characters
+                featured in a variety of media over seventy-five years. Marvel utilizes its character franchises in
+                entertainment, licensing and publishing. For more information visit <a href="">marvel.com</a>. © 2024
+                MARVEL</p>
+
+
+
+            <div class="logos">
+                <img src="/Entrega-02//iconos/stanlee 1.png" alt="Stan Lee" class="stanlee">
+                <div class="iconos-redes">
+                    <a href="https://www.instagram.com" target="">
+                        <img src="/Entrega-02//iconos/logoIG.png" alt="">
+                    </a>
+                    <a href="https://www.facebook.com" target="">
+                        <img src="/Entrega-02/iconos/logoFB.png" alt="">
+                    </a>
+                    <a href="https://www.x.com" target="">
+                        <img src="/Entrega-02//iconos/logoX.png" alt="">
+                    </a>
+                </div>
+                <img src="/Entrega-02/iconos/Marvel_logo.png" alt="" class="marvel">
+            </div>
+        </div>
+    </footer>
+    <script src="carrousel.js"></script>
+    <script src="index.js"></script>
+    <script src="botones.js"></script>
 </body>
 
 </html>

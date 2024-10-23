@@ -17,7 +17,7 @@ class Circle {
         this.ctx.fillStyle = this.fill;
         this.ctx.fill();
         this.ctx.closePath();
-        this.ctx.drawImage(this.img, this.posX - 15, this.posY - 15);
+        this.ctx.drawImage(this.img, this.posX - 25.5, this.posY - 25, 50, 50);
     }
 
     getName() {

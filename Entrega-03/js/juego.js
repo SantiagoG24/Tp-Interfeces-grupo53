@@ -1,3 +1,16 @@
+btn_play = document.getElementById("btn-play");
+btn_play.addEventListener('click', play);
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+let canvasWidth = canvas.width;
+let canvasHeight = canvas.height;
+let fichasEnPartida = [];
+let matriz = [];
+function play() {
+    let imgironman = "assets/ironman-logo.png";
+    let imgcapitan = "captain.america.logo.png";
+    drawFicha("ironman", 45, 45, "red", imgironman)
+}
 function createTablero(inicioTable) {
     for (let x = 0; x < filas; x++) {
         let fila = [];
@@ -127,15 +140,15 @@ function playActive() {
     function play(fichaIronman, FichaCapitanAmerica, mode) {
 
         let canvas = document.getElementById("myCanvas");
-        canvas.classList.toggle("active");
-        let timeGame = document.getElementById("timeGame");
-        timeGame.classList.toggle("active");
-        let timeTurn = document.getElementById("timeTurn");
-        timeTurn.classList.toggle("active");
-        let opcionInGame = document.getElementById("opcionInGame");
-        opcionInGame.classList.toggle("active");
-        fichasEleccion.classList.toggle("desactive");
-        gameMenu.classList.toggle("active");
+        // canvas.classList.toggle("active");
+        // let timeGame = document.getElementById("timeGame");
+        // timeGame.classList.toggle("active");
+        // let timeTurn = document.getElementById("timeTurn");
+        // timeTurn.classList.toggle("active");
+        // let opcionInGame = document.getElementById("opcionInGame");
+        // opcionInGame.classList.toggle("active");
+        // fichasEleccion.classList.toggle("desactive");
+        // gameMenu.classList.toggle("active");
 
         /** @type {CanvasRenderingContext2D} */
         let ctx = canvas.getContext("2d");
@@ -155,21 +168,21 @@ function playActive() {
         let winner = document.getElementById("winner");
         let exitEnGame = document.getElementById("exitEndGame");
 
-        let reload = document.getElementById("reload");
-        reload.addEventListener("click", () => {
-            cronometroPartida = 0;
-            cronometroJugador = 0;
-            local = true;
-            for (let i = 0; i < fichasEnPartida.length; i++) {
-                fichasEnPartida.pop();
-            }
-            for (let i = 0; i < matriz.length; i++) {
-                for (let j = 0; j < matriz[i].length; j++) {
-                    matriz[i][j].deleteOcupado();
-                }
-            }
-            clearCanvas();
-        });
+        // let reload = document.getElementById("reload");
+        // reload.addEventListener("click", () => {
+        //     cronometroPartida = 0;
+        //     cronometroJugador = 0;
+        //     local = true;
+        //     for (let i = 0; i < fichasEnPartida.length; i++) {
+        //         fichasEnPartida.pop();
+        //     }
+        //     for (let i = 0; i < matriz.length; i++) {
+        //         for (let j = 0; j < matriz[i].length; j++) {
+        //             matriz[i][j].deleteOcupado();
+        //         }
+        //     }
+        //     clearCanvas();
+        // });
 
         function tableModeCreate() {
 
@@ -261,11 +274,6 @@ function playActive() {
             }, 900);
         }
 
-        function drawFicha(name, x, color, img) {
-            ficha = new Circle(name, x, 335, 25, color, ctx, img);
-            fichasEnPartida.push(ficha);
-            actualizar();
-        }
 
         function actualizar() {
             clearCanvas();
@@ -284,9 +292,13 @@ function playActive() {
                 }
             }
         }
+        function drawFicha(name, x, color, img) {
+            ficha = new Circle(name, x, 335, 25, color, ctx, img);
+            fichasEnPartida.push(ficha);
+            actualizar();
+        }
 
         canvas.addEventListener("mousedown", onMouseDown, false);
-
         function onMouseDown(e) {
             isMouseDown = true;
 

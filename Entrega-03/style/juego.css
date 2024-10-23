@@ -12,14 +12,6 @@ button {
     border-radius: 2px; */
 }
 
-img.img-opcion {
-
-    width: 320px;
-    height: 320px;
-    border-radius: 60%;
-    background-color: white;
-}
-
 .opcion img {
     width: 100px;
     height: 100px;

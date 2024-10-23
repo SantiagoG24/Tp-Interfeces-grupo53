@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="juego.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="buttonsGame" id="buttonsGame">
+        <button id="mode4">Jugar 4 en linea</button>
+        <button id="mode5">Jugar 5 en linea</button>
+        <button id="mode6">Jugar 6 en linea</button>
+        <button id="mode7">Jugar 7 en linea</button>
+        <button id="help">Instrucciones</button>
+    </div>
+    <div class="fichasEleccion" id="fichasEleccion">
+        <div class="opcion">
+            <img src="ironman-logo.png" alt="Escudo de River Plate"> <img src="captain-america-logo.png"
+                alt="Escudo de Boca Juniors">
+            <button id="buttonOpcionA">Opcion A</button>
+            <button id="buttonOpcionB">Opcion B</button>
+            <img src="ironman-logo2.png" alt="Escudo alternativo de River Plate"> <img src="captain-america-logo2.png"
+                alt="Escudo alternativo de Boca Juniors">
+        </div>
+        <div class="buttonBack">
+            <button id="back">Volver</button>
+        </div>
+    </div>
+    <canvas class="myCanvas" id="myCanvas" width="1353" height="670"></canvas>
+</body>
+<button id="btn-play">Play</button>
+<script src="juego.js"></script>
+<script src="objetosJuego/Casillero.js"></script>
+<script src="objetosJuego/Circle.js"></script>
+<script src="objetosJuego/Tiempo.js"></script>
+
+</html>

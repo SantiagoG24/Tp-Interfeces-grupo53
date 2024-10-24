@@ -6,7 +6,43 @@ let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 let fichasEnPartida = [];
 let matriz = [];
+let mode
 function play() {
+    let selecionModo = document.getElementById("buttonsGame");
+    selecionModo.classList.toggle("active"); //muestro la seccion de los modos
+
+    let buttonMode4 = document.getElementById("mode4");
+    let buttonMode5 = document.getElementById("mode5");
+    let buttonMode6 = document.getElementById("mode6");
+    let buttonMode7 = document.getElementById("mode7");
+    // let help = document.getElementById("help");
+    // let back = document.getElementById("back");
+    // let closeHelp = document.getElementById("closeHelp");
+
+    buttonMode4.addEventListener("click", () => {
+        mode = 4;
+    });
+    buttonMode5.addEventListener("click", () => {
+        mode = 5;
+    });
+    buttonMode6.addEventListener("click", () => {
+        mode = 6;
+    });
+    buttonMode7.addEventListener("click", () => {
+        mode = 7;
+    });
+    let btn_mode = document.getElementById("btn-modo");
+    btn_mode.addEventListener('click', showSelecionFicha);
+}
+
+
+function showSelecionFicha() {
+    let selecionFicha = document.getElementById("fichasEleccion")
+    selecionFicha.classList.toggle("active")
+    let start_game = document.getElementById("start-game");
+    start_game.addEventListener('click', startGame)
+}
+function startGame() {
     let imgironman = "assets/ironman-logo.png";
     let imgcapitan = "captain.america.logo.png";
     drawFicha("ironman", 45, 45, "red", imgironman)
@@ -69,32 +105,7 @@ function playActive() {
     // instrucciones.classList.toggle("desactive");
     // gameMenu.classList.toggle("active");
 
-
-    let buttonMode4 = document.getElementById("mode4");
-    let buttonMode5 = document.getElementById("mode5");
-    let buttonMode6 = document.getElementById("mode6");
-    let buttonMode7 = document.getElementById("mode7");
-    // let help = document.getElementById("help");
-    // let back = document.getElementById("back");
-    // let closeHelp = document.getElementById("closeHelp");
-
-    buttonMode4.addEventListener("click", () => {
-        let mode = 4;
-        elegirEscudos(mode);
-        console.log(mode)
-    });
-    buttonMode5.addEventListener("click", () => {
-        let mode = 5;
-        elegirEscudos(mode);
-    });
-    buttonMode6.addEventListener("click", () => {
-        let mode = 6;
-        elegirEscudos(mode);
-    });
-    buttonMode7.addEventListener("click", () => {
-        let mode = 7;
-        elegirEscudos(mode);
-    });
+    //
 
     // help.addEventListener("click", () => {
     //     toggle2(buttonsGame, instrucciones);

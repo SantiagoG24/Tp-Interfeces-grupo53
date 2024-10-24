@@ -1,15 +1,29 @@
 canvas {
     background-color: black;
+
 }
 
-body {
-    /* background-color: blue; */
+.button {
+    z-index: -1;
 }
 
-button {
-    /* width: 40px;
-    height: 15px;
-    border-radius: 2px; */
+.buttonsGame {
+    opacity: 0;
+    z-index: -1;
+}
+
+.fichasEleccion {
+    opacity: 0;
+    z-index: -1;
+}
+
+.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+.active {
+    z-index: 2;
 }
 
 .opcion img {

@@ -1,51 +1,69 @@
 btn_play = document.getElementById("btn-play");
-btn_play.addEventListener('click', play);
+btn_play.addEventListener('click', showConfig);
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 let fichasEnPartida = [];
 let matriz = [];
-let mode
-function play() {
-    let selecionModo = document.getElementById("buttonsGame");
-    selecionModo.classList.toggle("active"); //muestro la seccion de los modos
+let mode = 0;
+let tablero;
 
-    let buttonMode4 = document.getElementById("mode4");
-    let buttonMode5 = document.getElementById("mode5");
-    let buttonMode6 = document.getElementById("mode6");
-    let buttonMode7 = document.getElementById("mode7");
+function showConfig() {
+    let selecionModo = document.getElementById("selecionModo");
+    let selecionFicha = document.getElementById("fichasEleccion");
+    let btn_modo = document.getElementById("btn-modo");
+    let start_game = document.getElementById("start-game");
+
+    btn_modo.addEventListener('click', showSelecionFicha);
+    start_game.addEventListener('click', startGame)
+    selecionModo.addEventListener('click', selecionFicha);
+
+    showMode();
+    function showMode() {
+        selecionModo.classList.toggle("active");
+        let buttonMode4 = document.getElementById("mode4");
+        let buttonMode5 = document.getElementById("mode5");
+        let buttonMode6 = document.getElementById("mode6");
+        let buttonMode7 = document.getElementById("mode7");
+        buttonMode4.addEventListener("click", () => {
+            mode = 4;
+        });
+        buttonMode5.addEventListener("click", () => {
+            mode = 5;
+        });
+        buttonMode6.addEventListener("click", () => {
+            mode = 6;
+        });
+        buttonMode7.addEventListener("click", () => {
+            mode = 7;
+        });
+
+    }
+
+    function showSelecionFicha() {
+        selecionModo.classList.toggle("sacar");
+        selecionFicha.classList.toggle("active");
+    }
+    function startGame() {
+        selecionFicha.classList.toggle("sacar");
+        armarTablero(mode);
+        let imgironman = "assets/ironman-logo.png";
+        let imgcapitan = "captain.america.logo.png";
+        drawFicha("ironman", 45, 45, "red", imgironman)
+    }
+    function armarTablero() {
+        tablero = new Tablero(ctx, mode, 0, 67);
+    }
+}
+function play() {
+
+
     // let help = document.getElementById("help");
     // let back = document.getElementById("back");
     // let closeHelp = document.getElementById("closeHelp");
 
-    buttonMode4.addEventListener("click", () => {
-        mode = 4;
-    });
-    buttonMode5.addEventListener("click", () => {
-        mode = 5;
-    });
-    buttonMode6.addEventListener("click", () => {
-        mode = 6;
-    });
-    buttonMode7.addEventListener("click", () => {
-        mode = 7;
-    });
-    let btn_mode = document.getElementById("btn-modo");
-    btn_mode.addEventListener('click', showSelecionFicha);
-}
 
-
-function showSelecionFicha() {
-    let selecionFicha = document.getElementById("fichasEleccion")
-    selecionFicha.classList.toggle("active")
-    let start_game = document.getElementById("start-game");
-    start_game.addEventListener('click', startGame)
-}
-function startGame() {
-    let imgironman = "assets/ironman-logo.png";
-    let imgcapitan = "captain.america.logo.png";
-    drawFicha("ironman", 45, 45, "red", imgironman)
 }
 function createTablero(inicioTable) {
     for (let x = 0; x < filas; x++) {
@@ -137,7 +155,6 @@ function playActive() {
         buttonopcionB.addEventListener("click", () => {
             let imgFichaIronman = "ironman-logo2.png";
             let imgFichaCapitanAmerica = "captain-america-logo2.png";
-
 
             play(imgFichaIronman, imgFichaCapitanAmerica, mode);
         });

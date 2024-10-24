@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="buttonsGame" id="buttonsGame">
+    <div class="buttonsGame" id="selecionModo">
         <button id="mode4">Jugar 4 en linea</button>
         <button id="mode5">Jugar 5 en linea</button>
         <button id="mode6">Jugar 6 en linea</button>
@@ -25,11 +25,12 @@
             <button id="buttonOpcionB">Opcion B</button>
             <img src="assets/ironman-logo2.png" alt="iron man ficha"> <img src="assets/captain-america-logo2.png"
                 alt="capitan america ficha">
+            <div class="buttonBack">
+                <button id="back">Volver</button>
+                <button id="start-game">Comenzar</button>
+            </div>
         </div>
-        <div class="buttonBack">
-            <button id="back">Volver</button>
-            <button id="start-game">Comenzar</button>
-        </div>
+
     </div>
     <canvas class="myCanvas" id="myCanvas" width="1353" height="670"></canvas>
 </body>
@@ -38,5 +39,6 @@
 <script src="js/objetosJuego/Casillero.js"></script>
 <script src="js/objetosJuego/Circle.js"></script>
 <script src="js/objetosJuego/Tiempo.js"></script>
+<script src="js/objetosJuego/Tablero.js"></script>
 
 </html>

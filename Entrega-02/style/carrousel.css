@@ -51,6 +51,7 @@
 
 .h1-categoria {
     font-size: 26px;
+<<<<<<< HEAD
 }
 
 a.log-out {
@@ -60,7 +61,10 @@ a.log-out {
     gap: 20px;
     justify-content: flex-end;
     padding-left: 0px;
+=======
+>>>>>>> main
 }
+
 
 .bar-categoria {
     background-color: #656565;
@@ -129,6 +133,7 @@ a.log-out {
 
 .dest-grande-azul {
     font-size: 20px;
+<<<<<<< HEAD
     position: absolute;
     background-color: #2887D1;
     top: 0px;
@@ -152,17 +157,24 @@ a.log-out {
     width: 470px;
     height: 266px;
     padding: 0px;
+=======
+>>>>>>> main
     position: absolute;
-    top: 0%;
-    bottom: 0%;
-    border-radius: 5%;
-    z-index: 2;
+    background-color: #2887D1;
+    top: 0px;
+    left: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    z-index: 1;
+    border-radius: 10px 10px 10px 0px;
+    visibility: hidden;
 }
 
-.hover-card :hover {
-    animation: hover-card1 1s 1 linear both;
-    background-color: #2887D1;
-}*/
+.card-grande:hover .dest-grande-azul {
+    visibility: visible;
+}
 
 @keyframes hover-card1 {
     from {
@@ -197,14 +209,6 @@ a.log-out {
     gap: 24px;
     transition: all 0.5s cubic-bezier(0.07, 0.48, 0.63, 0.26);
 }
-
-/* .carrousel-card-mini {
-    width: 95%;
-    max-width: 99%;
-    display: flex;
-    overflow: hidden;
-}*/
-
 
 /* div de la card */
 .card {
@@ -278,10 +282,6 @@ a.log-out {
 
 }
 
-.agregar #btn-jugar-card {
-    background-color: #28d13e;
-}
-
 
 #btn-jugar-card {
     width: 120px;
@@ -327,4 +327,35 @@ a.log-out {
 
 #btn-jugar-card:hover p {
     display: none;
+<<<<<<< HEAD
+=======
+}
+#btn-agregar-card, #btn-quitar-card {
+    width: 114px;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    color: #ffff;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-agregar-card {
+    background-color: rgba(51, 143, 62, 1);
+}
+
+#btn-quitar-card {
+    background-color: rgba(236, 29, 36, 1);
+}
+.descripcion a{
+    text-decoration: none;
+>>>>>>> main
 }

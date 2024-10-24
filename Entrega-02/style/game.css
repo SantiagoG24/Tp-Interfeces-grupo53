@@ -1,9 +1,19 @@
 body {
+<<<<<<< HEAD
     background-image: url(/Entrega-02/assets/fondo-juego.png);
+=======
+    background-image: url(../assets/fondo-juego.png);
+>>>>>>> main
     background-size: cover;
     background-repeat: no-repeat;
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
+<<<<<<< HEAD
+=======
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+>>>>>>> main
 }
 
 .div-superior {
@@ -371,8 +381,11 @@ body {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
 /* FOOTER */
 
 footer {

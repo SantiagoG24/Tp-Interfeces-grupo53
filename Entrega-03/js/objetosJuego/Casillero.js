@@ -10,7 +10,7 @@ class Casillero {
         this.imgFicha = null;
         this.imgOcupacion = null;
         this.imgCasillero = new Image();
-        this.imgCasillero.src = "assets/4enlines.png";
+        this.imgCasillero.src = "assets/Fondo.png";
     }
 
     draw() {

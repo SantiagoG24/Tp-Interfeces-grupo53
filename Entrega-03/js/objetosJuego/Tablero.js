@@ -60,17 +60,27 @@ class Tablero {
         if (modo == 6) {
             this.filas = 8 + 1;
             this.columnas = 9;
-            inicioTable = 55.3;
+            inicioTable = 155.3;
             this.llenarTablero(inicioTable);
         }
         if (modo == 7) {
             this.filas = 9 + 1;
             this.columnas = 9;
-            inicioTable = 55;
+            inicioTable = 155;
             this.llenarTablero(inicioTable);
         }
         console.log(this.tablero)
 
+    }
+    drawTablero() {
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = 0; j < this.tablero[i].length; j++) {
+                this.tablero[i][j].draw();
+                this.tablero[i][j].drawObj();
+            }
+        }
     }
 
     llenarTablero(inicioTable) {

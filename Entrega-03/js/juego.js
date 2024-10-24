@@ -51,9 +51,10 @@ function showConfig() {
         let imgironman = "assets/ironman-logo.png";
         let imgcapitan = "captain.america.logo.png";
         drawFicha("ironman", 45, 45, "red", imgironman)
+        tablero.drawTablero();
     }
     function armarTablero() {
-        tablero = new Tablero(ctx, mode, 0, 67);
+        tablero = new Tablero(ctx, mode, 5, 67);
     }
 }
 function play() {

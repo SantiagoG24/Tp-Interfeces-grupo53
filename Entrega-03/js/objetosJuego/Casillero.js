@@ -10,13 +10,13 @@ class Casillero {
         this.imgFicha = null;
         this.imgOcupacion = null;
         this.imgCasillero = new Image();
-        this.imgCasillero.src = "assets/Fondo.png";
+        this.imgCasillero.src = "../../Entrega-03/assets/casillero.jpg";
     }
 
     draw() {
-        this.ctx.fillStyle = "#B2FFFF";
+        this.ctx.fillStyle = "#757575";
         this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 67);
-        this.ctx.drawImage(this.imgCasillero, this.inicioX + 10, this.inicioY + 20);
+        this.ctx.drawImage(this.imgCasillero, this.inicioX - 105, this.inicioY - 67);
 
         this.ctx.beginPath();
         this.ctx.arc(this.inicioX + 52.65, this.inicioY + 33.5, 25, 0, 2 * Math.PI);

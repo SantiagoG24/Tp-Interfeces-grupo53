@@ -8,6 +8,7 @@ let fichasEnPartida = [];
 let matriz = [];
 let mode = 0;
 let tablero;
+let ficha1;
 
 function showConfig() {
     let selecionModo = document.getElementById("selecionModo");
@@ -50,8 +51,10 @@ function showConfig() {
         armarTablero(mode);
         let imgironman = "assets/ironman-logo.png";
         let imgcapitan = "captain.america.logo.png";
-        drawFicha("ironman", 45, 45, "red", imgironman)
+        drawFicha("ironman", 45, 45, "red", imgironman);
         tablero.drawTablero();
+
+
     }
     function armarTablero() {
         tablero = new Tablero(ctx, mode, 5, 67);

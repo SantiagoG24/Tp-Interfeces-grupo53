@@ -63,4 +63,8 @@ class Circle {
     getImg() {
         return this.source;
     }
+
+    isPointInside(){
+        return !(x<this.posX || x +this.posX )
+    }
 }

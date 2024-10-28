@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeCarousel();
 
+
     // Función para inicializar el carrusel
     function initializeCarousel() {
         const carouselContainers = document.querySelectorAll('.carousel-container');
         const cardWidth = document.querySelector('.card-grande').offsetWidth + 15; // Ancho de la card + margen
-        console.log(carouselContainers);
         carouselContainers.forEach(container => {
             const carousel = container.querySelector('.carousel');
+            // console.log(carousel);
             container.querySelector('.right-arrow').addEventListener('click', () => {
                 const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
 
@@ -50,5 +51,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
 })

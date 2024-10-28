@@ -1,36 +1,5 @@
-/* botones flechas */
-.btn-next {
-    background-color: #272626;
-    width: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-90deg);
-    cursor: pointer;
-}
-
-.btn-prev {
-    background-color: #272626;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(90deg);
-    cursor: pointer;
-}
-
-
 /* carrousel grande */
-.carrousel-grande {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
+
 
 
 .carrousel-container {
@@ -164,15 +133,6 @@
 }
 
 /* div de la card */
-.card {
-    padding: 0px;
-    box-sizing: content-box;
-    width: 218px;
-    height: 295px;
-    position: relative;
-    overflow: hidden;
-}
-
 .destacado {
     position: absolute;
     background-color: #206ba8;
@@ -209,6 +169,7 @@
     align-items: center;
     border-radius: 0px 0px 10px 10px;
     justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .descripcion h2 {
@@ -324,8 +285,17 @@
     overflow: hidden;
 }
 
-.left-arrow {
-    rotate: 90deg;
+.mini {
+    height: 370px;
+}
+
+.carousel-mini {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-left: 15px;
+
 }
 
 .carousel {
@@ -336,6 +306,22 @@
     margin-left: 15px;
     scroll-behavior: smooth;
 }
+
+.card {
+    padding: 0px;
+    box-sizing: content-box;
+    width: 218px;
+    height: 295px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.left-arrow {
+    rotate: 90deg;
+}
+
+
 
 .right-arrow {
     rotate: -90deg;

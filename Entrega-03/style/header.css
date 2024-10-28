@@ -21,7 +21,7 @@ header {
     background-color: #1F1E1E;
     opacity: 0%;
     position: fixed;
-    top: 43px;
+    top: 60px;
     left: 1px;
     z-index: 2;
     display: none;
@@ -243,6 +243,15 @@ div.header-der div {
 }
 
 a.log-out {
+    display: flex;
+    text-decoration: none;
+    color: #FBFAFA;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-left: 0px;
+}
+
+.categoria a {
     display: flex;
     text-decoration: none;
     color: #FBFAFA;

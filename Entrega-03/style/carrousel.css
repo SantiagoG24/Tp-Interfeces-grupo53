@@ -12,6 +12,7 @@
     height: 32px;
     width: 1698px;
     padding-bottom: 10px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,6 +20,7 @@
 }
 
 .h1-categoria {
+    width: auto;
     font-size: 26px;
 }
 
@@ -286,7 +288,7 @@
 }
 
 .mini {
-    height: 370px;
+    height: 300px;
 }
 
 .carousel-mini {

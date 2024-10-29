@@ -72,8 +72,6 @@ input.buscar {
     text-decoration: none;
 }
 
-.marvelcito-logo {}
-
 .header-der {
     width: 150px;
     padding: 0px;
@@ -169,6 +167,49 @@ input.buscar {
         height: 1080px;
         opacity: 90%;
     }
+}
+
+.user-menu {
+    background-color: #1F1E1E;
+    opacity: 0%;
+    position: fixed;
+    top: 60px;
+    right: 1px;
+    z-index: 2;
+    display: none;
+    transition: opacity 2s ease, transform 0.5s ease;
+}
+
+.visible-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: nav-user 1s 1 linear both;
+}
+
+@keyframes nav-user {
+    0% {
+        width: 250px;
+        height: 280px;
+    }
+
+    100% {
+        width: 250px;
+        height: 280px;
+        opacity: 95%;
+    }
+}
+
+.categoria-menu {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .categoria {

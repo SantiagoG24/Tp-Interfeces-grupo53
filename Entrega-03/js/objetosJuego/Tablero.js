@@ -11,6 +11,15 @@ class Tablero {
         this.tablero = [];
         this.crearTablero(modo);
     }
+
+    getFilas(){
+        return this.filas-1;
+    }
+
+    getColumnas(){
+        return this.columnas;
+    }
+
     InsertColumna(c, nueva) {
         if (c < this.columnas) {
             for (let i = this.filas; i < 0; i--) {

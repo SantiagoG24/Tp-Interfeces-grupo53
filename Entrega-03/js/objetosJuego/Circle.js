@@ -9,7 +9,13 @@ class Circle {
         this.source = img;
         this.img = new Image();
         this.img.src = img;
+
+        this.img.onload = () => {
+            this.draw();
+        };
     }
+
+
 
     draw() {
         this.ctx.beginPath();
@@ -19,6 +25,8 @@ class Circle {
         this.ctx.closePath();
         this.ctx.drawImage(this.img, this.posX - 25.5, this.posY - 25, 50, 50);
     }
+ 
+   
 
     getName() {
         return this.name;
@@ -60,5 +68,13 @@ class Circle {
 
     getImg() {
         return this.source;
+    }
+
+    isPointInside(x,y){
+        let xd = this.posX - x;
+        let yd = this.posY - y;
+        let distance = Math.sqrt(xd * xd + yd * yd);
+
+        return distance <= this.radius;
     }
 }

@@ -12,6 +12,7 @@ body {
 .div-superior {
     width: 1306px;
     margin: auto;
+    margin-top: 15px;
 }
 
 .breadcrumb {

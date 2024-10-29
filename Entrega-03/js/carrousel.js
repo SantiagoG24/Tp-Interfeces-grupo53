@@ -1,30 +1,54 @@
-const carrousel = document.querySelector("#card-container");
-const btn_next = document.querySelector("#btn_next");
-btn_next.addEventListener('click', next);
-const btn_prev = document.querySelector("#btn_prev");
-btn_prev.addEventListener('click', prev);
-
-function next() {
-    carrousel.style = "transform: translateX(-44%)"
-    console.log("next btn")
-}
-function prev() {
-    carrousel.style = "transform: translateX(0%)"
-    console.log("prev btn");
-}
+document.addEventListener('DOMContentLoaded', () => {
+    initializeCarousel();
 
 
+    // Función para inicializar el carrusel
+    function initializeCarousel() {
+        const carouselContainers = document.querySelectorAll('.carousel-container');
+        const cardWidth = document.querySelector('.card-grande').offsetWidth + 15; // Ancho de la card + margen
+        carouselContainers.forEach(container => {
+            const carousel = container.querySelector('.carousel');
+            // console.log(carousel);
+            container.querySelector('.right-arrow').addEventListener('click', () => {
+                const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
 
-const car_mini = document.querySelector("#cont-carrousel-mini");
-const btn_next_m = document.querySelector("#btn_next1");
-btn_next_m.addEventListener('click', nextm);
-const btn_prev_m = document.querySelector("#btn_prev1");
-btn_prev_m.addEventListener('click', prevm);
-function nextm() {
-    car_mini.style = "transform: translateX(-37%)";
-    console.log("next btn")
-}
-function prevm() {
-    car_mini.style = "transform: translateX(0%)";
-    console.log("prev btn");
-} 
+                if (carousel.scrollLeft >= maxScrollLeft) {
+                    addSkew();
+                    carousel.scrollLeft = 0;
+                } else {
+                    addSkew();
+                    carousel.scrollLeft += cardWidth;
+                }
+            });
+
+            container.querySelector('.left-arrow').addEventListener('click', () => {
+                if (carousel.scrollLeft <= 0) {
+                    addSkew();
+                    carousel.scrollLeft = carousel.scrollWidth - carousel.clientWidth;
+                } else {
+                    carousel.scrollLeft -= cardWidth;
+                    addSkew();
+                }
+            });
+
+            function addSkew() {
+                carousel.querySelectorAll('.card-grande').forEach(card => {
+                    card.classList.add("addSkew");
+                });
+
+                setTimeout(() => {
+                    carousel.querySelectorAll('.card-grande').forEach(card => {
+                        card.classList.add("addSkewEnd");
+                    });
+                }, 300);
+
+                setTimeout(() => {
+                    carousel.querySelectorAll('.card-grande').forEach(card => {
+                        card.classList.remove("addSkewEnd");
+                        card.classList.remove("addSkew");
+                    });
+                }, 600);
+            }
+        });
+    }
+})

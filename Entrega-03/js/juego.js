@@ -1,6 +1,6 @@
-btn_play = document.getElementById("btn-play");
-btn_play.addEventListener('click', showConfig);
+
 let canvas = document.getElementById("myCanvas");
+canvas.addEventListener('click', showConfig);
 
 let ctx = canvas.getContext("2d");
 let canvasWidth = canvas.width;
@@ -12,9 +12,23 @@ let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
 
+ctx.font = '700 30px Arial';         
+ctx.fillStyle = 'white';         
+ctx.textAlign = 'center';          
+ctx.textBaseline = 'middle'; 
+let texto = '¡Haz Click para Comenzar a Jugar!';
+let x = canvas.width / 2;        
+let y = canvas.height / 2;       
+ctx.fillText(texto, x, y);
+
+
+
 /*Imagenes Fichas*/
 let IronmanImg = "assets/ironman-logo.png";
 let CaptainAmericaImg = "assets/captain-america-logo.png";
+
+
+ 
 
 
     function showConfig() {
@@ -60,6 +74,33 @@ let CaptainAmericaImg = "assets/captain-america-logo.png";
 
         }
 
+        function showCantFichas(){
+
+            let buttonMode4 = new Circle("modo4", 50, 100, 90, "blue", ctx);
+            let buttonMode5 = new Circle("modo5", 180, 100, 50, "blue", ctx);
+            let buttonMode6 = new Circle("modo6", 250, 100, 50, "blue", ctx);
+            let buttonMode7 = new Circle("modo7", 100, 100, 50, "blue", ctx);
+            buttonMode4.draw()
+            buttonMode5.draw()
+            buttonMode6.draw()
+            
+            buttonMode4.addEventListener("click", () => {
+                mode = 4;
+            });
+            buttonMode5.addEventListener("click", () => {
+                mode = 5;
+            });
+            buttonMode6.addEventListener("click", () => {
+                mode = 6;
+            });
+            buttonMode7.addEventListener("click", () => {
+                mode = 7;
+            });
+
+            
+
+        }
+
         function showSelecionFicha() {
             selecionModo.classList.toggle("sacar");
             selecionFicha.classList.toggle("active");
@@ -68,10 +109,12 @@ let CaptainAmericaImg = "assets/captain-america-logo.png";
             selecionFicha.classList.toggle("sacar");
             armarTablero(mode);
             let cantFichas = tablero.getFilas()* tablero.getColumnas();
+
             for(i = 0; i<cantFichas;i++){
                 let f1 = drawFicha("ironman", 100, 100+i*10, "red", IronmanImg );
                 let f2 = drawFicha("ironman", 1100, 100+i*10, "blue", CaptainAmericaImg);
             }
+
 
             tablero.drawTablero();
         }

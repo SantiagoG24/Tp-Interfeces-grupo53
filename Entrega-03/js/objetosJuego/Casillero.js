@@ -21,8 +21,8 @@ class Casillero {
 
     draw() {
         this.ctx.fillStyle = "#757575";
-        this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 85);
-        this.ctx.drawImage(this.imgCasillero, this.inicioX, this.inicioY, 105.3, 85);
+        this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 70);
+        this.ctx.drawImage(this.imgCasillero, this.inicioX, this.inicioY, 105.3, 70);
        /* this.ctx.beginPath();
         this.ctx.arc(this.inicioX + 52.65, this.inicioY + 33.5, 25, 0, 2 * Math.PI);
         this.ctx.fillStyle = "white";

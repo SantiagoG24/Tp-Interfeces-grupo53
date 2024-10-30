@@ -10,19 +10,20 @@ class Tablero {
         this.columnas = 0;
         this.tablero = [];
         this.crearTablero(modo);
+        this.columnasX = [];
     }
 
-    getFilas(){
-        return this.filas-1;
+    getFilas() {
+        return this.filas - 1;
     }
 
-    getColumnas(){
+    getColumnas() {
         return this.columnas;
     }
 
     InsertColumna(c, nueva) {
         if (c < this.columnas) {
-            for (let i = this.filas; i < 0; i--) {
+            for (let i = this.filas; i < 1; i--) {
                 let casillero = this.tablero[i][c];
                 if (!casillero.getOcupado()) {
                     this.tablero[i][c] = nueva;
@@ -98,15 +99,29 @@ class Tablero {
             let inicioX = inicioTable;
             let finX = inicioTable + 105.3;
             for (let y = 0; y < this.columnas; y++) {
+                // this.columnasX.push(inicioX);
                 let casillero = new Casillero(ctx, inicioX, finX, this.inicioY, this.finY);
                 fila.push(casillero);
                 inicioX = inicioX + 105.3;
                 finX = finX + 105.3;
             }
+
             this.tablero.push(fila);
             this.inicioY = this.inicioY + 67;
             this.finY = this.finY + 67;
         }
+    }
+    clickEnTablero(x, y) {
+        if (x > inicioX && x < finX && y > this.inicioY && y < this.finY) {
+            for (let i = 0; i < this.tableroX.length; i++) {
+                inicioCol = this.tableroX[i];
+                finCol = this.tablero[i + 1] - 1;
+                if (x > inicioCol && x < finCol) {
+                    return i;
+                }
+            }
+        }
+
     }
     //////////////////////////
     busquedaPorFila() {

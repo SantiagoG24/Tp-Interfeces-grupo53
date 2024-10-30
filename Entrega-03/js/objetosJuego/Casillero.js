@@ -12,7 +12,6 @@ class Casillero {
         this.imgCasillero = new Image();
         this.imgCasillero.src = "../../Entrega-03/assets/casillero.jpg";
     }
-
     draw() {
         this.ctx.fillStyle = "#757575";
         this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 67);
@@ -64,6 +63,9 @@ class Casillero {
             this.imgOcupacion.src = this.imgFicha;
             this.ctx.drawImage(this.imgOcupacion, this.inicioX + 52.65 - 15, this.inicioY + 33.5 - 15);
         }
+    }
+    estaEnComlumna(x) {
+        return x > this.inicioX && x < this.finX
     }
 
     getObj() {

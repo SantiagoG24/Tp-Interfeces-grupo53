@@ -107,8 +107,8 @@ class Tablero {
             }
 
             this.tablero.push(fila);
-            this.inicioY = this.inicioY + 67;
-            this.finY = this.finY + 67;
+            this.inicioY = this.inicioY + 70;
+            this.finY = this.finY + 70;
         }
     }
     clickEnTablero(x, y) {

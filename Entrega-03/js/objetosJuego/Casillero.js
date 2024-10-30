@@ -11,17 +11,26 @@ class Casillero {
         this.imgOcupacion = null;
         this.imgCasillero = new Image();
         this.imgCasillero.src = "../../Entrega-03/assets/casillero.jpg";
+        this.imgCasillero.onload = () => {
+            this.draw();
+        };
+        
     }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 98444562651b6dc660c448fd715b6676229b6484
     draw() {
         this.ctx.fillStyle = "#757575";
-        this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 67);
-        this.ctx.drawImage(this.imgCasillero, this.inicioX - 105, this.inicioY - 67);
-
-        this.ctx.beginPath();
+        this.ctx.fillRect(this.inicioX, this.inicioY, 105.3, 70);
+        this.ctx.drawImage(this.imgCasillero, this.inicioX, this.inicioY, 105.3, 70);
+       /* this.ctx.beginPath();
         this.ctx.arc(this.inicioX + 52.65, this.inicioY + 33.5, 25, 0, 2 * Math.PI);
         this.ctx.fillStyle = "white";
         this.ctx.fill();
-        this.ctx.closePath();
+        this.ctx.closePath();*/
     }
 
     getInicioX() {

@@ -2,8 +2,6 @@ btn_play = document.getElementById("btn-play");
 btn_play.addEventListener('click', showConfig);
 let canvas = document.getElementById("myCanvas");
 
-
-
 let ctx = canvas.getContext("2d");
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
@@ -14,12 +12,27 @@ let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
 
+/*Imagenes Fichas*/
+let IronmanImg = "assets/ironman-logo.png";
+let CaptainAmericaImg = "assets/captain-america-logo.png";
+
 
     function showConfig() {
         let selecionModo = document.getElementById("selecionModo");
         let selecionFicha = document.getElementById("fichasEleccion");
         let btn_modo = document.getElementById("btn-modo");
         let start_game = document.getElementById("start-game");
+
+         // Eventos para las opciones de fichas
+        document.getElementById("buttonOpcionA").addEventListener("click", () => {
+        IronmanImg = "assets/ironman-logo.png";
+        CaptainAmericaImg = "assets/captain-america-logo.png";
+    });
+
+        document.getElementById("buttonOpcionB").addEventListener("click", () => {
+        IronmanImg = "assets/ironman-logo2.png";
+        CaptainAmericaImg = "assets/captain-america-logo2.png";
+    });
 
         btn_modo.addEventListener('click', showSelecionFicha);
         start_game.addEventListener('click', startGame)
@@ -54,12 +67,10 @@ let lastCircleCliked = null;
         function startGame() {
             selecionFicha.classList.toggle("sacar");
             armarTablero(mode);
-            let imgironman = "assets/ironman-logo.png";
-            let imgcapitan = "assets/captain-america-logo.png" ;
             let cantFichas = tablero.getFilas()* tablero.getColumnas();
             for(i = 0; i<cantFichas;i++){
-                let f1 = drawFicha("ironman", 100, 100+i*10, "red", imgironman);
-                let f2 = drawFicha("ironman", 1100, 100+i*10, "blue", imgcapitan);
+                let f1 = drawFicha("ironman", 100, 100+i*10, "red", IronmanImg );
+                let f2 = drawFicha("ironman", 1100, 100+i*10, "blue", CaptainAmericaImg);
             }
 
             tablero.drawTablero();

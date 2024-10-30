@@ -104,8 +104,8 @@ class Tablero {
                 finX = finX + 105.3;
             }
             this.tablero.push(fila);
-            this.inicioY = this.inicioY + 67;
-            this.finY = this.finY + 67;
+            this.inicioY = this.inicioY + 80;
+            this.finY = this.finY + 80;
         }
     }
     //////////////////////////

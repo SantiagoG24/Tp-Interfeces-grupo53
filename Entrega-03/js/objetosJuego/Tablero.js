@@ -53,59 +53,56 @@ class Tablero {
         return encontrado
     }
     crearTablero(modo) {
-        let inicioTable;
+        let casilleroWidth = 105.3; 
+        let casilleroHeight = 70;   
+
         if (modo == 4) {
             this.filas = 6 + 1;
             this.columnas = 7;
-            inicioTable = 255.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 5) {
+        } else if (modo == 5) {
             this.filas = 7 + 1;
             this.columnas = 8;
-            inicioTable = 155.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 6) {
+        } else if (modo == 6) {
             this.filas = 8 + 1;
             this.columnas = 9;
-            inicioTable = 155.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 7) {
+        } else if (modo == 7) {
             this.filas = 9 + 1;
             this.columnas = 9;
-            inicioTable = 155;
-            this.llenarTablero(inicioTable);
         }
-        console.log(this.tablero)
 
+        
+        let tableroAncho = this.columnas * casilleroWidth;
+        let tableroAlto = this.filas * casilleroHeight;
+
+       
+        let inicioX = (canvasWidth - tableroAncho) / 2;
+        let inicioY = (canvasHeight - tableroAlto) / 2;
+
+        this.llenarTablero(inicioX, inicioY, casilleroWidth, casilleroHeight);
     }
+
+    llenarTablero(inicioX, inicioY, casilleroWidth, casilleroHeight) {
+        for (let x = 0; x < this.filas; x++) {
+            let fila = [];
+            let posX = inicioX;
+            for (let y = 0; y < this.columnas; y++) {
+                let casillero = new Casillero(this.ctx, posX, posX + casilleroWidth, inicioY, inicioY + casilleroHeight);
+                fila.push(casillero);
+                posX += casilleroWidth;
+            }
+            this.tablero.push(fila);
+            inicioY += casilleroHeight;
+        }
+    }
+
     drawTablero() {
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(0, 0, canvasWidth, canvasHeight);
         for (let i = 0; i < this.tablero.length; i++) {
             for (let j = 0; j < this.tablero[i].length; j++) {
                 this.tablero[i][j].draw();
                 this.tablero[i][j].drawObj();
             }
-        }
-    }
-
-    llenarTablero(inicioTable) {
-        for (let x = 0; x < this.filas; x++) {
-            let fila = [];
-            let inicioX = inicioTable;
-            let finX = inicioTable + 105.3;
-            for (let y = 0; y < this.columnas; y++) {
-                let casillero = new Casillero(ctx, inicioX, finX, this.inicioY, this.finY);
-                fila.push(casillero);
-                inicioX = inicioX + 105.3;
-                finX = finX + 105.3;
-            }
-            this.tablero.push(fila);
-            this.inicioY = this.inicioY + 70;
-            this.finY = this.finY + 70;
         }
     }
     //////////////////////////

@@ -1,11 +1,11 @@
 class Boton {
-    constructor(posX, posY, width, height, ctx,mode) {
+    constructor(posX, posY, width, height, ctx, mode) {
         this.posX = posX;
         this.posY = posY;
         this.width = width;
         this.height = height;
         this.ctx = ctx;
-        
+
     }
 
     draw() {
@@ -23,9 +23,3 @@ class Boton {
     }
 
 }
-
-
-
-
-
-    

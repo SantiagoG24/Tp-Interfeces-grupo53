@@ -231,6 +231,8 @@ function onMouseUp(e) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
+                borrarFichaPartida(lastCircleCliked);
+                actualizar();
                 // if (ganador) {
                 //     showGanador();
                 // }
@@ -239,8 +241,7 @@ function onMouseUp(e) {
             lastCircleCliked.returPosIni();
         }
     }
-    borrarFichaPartida(lastCircleCliked);
     lastCircleCliked = null;
     isMouseDown = false;
-    actualizar();
+
 } 

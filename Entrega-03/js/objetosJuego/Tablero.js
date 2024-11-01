@@ -26,19 +26,25 @@ class Tablero {
     getColumnas() {
         return this.columnas;
     }
-
-    InsertColumna(c, nueva) {
-        if (c < this.columnas) {
-            for (let i = this.filas; i < 1; i--) {
-                let casillero = this.tablero[i][c];
-                if (!casillero.getOcupado()) {
-                    this.tablero[i][c] = nueva;
-                    return chequearGanador();
-                }
+    tenesEspacioColumna(c) {
+        for (let i = this.filas - 1; i >= 1; i--) {  // Empieza en la última fila y va hasta la fila 1
+            let cas = this.tablero[i][c];
+            if (cas.getOcupado() == false) {
+                return i;
             }
         }
-        return false;
+        return -1;
     }
+
+    InsertColumna(c, f, nueva) {
+        let casillero = this.tablero[f][c];
+        casillero.setOcupado(nueva);
+        casillero.drawObj();
+        return this.chequearGanador();
+    }
+
+
+
     chequearGanador() {
         let encontrado = false;
 

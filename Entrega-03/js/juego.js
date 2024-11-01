@@ -222,10 +222,16 @@ canvas.addEventListener("mouseup", onMouseUp, false);
 
 function onMouseUp(e) {
     if (tablero && lastCircleCliked !== null) {
-        let res = tablero.whereClick(e.layerX, e.layerY);
-        console.log(res)
-        if (res !== null) {
-            //     tablero.InsertColumna(res, lastCircleCliked)
+        let col = tablero.whereClick(e.layerX, e.layerY);
+        console.log(col);
+        if (col !== null) {
+            let filaAinsertar = tablero.tenesEspacioColumna(col);
+            if (filaAinsertar > 0) {
+                let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
+                if (ganador) {
+                    showGanador();
+                }
+            }
         } else {
             lastCircleCliked.returPosIni();
         }

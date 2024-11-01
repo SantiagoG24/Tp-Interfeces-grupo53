@@ -70,7 +70,7 @@ class Casillero {
 
             this.imgOcupacion = new Image();
             this.imgOcupacion.src = this.imgFicha;
-            this.ctx.drawImage(this.imgOcupacion, this.inicioX + 52.65 - 15, this.inicioY + 33.5 - 15);
+            this.ctx.drawImage(this.imgOcupacion, this.inicioX, this.inicioY, 105.3, 70);
         }
     }
     estaEnComlumna(x) {

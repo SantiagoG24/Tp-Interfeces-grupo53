@@ -217,7 +217,10 @@ function onMouseMove(e) {
     // console.log("X" + e.layerX, " Y " + e.layerY);
     // console.log(tablero.whereClick(e.layerX, e.layerY));
 }
-
+function borrarFichaPartida(ficha) {
+    let index = fichasEnPartida.indexOf(ficha);
+    fichasEnPartida.splice(index, 1);
+}
 canvas.addEventListener("mouseup", onMouseUp, false);
 
 function onMouseUp(e) {
@@ -228,14 +231,16 @@ function onMouseUp(e) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
-                if (ganador) {
-                    showGanador();
-                }
+                // if (ganador) {
+                //     showGanador();
+                // }
             }
         } else {
             lastCircleCliked.returPosIni();
         }
     }
+    borrarFichaPartida(lastCircleCliked);
     lastCircleCliked = null;
     isMouseDown = false;
-}
+    actualizar();
+} 

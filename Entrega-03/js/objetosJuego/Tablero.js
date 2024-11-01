@@ -40,7 +40,7 @@ class Tablero {
         let casillero = this.tablero[f][c];
         casillero.setOcupado(nueva);
         casillero.drawObj();
-        return this.chequearGanador();
+        // return this.chequearGanador();
     }
 
 

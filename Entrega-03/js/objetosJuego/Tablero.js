@@ -49,19 +49,19 @@ class Tablero {
         let encontrado = false;
 
         if (encontrado === false) {
-            encontrado = busquedaPorFila();
+            encontrado = this.busquedaPorFila();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorColumna();
+            encontrado = this.busquedaPorColumna();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorDiagonalIzquierda();
+            encontrado = this.busquedaPorDiagonalIzquierda();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorDiagonalDerecha();
+            encontrado = this.busquedaPorDiagonalDerecha();
         }
         return encontrado
     }
@@ -191,22 +191,22 @@ class Tablero {
         let columna = 0;
         let fila = 0;
 
-        while (columna < mode * 2) {
-            while (fila < mode * 2) {
-                if (contador < mode) {
-                    if (matriz[fila][columna].getObj() != null) {
+        while (columna < this.mode * 2) {
+            while (fila < this.mode * 2) {
+                if (contador < this.mode) {
+                    if (this.tablero[fila][columna].getObj() != null) {
                         if (contador == 0) {
-                            aux = matriz[fila][columna].getObj().getName();
+                            aux = this.tablero[fila][columna].getObj().getName();
                             contador++;
                         } else if (contador > 0) {
-                            if (matriz[fila][columna].getObj().getName() == aux) {
+                            if (this.tablero[fila][columna].getObj().getName() == aux) {
                                 contador++;
                             } else {
-                                aux = matriz[fila][columna].getObj().getName();
+                                aux = this.tablero[fila][columna].getObj().getName();
                                 contador = 1;
                             }
                         }
-                    } else if (matriz[fila][columna].getObj() == null) {
+                    } else if (this.tablero[fila][columna].getObj() == null) {
                         aux = "";
                         contador = 0;
                     }
@@ -215,13 +215,13 @@ class Tablero {
                 }
                 fila++;
             }
-            if (contador == mode) {
+            if (contador == this.mode) {
                 return true;
             } else {
                 columna++;
                 fila = 0;
                 contador = 0;
-                axu = "";
+                aux = "";
             }
         }
         return false;

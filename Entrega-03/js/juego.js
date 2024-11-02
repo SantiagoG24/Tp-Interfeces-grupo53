@@ -231,6 +231,7 @@ function onMouseUp(e) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
+                console.log(ganador)
                 borrarFichaPartida(lastCircleCliked);
                 actualizar();
                 // if (ganador) {

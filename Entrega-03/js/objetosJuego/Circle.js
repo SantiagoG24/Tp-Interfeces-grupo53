@@ -4,6 +4,7 @@ class Circle {
         this.posX = posX;
         this.posY = posY;
         this.fill = fill;
+        this.activado = false;
         this.ctx = ctx;
         this.radius = radius;
         this.source = img;
@@ -19,6 +20,12 @@ class Circle {
     }
     returPosIni() {
         this.setPosition(this.posIni.x, this.posIni.y);
+    }
+    getActivado() {
+        return this.activado;
+    }
+    setActivado() {
+        this.activado = !this.activado;
     }
 
     draw() {

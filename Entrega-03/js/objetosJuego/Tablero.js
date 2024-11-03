@@ -148,23 +148,23 @@ class Tablero {
     busquedaPorFila() {
         let contador = 0;
         let aux = "";
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = 0; j < matriz[i].length; j++) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = 0; j < this.tablero[i].length; j++) {
                 if (contador < mode) {
-                    if (matriz[i][j].getObj() != null) {
+                    if (this.tablero[i][j].getObj() != null) {
                         if (contador == 0) {
-                            aux = matriz[i][j].getObj().getName();
+                            aux = this.tablero[i][j].getObj().getName();
                             contador++;
                         } else if (contador > 0) {
-                            if (matriz[i][j].getObj().getName() == aux) {
+                            if (this.tablero[i][j].getObj().getName() == aux) {
                                 contador++;
                             } else {
                                 contador = 1;
-                                aux = matriz[i][j].getObj().getName();
+                                aux = this.tablero[i][j].getObj().getName();
                             }
                         }
                     } else {
-                        if (matriz[i][j].getObj() == null) {
+                        if (this.tablero[i][j].getObj() == null) {
                             contador = 0;
                             aux = "";
                         }
@@ -177,7 +177,7 @@ class Tablero {
                 return true;
             } else {
                 contador = 0;
-                axu = "";
+                aux = "";
             }
 
         }
@@ -187,43 +187,38 @@ class Tablero {
     busquedaPorColumna() {
         let contador = 0;
         let aux = "";
+        for (let j = 0; j < this.tablero[0].length; j++) {
+            contador = 0;
+            aux = "";
 
-        let columna = 0;
-        let fila = 0;
-
-        while (columna < this.mode * 2) {
-            while (fila < this.mode * 2) {
-                if (contador < this.mode) {
-                    if (this.tablero[fila][columna].getObj() != null) {
+            for (let i = 0; i < this.tablero.length; i++) {
+                if (contador < mode) {
+                    if (this.tablero[i][j].getObj() != null) {
                         if (contador == 0) {
-                            aux = this.tablero[fila][columna].getObj().getName();
+                            aux = this.tablero[i][j].getObj().getName();
                             contador++;
-                        } else if (contador > 0) {
-                            if (this.tablero[fila][columna].getObj().getName() == aux) {
+                        } else {
+                            if (this.tablero[i][j].getObj().getName() == aux) {
                                 contador++;
                             } else {
-                                aux = this.tablero[fila][columna].getObj().getName();
                                 contador = 1;
+                                aux = this.tablero[i][j].getObj().getName();
                             }
                         }
-                    } else if (this.tablero[fila][columna].getObj() == null) {
-                        aux = "";
+                    } else {
                         contador = 0;
+                        aux = "";
                     }
                 } else {
                     return true;
                 }
-                fila++;
             }
-            if (contador == this.mode) {
+
+            if (contador == mode) {
                 return true;
-            } else {
-                columna++;
-                fila = 0;
-                contador = 0;
-                aux = "";
             }
         }
+
         return false;
     }
 
@@ -232,11 +227,11 @@ class Tablero {
         let aux = "";
         let busqueda = false;
 
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = 0; j < matriz[i].length; j++) {
-                if (matriz[i][j].getObj() != null) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = 0; j < this.tablero[i].length; j++) {
+                if (this.tablero[i][j].getObj() != null) {
                     contador = 1;
-                    aux = matriz[i][j].getObj().getName();
+                    aux = this.tablero[i][j].getObj().getName();
                     busqueda = true;
                     let x = j;
                     let y = i;
@@ -244,14 +239,14 @@ class Tablero {
                         if (contador < mode) {
                             x++;
                             y++;
-                            if (x < columnas && y < filas) {
-                                if (matriz[y][x].getObj() != null) {
-                                    if (matriz[y][x].getObj().getName() == aux) {
+                            if (x < this.columnas && y < this.filas) {
+                                if (this.tablero[y][x].getObj() != null) {
+                                    if (this.tablero[y][x].getObj().getName() == aux) {
                                         contador++;
                                     } else {
                                         busqueda = false;
                                     }
-                                } else if (matriz[y][x].getObj() == null) {
+                                } else if (this.tablero[y][x].getObj() == null) {
                                     busqueda = false;
                                 }
                             } else {
@@ -276,11 +271,11 @@ class Tablero {
         let aux = "";
         let busqueda = false;
 
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = columnas - 1; j >= 0; j--) {
-                if (matriz[i][j].getObj() != null) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = this.columnas - 1; j >= 0; j--) {
+                if (this.tablero[i][j].getObj() != null) {
                     contador = 1;
-                    aux = matriz[i][j].getObj().getName();
+                    aux = this.tablero[i][j].getObj().getName();
                     busqueda = true;
                     let x = j;
                     let y = i;
@@ -288,14 +283,14 @@ class Tablero {
                         if (contador < mode) {
                             x--;
                             y++;
-                            if (x >= 0 && y < filas) {
-                                if (matriz[y][x].getObj() != null) {
-                                    if (matriz[y][x].getObj().getName() == aux) {
+                            if (x >= 0 && y < this.filas) {
+                                if (this.tablero[y][x].getObj() != null) {
+                                    if (this.tablero[y][x].getObj().getName() == aux) {
                                         contador++;
                                     } else {
                                         busqueda = false;
                                     }
-                                } else if (matriz[y][x].getObj() == null) {
+                                } else if (this.tablero[y][x].getObj() == null) {
                                     busqueda = false;
                                 }
                             } else {

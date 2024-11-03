@@ -202,6 +202,7 @@ body {
 
 .multimedia img {
     width: 150px;
+    cursor: pointer;
 }
 
 .seccion h4,
@@ -388,8 +389,8 @@ footer {
 footer .row {
     display: flex;
     justify-content: space-around;
-    gap: 62px;
-    max-width: 594px;
+    gap: 60px;
+    max-width: 60%;
     margin: auto;
     text-align: left;
 

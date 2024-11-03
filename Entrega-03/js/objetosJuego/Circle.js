@@ -4,18 +4,29 @@ class Circle {
         this.posX = posX;
         this.posY = posY;
         this.fill = fill;
+        this.activado = false;
         this.ctx = ctx;
         this.radius = radius;
         this.source = img;
         this.img = new Image();
         this.img.src = img;
-
+        this.posIni = {
+            x: this.posX,
+            y: this.posY
+        }
         this.img.onload = () => {
             this.draw();
         };
     }
-
-
+    returPosIni() {
+        this.setPosition(this.posIni.x, this.posIni.y);
+    }
+    getActivado() {
+        return this.activado;
+    }
+    setActivado() {
+        this.activado = !this.activado;
+    }
 
     draw() {
         this.ctx.beginPath();
@@ -25,8 +36,8 @@ class Circle {
         this.ctx.closePath();
         this.ctx.drawImage(this.img, this.posX - 25.5, this.posY - 25, 50, 50);
     }
- 
-   
+
+
 
     getName() {
         return this.name;
@@ -70,7 +81,7 @@ class Circle {
         return this.source;
     }
 
-    isPointInside(x,y){
+    isPointInside(x, y) {
         let xd = this.posX - x;
         let yd = this.posY - y;
         let distance = Math.sqrt(xd * xd + yd * yd);

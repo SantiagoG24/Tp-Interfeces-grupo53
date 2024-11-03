@@ -10,80 +10,133 @@ class Tablero {
         this.columnas = 0;
         this.tablero = [];
         this.crearTablero(modo);
+        this.inicioX;
+        this.finX;
+        this.tableroXI;
+        this.tableroXF;
+        this.tableroYI;
+        this.tableroXF;
+
     }
 
-    getFilas(){
-        return this.filas-1;
+    getFilas() {
+        return this.filas - 1;
     }
 
-    getColumnas(){
+    getColumnas() {
         return this.columnas;
     }
-
-    InsertColumna(c, nueva) {
-        if (c < this.columnas) {
-            for (let i = this.filas; i < 0; i--) {
-                let casillero = this.tablero[i][c];
-                if (!casillero.getOcupado()) {
-                    this.tablero[i][c] = nueva;
-                    return chequearGanador();
-                }
+    tenesEspacioColumna(c) {
+        for (let i = this.filas - 1; i >= 1; i--) {  // Empieza en la última fila y va hasta la fila 1
+            let cas = this.tablero[i][c];
+            if (cas.getOcupado() == false) {
+                return i;
             }
         }
-        return false;
+        return -1;
     }
+
+    InsertColumna(c, f, nueva) {
+        let casillero = this.tablero[f][c];
+        casillero.setOcupado(nueva);
+        casillero.drawObj();
+        return this.chequearGanador();
+    }
+
+
+
     chequearGanador() {
         let encontrado = false;
 
         if (encontrado === false) {
-            encontrado = busquedaPorFila();
+            encontrado = this.busquedaPorFila();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorColumna();
+            encontrado = this.busquedaPorColumna();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorDiagonalIzquierda();
+            encontrado = this.busquedaPorDiagonalIzquierda();
         }
 
         if (encontrado === false) {
-            encontrado = busquedaPorDiagonalDerecha();
+            encontrado = this.busquedaPorDiagonalDerecha();
         }
         return encontrado
     }
     crearTablero(modo) {
-        let inicioTable;
+        let casilleroWidth = 0;
+        let casilleroHeight = 0;
+
         if (modo == 4) {
             this.filas = 6 + 1;
             this.columnas = 7;
-            inicioTable = 255.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 5) {
+            casilleroWidth = 105.3;
+            casilleroHeight = 70;
+        } else if (modo == 5) {
             this.filas = 7 + 1;
             this.columnas = 8;
-            inicioTable = 155.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 6) {
+            casilleroWidth = 105.3;
+            casilleroHeight = 70;
+        } else if (modo == 6) {
             this.filas = 8 + 1;
             this.columnas = 9;
-            inicioTable = 155.3;
-            this.llenarTablero(inicioTable);
-        }
-        if (modo == 7) {
+            casilleroWidth = 95.3;
+            casilleroHeight = 65;
+        } else if (modo == 7) {
             this.filas = 9 + 1;
             this.columnas = 9;
-            inicioTable = 155;
-            this.llenarTablero(inicioTable);
+            casilleroWidth = 95.3;
+            casilleroHeight = 65;
         }
-        console.log(this.tablero)
 
+        let tableroAncho = this.columnas * casilleroWidth;
+        let tableroAlto = this.filas * casilleroHeight;
+
+        let inicioX = (canvasWidth - tableroAncho) / 2;
+        let inicioY = (canvasHeight - tableroAlto) / 2;
+        this.tableroXI = inicioX;
+        this.tableroYI = inicioY;
+
+        this.llenarTablero(inicioX, inicioY, casilleroWidth, casilleroHeight);
     }
+
+    llenarTablero(inicioX, inicioY, casilleroWidth, casilleroHeight) {
+        for (let x = 0; x < this.filas; x++) {
+            let fila = [];
+            let posX = inicioX;
+            for (let y = 0; y < this.columnas; y++) {
+                let casillero = new Casillero(this.ctx, posX, posX + casilleroWidth, inicioY, inicioY + casilleroHeight);
+                fila.push(casillero);
+                posX += casilleroWidth;
+                this.tableroXF = posX;
+            }
+            this.tablero.push(fila);
+            inicioY += casilleroHeight;
+            this.tableroYF = inicioY;
+        }
+    }
+    whereClick(x, y) {
+        if (x > this.tableroXI && x < this.tableroXF && y > this.tableroYI && y < this.tableroYF) {
+            let res = this.buscarColumnaPos(x);
+            return res;
+        }
+        return null;
+    }
+    buscarColumnaPos(x) {
+        for (let i = 0; i < this.columnas; i++) {
+            let cas = this.tablero[0][i];
+            if (cas.estaEnComlumna(x)) {
+                return i;
+            }
+        }
+        return null;
+    }
+
     drawTablero() {
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(0, 0, canvasWidth, canvasHeight);
         for (let i = 0; i < this.tablero.length; i++) {
             for (let j = 0; j < this.tablero[i].length; j++) {
                 this.tablero[i][j].draw();
@@ -91,44 +144,27 @@ class Tablero {
             }
         }
     }
-
-    llenarTablero(inicioTable) {
-        for (let x = 0; x < this.filas; x++) {
-            let fila = [];
-            let inicioX = inicioTable;
-            let finX = inicioTable + 105.3;
-            for (let y = 0; y < this.columnas; y++) {
-                let casillero = new Casillero(ctx, inicioX, finX, this.inicioY, this.finY);
-                fila.push(casillero);
-                inicioX = inicioX + 105.3;
-                finX = finX + 105.3;
-            }
-            this.tablero.push(fila);
-            this.inicioY = this.inicioY + 67;
-            this.finY = this.finY + 67;
-        }
-    }
     //////////////////////////
     busquedaPorFila() {
         let contador = 0;
         let aux = "";
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = 0; j < matriz[i].length; j++) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = 0; j < this.tablero[i].length; j++) {
                 if (contador < mode) {
-                    if (matriz[i][j].getObj() != null) {
+                    if (this.tablero[i][j].getObj() != null) {
                         if (contador == 0) {
-                            aux = matriz[i][j].getObj().getName();
+                            aux = this.tablero[i][j].getObj().getName();
                             contador++;
                         } else if (contador > 0) {
-                            if (matriz[i][j].getObj().getName() == aux) {
+                            if (this.tablero[i][j].getObj().getName() == aux) {
                                 contador++;
                             } else {
                                 contador = 1;
-                                aux = matriz[i][j].getObj().getName();
+                                aux = this.tablero[i][j].getObj().getName();
                             }
                         }
                     } else {
-                        if (matriz[i][j].getObj() == null) {
+                        if (this.tablero[i][j].getObj() == null) {
                             contador = 0;
                             aux = "";
                         }
@@ -141,7 +177,7 @@ class Tablero {
                 return true;
             } else {
                 contador = 0;
-                axu = "";
+                aux = "";
             }
 
         }
@@ -151,43 +187,38 @@ class Tablero {
     busquedaPorColumna() {
         let contador = 0;
         let aux = "";
+        for (let j = 0; j < this.tablero[0].length; j++) {
+            contador = 0;
+            aux = "";
 
-        let columna = 0;
-        let fila = 0;
-
-        while (columna < mode * 2) {
-            while (fila < mode * 2) {
+            for (let i = 0; i < this.tablero.length; i++) {
                 if (contador < mode) {
-                    if (matriz[fila][columna].getObj() != null) {
+                    if (this.tablero[i][j].getObj() != null) {
                         if (contador == 0) {
-                            aux = matriz[fila][columna].getObj().getName();
+                            aux = this.tablero[i][j].getObj().getName();
                             contador++;
-                        } else if (contador > 0) {
-                            if (matriz[fila][columna].getObj().getName() == aux) {
+                        } else {
+                            if (this.tablero[i][j].getObj().getName() == aux) {
                                 contador++;
                             } else {
-                                aux = matriz[fila][columna].getObj().getName();
                                 contador = 1;
+                                aux = this.tablero[i][j].getObj().getName();
                             }
                         }
-                    } else if (matriz[fila][columna].getObj() == null) {
-                        aux = "";
+                    } else {
                         contador = 0;
+                        aux = "";
                     }
                 } else {
                     return true;
                 }
-                fila++;
             }
+
             if (contador == mode) {
                 return true;
-            } else {
-                columna++;
-                fila = 0;
-                contador = 0;
-                axu = "";
             }
         }
+
         return false;
     }
 
@@ -196,11 +227,11 @@ class Tablero {
         let aux = "";
         let busqueda = false;
 
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = 0; j < matriz[i].length; j++) {
-                if (matriz[i][j].getObj() != null) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = 0; j < this.tablero[i].length; j++) {
+                if (this.tablero[i][j].getObj() != null) {
                     contador = 1;
-                    aux = matriz[i][j].getObj().getName();
+                    aux = this.tablero[i][j].getObj().getName();
                     busqueda = true;
                     let x = j;
                     let y = i;
@@ -208,14 +239,14 @@ class Tablero {
                         if (contador < mode) {
                             x++;
                             y++;
-                            if (x < columnas && y < filas) {
-                                if (matriz[y][x].getObj() != null) {
-                                    if (matriz[y][x].getObj().getName() == aux) {
+                            if (x < this.columnas && y < this.filas) {
+                                if (this.tablero[y][x].getObj() != null) {
+                                    if (this.tablero[y][x].getObj().getName() == aux) {
                                         contador++;
                                     } else {
                                         busqueda = false;
                                     }
-                                } else if (matriz[y][x].getObj() == null) {
+                                } else if (this.tablero[y][x].getObj() == null) {
                                     busqueda = false;
                                 }
                             } else {
@@ -240,11 +271,11 @@ class Tablero {
         let aux = "";
         let busqueda = false;
 
-        for (let i = 0; i < matriz.length; i++) {
-            for (let j = columnas - 1; j >= 0; j--) {
-                if (matriz[i][j].getObj() != null) {
+        for (let i = 0; i < this.tablero.length; i++) {
+            for (let j = this.columnas - 1; j >= 0; j--) {
+                if (this.tablero[i][j].getObj() != null) {
                     contador = 1;
-                    aux = matriz[i][j].getObj().getName();
+                    aux = this.tablero[i][j].getObj().getName();
                     busqueda = true;
                     let x = j;
                     let y = i;
@@ -252,14 +283,14 @@ class Tablero {
                         if (contador < mode) {
                             x--;
                             y++;
-                            if (x >= 0 && y < filas) {
-                                if (matriz[y][x].getObj() != null) {
-                                    if (matriz[y][x].getObj().getName() == aux) {
+                            if (x >= 0 && y < this.filas) {
+                                if (this.tablero[y][x].getObj() != null) {
+                                    if (this.tablero[y][x].getObj().getName() == aux) {
                                         contador++;
                                     } else {
                                         busqueda = false;
                                     }
-                                } else if (matriz[y][x].getObj() == null) {
+                                } else if (this.tablero[y][x].getObj() == null) {
                                     busqueda = false;
                                 }
                             } else {
@@ -279,4 +310,3 @@ class Tablero {
         return false;
     }
 }
-

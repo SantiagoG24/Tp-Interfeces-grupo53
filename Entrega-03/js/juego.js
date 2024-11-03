@@ -49,25 +49,17 @@ function showConfig() {
     start_game.addEventListener('click', startGame)
     selecionModo.addEventListener('click', selecionFicha);
 
-<<<<<<< HEAD
 
    
   function showMode() {
-=======
-    showMode();
-    function showMode() {
->>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
-<<<<<<< HEAD
 
         
 
-=======
->>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
         buttonMode4.addEventListener("click", () => {
             mode = 4;
         });
@@ -82,14 +74,11 @@ function showConfig() {
         });
     }
 
-<<<<<<< HEAD
 
        
   showMode();
 
 
-=======
->>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
     function showSelecionFicha() {
         selecionModo.classList.toggle("sacar");
         selecionFicha.classList.toggle("active");
@@ -114,14 +103,11 @@ function showConfig() {
         textGame('Jugador 2', (canvasWidth / 8) * 7, canvasHeight / 8);
         setFichas(ronda);
     }
-<<<<<<< HEAD
 
     
     
 
 
-=======
->>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
     function armarTablero(mode) {
         tablero = new Tablero(ctx, mode, 5, 67);
     }

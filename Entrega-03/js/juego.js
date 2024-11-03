@@ -11,7 +11,7 @@ let buttonMode4, buttonMode5, buttonMode6, buttonMode7;
 let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
-
+let ronda = "ironman";
 
 function textGame(texto, x, y) {
     ctx.font = '700 30px Arial';
@@ -24,14 +24,9 @@ function textGame(texto, x, y) {
 
 textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2);
 
-
-
 /*Imagenes Fichas*/
 let IronmanImg = "assets/ironman-logo.png";
 let CaptainAmericaImg = "assets/captain-america-logo.png";
-
-
-
 
 function showConfig() {
     let selecionModo = document.getElementById("selecionModo");
@@ -54,17 +49,25 @@ function showConfig() {
     start_game.addEventListener('click', startGame)
     selecionModo.addEventListener('click', selecionFicha);
 
+<<<<<<< HEAD
 
    
   function showMode() {
+=======
+    showMode();
+    function showMode() {
+>>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
+<<<<<<< HEAD
 
         
 
+=======
+>>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
         buttonMode4.addEventListener("click", () => {
             mode = 4;
         });
@@ -79,11 +82,14 @@ function showConfig() {
         });
     }
 
+<<<<<<< HEAD
 
        
   showMode();
 
 
+=======
+>>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
     function showSelecionFicha() {
         selecionModo.classList.toggle("sacar");
         selecionFicha.classList.toggle("active");
@@ -97,7 +103,7 @@ function showConfig() {
 
         tablero.drawTablero();
 
-        let cantFichas = tablero.getFilas() * tablero.getColumnas() - tablero.getFilas();
+        let cantFichas = tablero.getFilas() * tablero.getColumnas();
 
         for (let i = 0; i < cantFichas / 2; i++) {
             let f1 = drawFicha("ironman", canvasWidth / 8, canvasHeight / 4 + i * 10, "red", IronmanImg);
@@ -106,18 +112,37 @@ function showConfig() {
 
         textGame('Jugador 1', canvasWidth / 8, canvasHeight / 8);
         textGame('Jugador 2', (canvasWidth / 8) * 7, canvasHeight / 8);
+        setFichas(ronda);
     }
+<<<<<<< HEAD
 
     
     
 
 
+=======
+>>>>>>> fbfbf4622578af4b2c74618536e09e4cb00f891d
     function armarTablero(mode) {
         tablero = new Tablero(ctx, mode, 5, 67);
     }
-
 }
-
+function setFichas(ronda) {
+    for (let i = 0; i < fichasEnPartida.length; i++) {
+        let ficha = fichasEnPartida[i];
+        if (ficha.getName() == ronda) {
+            ficha.setActivado();
+        }
+    }
+}
+function cambiarRonda() {
+    setFichas(ronda);
+    if (ronda == 'ironman') {
+        ronda = 'capitanamerica';
+    } else {
+        ronda = 'ironman'
+    }
+    setFichas(ronda);
+}
 function play() {
 }
 
@@ -137,8 +162,6 @@ function createTablero(inicioTable) {
         finY = finY + 67;
     }
 }
-
-
 
 function drawFicha(name, x, y, color, img) {
     let ficha = new Circle(name, x, y, 25, color, ctx, img);
@@ -170,8 +193,6 @@ function clearCanvas() {
     }
 }
 
-
-
 function findClickedCircle(x, y) {
     for (let i = 0; i < fichasEnPartida.length; i++) {
         let circle = fichasEnPartida[i];
@@ -181,7 +202,6 @@ function findClickedCircle(x, y) {
     }
 }
 
-
 canvas.addEventListener("mousedown", onMouseDown, false);
 function onMouseDown(e) {
     isMouseDown = true;
@@ -190,7 +210,7 @@ function onMouseDown(e) {
         lastCircleCliked = null;
     }
     let clickFig = findClickedCircle(e.layerX, e.layerY);
-    if (clickFig != null) {
+    if (clickFig != null && clickFig.getActivado() == true) {
         lastCircleCliked = clickFig;
     }
     actualizar();
@@ -215,16 +235,18 @@ canvas.addEventListener("mouseup", onMouseUp, false);
 function onMouseUp(e) {
     if (tablero && lastCircleCliked !== null) {
         let col = tablero.whereClick(e.layerX, e.layerY);
-        console.log(col);
         if (col !== null) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
+                console.log(ganador);
                 borrarFichaPartida(lastCircleCliked);
                 actualizar();
-                // if (ganador) {
-                //     showGanador();
-                // }
+                if (ganador) {
+                    showGanador();
+                } else {
+                    cambiarRonda()
+                }
             }
         } else {
             lastCircleCliked.returPosIni();
@@ -233,4 +255,7 @@ function onMouseUp(e) {
     lastCircleCliked = null;
     isMouseDown = false;
 
-} 
+}
+function showGanador() {
+
+}

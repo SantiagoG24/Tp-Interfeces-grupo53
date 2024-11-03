@@ -26,7 +26,7 @@ body {
 /* FOOTER */
 
 footer {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
     overflow: hidden;
@@ -39,8 +39,8 @@ footer {
 footer .row {
     display: flex;
     justify-content: space-around;
-    gap: 62px;
-    max-width: 594px;
+    gap: 60px;
+    max-width: 60%;
     margin: auto;
     text-align: left;
 
@@ -125,4 +125,9 @@ footer a {
 
 footer a:hover {
     color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 768px) {
+    .div-central h3, .div-central p{
+        display: none;
+    }
 }

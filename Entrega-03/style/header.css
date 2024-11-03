@@ -27,6 +27,9 @@ header {
     display: none;
     transition: opacity 2s ease, transform 0.5s ease;
 }
+#header-menu svg{
+    cursor: pointer;
+}
 
 .header-menu {
     align-self: center;
@@ -246,6 +249,7 @@ input.buscar {
 .header-user {
     /* left: 40px; */
     position: relative;
+    cursor: pointer;
 }
 
 .header-user img {

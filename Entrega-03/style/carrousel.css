@@ -219,20 +219,12 @@
     justify-content: center;
 }
 
-.agregar #btn-jugar-card {
-    background-color: #338F3E;
-}
-
-.quitar #btn-jugar-card {
-    background-color: #E01A21;
-}
-
 #img-play {
     width: 36px;
 }
 
 #btn-jugar-card p,
-#btn-agregar-card p {
+.btn-agregar-card p {
     padding-right: 5px;
 }
 
@@ -246,14 +238,14 @@
     display: none;
 }
 
-#btn-agregar-card,
-#btn-quitar-card {
+.descripcion .btn-agregar-card, .descripcion .btn-quitar-card {
     width: 114px;
     height: 40px;
     padding: 5px;
     margin: 0;
     color: #ffff;
     font-size: 14px;
+    font-weight: bold;
     letter-spacing: 0.02em;
     font-style: normal;
     border: none;
@@ -265,11 +257,11 @@
     justify-content: center;
 }
 
-#btn-agregar-card {
+.descripcion .btn-agregar-card{
     background-color: rgba(51, 143, 62, 1);
 }
 
-#btn-quitar-card {
+.descripcion .btn-quitar-card {
     background-color: rgba(236, 29, 36, 1);
 }
 

@@ -306,12 +306,12 @@
                     <div class="descripcion">
                         <h2>Super Mario</h2>
                         <div id="contenedor-botones">
-                            <button id="btn-agregar-card" type="button">
+                            <button class="btn-agregar-card" type="button" style="display: flex;">
                                 <p>Agregar</p>
                                 <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
                             </button>
 
-                            <button id="btn-quitar-card" style="display: none;">
+                            <button class="btn-quitar-card" style="display: none;">
                                 <p>Quitar</p>
                                 <img id="img-play" src="iconos/quitar-carrito.png">
                             </button>
@@ -320,16 +320,21 @@
                 </div>
                 <div class="card">
                     <div class="img-container">
-                        <div class="destacado">Gratis</div>
+                        <div class="destacado">$50.000</div>
                         <img class="card-imagen-mini"
                             src="assets/juegos/God-of-War-Ragnarok-Featured-image-9998438-850x491.jpg" alt="Ghost-TB">
                     </div>
                     <div class="descripcion">
                         <h2>God of War Ragnarok</h2>
-                        <div class="agregar">
-                            <button id="btn-jugar-card">
+                        <div id="contenedor-botones">
+                            <button class="btn-agregar-card" type="button" style="display: flex;">
                                 <p>Agregar</p>
-                                <img id="img-play" src="iconos/carrito.png">
+                                <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
+                            </button>
+
+                            <button class="btn-quitar-card" style="display: none;">
+                                <p>Quitar</p>
+                                <img id="img-play" src="iconos/quitar-carrito.png">
                             </button>
                         </div>
                     </div>
@@ -380,10 +385,15 @@
                     </div>
                     <div class="descripcion">
                         <h2>Cuphead</h2>
-                        <div class="agregar">
-                            <button id="btn-jugar-card">
+                        <div id="contenedor-botones">
+                            <button class="btn-agregar-card" type="button" style="display: flex;">
                                 <p>Agregar</p>
-                                <img id="img-play" src="iconos/carrito.png">
+                                <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
+                            </button>
+
+                            <button class="btn-quitar-card" style="display: none;">
+                                <p>Quitar</p>
+                                <img id="img-play" src="iconos/quitar-carrito.png">
                             </button>
                         </div>
                     </div>
@@ -395,8 +405,13 @@
                     </div>
                     <div class="descripcion">
                         <h2>Valorant</h2>
-                        <div class="quitar">
-                            <button id="btn-jugar-card">
+                        <div id="contenedor-botones">
+                            <button class="btn-agregar-card" type="button" style="display: flex;">
+                                <p>Agregar</p>
+                                <img id="img-play" src="/Entrega-02/iconos/carrito.png" alt="Carrito Agregar">
+                            </button>
+
+                            <button class="btn-quitar-card" style="display: none;">
                                 <p>Quitar</p>
                                 <img id="img-play" src="iconos/quitar-carrito.png">
                             </button>
@@ -440,6 +455,26 @@
     </div>
     <footer>
         <div class="row">
+            <div class="col-1">
+                <h4>Categorías de juegos</h4>
+                <ul class="col1-footer">
+                    <li class="item-col1">
+                        <a href="">Acción</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Carreras</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Estrategia</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">Aventura</a>
+                    </li>
+                    <li class="item-col1">
+                        <a href="">De mesa</a>
+                    </li>
+                </ul>
+            </div>
             <div class="col-1">
                 <h4>Categorías de juegos</h4>
                 <ul class="col1-footer">
@@ -526,16 +561,16 @@
 
 
             <div class="logos">
-                <img src="/Entrega-02//iconos/stanlee 1.png" alt="Stan Lee" class="stanlee">
+                <img src="iconos/stanlee 1.png" alt="Stan Lee" class="stanlee">
                 <div class="iconos-redes">
                     <a href="https://www.instagram.com" target="">
-                        <img src="/Entrega-02//iconos/logoIG.png" alt="">
+                        <img src="/Entrega-02/iconos/logoIG.png" alt="">
                     </a>
                     <a href="https://www.facebook.com" target="">
                         <img src="/Entrega-02/iconos/logoFB.png" alt="">
                     </a>
                     <a href="https://www.x.com" target="">
-                        <img src="/Entrega-02//iconos/logoX.png" alt="">
+                        <img src="iconos/logoX.png" alt="">
                     </a>
                 </div>
                 <img src="/Entrega-02/iconos/Marvel_logo.png" alt="" class="marvel">
@@ -544,6 +579,7 @@
     </footer>
     <script src="js/carrousel.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/botones.js"></script>
 
 </body>
 

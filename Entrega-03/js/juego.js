@@ -7,6 +7,7 @@ let canvasHeight = canvas.height;
 let fichasEnPartida = [];
 let matriz = [];
 let mode = 0;
+let buttonMode4, buttonMode5, buttonMode6, buttonMode7;
 let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
@@ -54,16 +55,15 @@ function showConfig() {
     selecionModo.addEventListener('click', selecionFicha);
 
 
-    showMode();
-    function showMode() {
+   
+  function showMode() {
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
 
-
-
+        
 
         buttonMode4.addEventListener("click", () => {
             mode = 4;
@@ -77,26 +77,11 @@ function showConfig() {
         buttonMode7.addEventListener("click", () => {
             mode = 7;
         });
-
-
-
     }
 
 
-    /*   function showMode() {
-           let buttonMode4 = new Boton(10, 10, 150, 100, ctx);
-           let buttonMode5 = new Boton(200, 10, 150, 100, ctx);
-
-           buttonMode4.draw();
-           buttonMode5.draw();
-
-           canvas.addEventListener("click", (event) => {
-
-           })
-
- 
-       }*/
-
+       
+  showMode();
 
 
     function showSelecionFicha() {
@@ -105,6 +90,7 @@ function showConfig() {
     }
 
     function startGame() {
+        console.log("juego inicado");
         selecionFicha.classList.toggle("sacar");
         armarTablero(mode);
 
@@ -121,6 +107,9 @@ function showConfig() {
         textGame('Jugador 1', canvasWidth / 8, canvasHeight / 8);
         textGame('Jugador 2', (canvasWidth / 8) * 7, canvasHeight / 8);
     }
+
+    
+    
 
 
     function armarTablero(mode) {

@@ -144,6 +144,7 @@ class Tablero {
                 this.tablero[i][j].drawObj();
             }
         }
+
     }
     //////////////////////////
     busquedaPorFila() {

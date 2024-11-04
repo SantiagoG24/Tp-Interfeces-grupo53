@@ -197,6 +197,7 @@ function actualizar() {
     clearCanvas();
     for (let i = 0; i < fichasEnPartida.length; i++) {
         fichasEnPartida[i].draw();
+        crono.mostrarTiempo(); 
     }
 }
 

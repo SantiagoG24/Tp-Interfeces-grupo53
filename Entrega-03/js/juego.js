@@ -11,6 +11,7 @@ let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
+let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
 
 let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
 

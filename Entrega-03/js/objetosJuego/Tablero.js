@@ -87,8 +87,8 @@ class Tablero {
         } else if (modo == 7) {
             this.filas = 9 + 1;
             this.columnas = 9;
-            casilleroWidth = 95.3;
-            casilleroHeight = 65;
+            casilleroWidth = 76.24;
+            casilleroHeight = 52;
         }
 
         let tableroAncho = this.columnas * casilleroWidth;
@@ -117,6 +117,7 @@ class Tablero {
             this.tableroYF = inicioY;
         }
     }
+    
     whereClick(x, y) {
         if (x > this.tableroXI && x < this.tableroXF && y > this.tableroYI && y < this.tableroYF) {
             let res = this.buscarColumnaPos(x);
@@ -143,6 +144,7 @@ class Tablero {
                 this.tablero[i][j].drawObj();
             }
         }
+
     }
     //////////////////////////
     busquedaPorFila() {

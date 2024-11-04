@@ -12,26 +12,39 @@ let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
 
-function textGame(texto, x, y) {
+let imagenFondo = new Image();
+imagenFondo.src = 'assets/fondo-canva.png';
+
+
+/*function textGame(texto, x, y,color) {
     ctx.font = '700 30px Arial';
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = color;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     let txt = texto;
     ctx.fillText(txt, x, y);
-}
+}*/
 
-textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2);
+let bienvenida = new Text(canvas.width / 2, canvas.height / 2, ctx, 'white', '¡Haz Click para Comenzar a Jugar!');
+bienvenida.draw();
+let jugador1Texto = new Text(canvasWidth / 8, canvasHeight / 8, ctx, 'white', 'Jugador 1');
+let jugador2Texto = new Text((canvasWidth / 8) * 7, canvasHeight / 8, ctx, 'white', 'Jugador 2');
+
+
+//textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2,"white");
 
 /*Imagenes Fichas*/
 let IronmanImg = "assets/ironman-logo.png";
 let CaptainAmericaImg = "assets/captain-america-logo.png";
+
+
 
 function showConfig() {
     let selecionModo = document.getElementById("selecionModo");
     let selecionFicha = document.getElementById("fichasEleccion");
     let btn_modo = document.getElementById("btn-modo");
     let start_game = document.getElementById("start-game");
+    let back_modo = document.getElementById("back");
 
     // Eventos para las opciones de fichas
     document.getElementById("buttonOpcionA").addEventListener("click", () => {
@@ -40,21 +53,27 @@ function showConfig() {
     });
 
     document.getElementById("buttonOpcionB").addEventListener("click", () => {
-        IronmanImg = "assets/ironman-logo2.png";
+        IronmanImg = "assets/ironman-B.png";
         CaptainAmericaImg = "assets/captain-america-logo2.png";
     });
 
+    
+    
+   
     btn_modo.addEventListener('click', showSelecionFicha);
     start_game.addEventListener('click', startGame)
-    selecionModo.addEventListener('click', selecionFicha);
-
-    showMode();
-    function showMode() {
+    selecionModo.addEventListener('click', selecionFicha);   
+    back_modo.addEventListener('click',showSelecionFicha );
+   
+  function showMode() {
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
+
+        
+
         buttonMode4.addEventListener("click", () => {
             mode = 4;
         });
@@ -68,6 +87,16 @@ function showConfig() {
             mode = 7;
         });
     }
+     
+    
+
+       
+  showMode();
+
+  
+
+  
+
 
     function showSelecionFicha() {
         selecionModo.classList.toggle("sacar");
@@ -75,6 +104,7 @@ function showConfig() {
     }
 
     function startGame() {
+        console.log("juego inicado");
         selecionFicha.classList.toggle("sacar");
         armarTablero(mode);
 
@@ -88,14 +118,24 @@ function showConfig() {
             let f2 = drawFicha("capitanamerica", (canvasWidth / 8) * 7, canvasHeight / 4 + i * 10, "blue", CaptainAmericaImg);
         }
 
-        textGame('Jugador 1', canvasWidth / 8, canvasHeight / 8);
-        textGame('Jugador 2', (canvasWidth / 8) * 7, canvasHeight / 8);
+        jugador1Texto.draw();
+        jugador2Texto.draw();
         setFichas(ronda);
+        
     }
+
+    
+    
+
+
     function armarTablero(mode) {
         tablero = new Tablero(ctx, mode, 5, 67);
     }
 }
+
+
+
+
 function setFichas(ronda) {
     for (let i = 0; i < fichasEnPartida.length; i++) {
         let ficha = fichasEnPartida[i];
@@ -104,14 +144,25 @@ function setFichas(ronda) {
         }
     }
 }
+
+
+
+
 function cambiarRonda() {
     setFichas(ronda);
     if (ronda == 'ironman') {
         ronda = 'capitanamerica';
+        jugador1Texto.setText('Jugador 1');
+        jugador2Texto.setText('¡Es tu turno!');
+         
     } else {
         ronda = 'ironman'
+        jugador1Texto.setText('¡Es tu turno!');
+        jugador2Texto.setText('Jugador 2');
     }
+    actualizar();
     setFichas(ronda);
+    
 }
 function play() {
 }
@@ -145,16 +196,18 @@ function actualizar() {
     }
 }
 
+
 function clearCanvas() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-
-    if (tablero) {
-        tablero.drawTablero();
-        textGame('Jugador 1', canvasWidth / 8, canvasHeight / 8);
-        textGame('Jugador 2', (canvasWidth / 8) * 7, canvasHeight / 8);
-    }
-
+    ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
+    
+        if (tablero) {
+        tablero.drawTablero();   
+        jugador1Texto.draw();
+        jugador2Texto.draw();
+        }
+    
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz[i].length; j++) {
             matriz[i][j].draw();

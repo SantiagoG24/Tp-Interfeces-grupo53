@@ -1,27 +1,158 @@
+.canvas-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+
+}
 canvas {
-    background-color: #180755;
-
+    background-color: #010B2A;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
-.button {
-    z-index: -1;
-}
-
-.buttonsGame {
+.buttonsGame,.fichasEleccion {   
+    position: absolute; 
+    bottom: 70%;
     width: 0px;
     height: 0px;
     opacity: 0;
     z-index: -1;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
     /* display: none; */
 }
 
-.fichasEleccion {
-    width: 0px;
-    height: 0px;
-    opacity: 0;
-    z-index: -1;
-    /* display: none; */
+.buttonsGame h1, h2 {
+    margin-bottom: 10%;
+    width: 100%;
+    color: #f1f0f3;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 2px 2px 4px #000; 
 }
+
+#mode4,#mode5,#mode6,#mode7,#btn-modo {  
+    z-index: -1;
+    width: 20%;
+    height: 30%;
+    margin: 2%;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
+}
+
+#btn-modo{
+    width: 30%;
+    height: 30%;
+    margin-top: 3%;
+}
+
+#mode4:hover {
+    background-color: #0b771d; 
+    color: #f4f4f7; 
+}
+
+#mode5:hover {
+    background-color: #2887D1; 
+    color: #f4f4f7; 
+}
+
+#mode6:hover {
+    background-color: #AD1C21; 
+    color: #f4f4f7; 
+}
+
+#mode7:hover {
+    background-color:#C85336; 
+    color: #f4f4f7; 
+}
+
+#btn-modo:hover {
+    background-color: #310b77;
+    color: #f4f4f7;
+}
+
+.opcion {
+    display: flex;
+    justify-content: space-around; /* Centra las opciones */
+    margin-bottom: 1rem;
+
+}
+
+#buttonOpcionA, #buttonOpcionB{
+    width: 40%;
+    padding: 10px;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
+}
+
+#buttonOpcionA:hover {
+     
+    background-color: #0b771d;
+    color:#f4f4f7 ;
+}
+
+#buttonOpcionB:hover {
+     
+    background-color: #0b771d;
+    color:#f4f4f7 ;
+}
+
+
+.buttonBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia los botones */
+    align-items: center;
+    width: 80%; /* Ajusta el ancho para centrar */
+    margin: 0 auto; /* Centra .buttonBack */
+    margin-top: 1rem;
+
+}
+
+#back,#start-game {
+    width: 45%; /* Ajusta el ancho de los botones para que se vean mejor */
+    padding: 10px;
+    margin-top: 5%;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
+}
+
+#back:hover {
+    background-color: #310b77;
+    color: #f4f4f7;
+}
+
+#start-game:hover {
+    background-color: #310b77;
+    color: #f4f4f7;
+}
+
+
+
+
+
 
 .active {
     width: 600px;
@@ -34,6 +165,7 @@ canvas {
 .opcion img {
     width: 100px;
     height: 100px;
+    padding: 5%;
 }
 
 .desactive {

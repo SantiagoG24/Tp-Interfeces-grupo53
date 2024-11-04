@@ -1,5 +1,4 @@
 class Casillero {
-
     constructor(ctx, inicioX, finX, inicioY, finY) {
         this.inicioX = inicioX;
         this.finX = finX;
@@ -68,25 +67,21 @@ class Casillero {
             const centerX = this.inicioX + this.width / 2;
             const centerY = this.inicioY + this.height / 2;
             const radius = Math.min(this.width, this.height) * 0.3;  // Proporcional al tamaño del casillero
-
             // Dibujar el círculo en el centro del casillero
             this.ctx.beginPath();
             this.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
             this.ctx.fillStyle = this.obj.getFill();
             this.ctx.fill();
             this.ctx.closePath();
-
             // Configurar el recorte circular
             this.ctx.save(); // Guardar el estado del contexto
             this.ctx.beginPath();
             this.ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
             this.ctx.clip(); // Recortar al círculo
-
             // Dibujar la imagen ajustada al círculo
             this.imgOcupacion = new Image();
             this.imgOcupacion.src = this.imgFicha;
             this.ctx.drawImage(this.imgOcupacion, centerX - radius, centerY - radius, radius * 2, radius * 2);
-
             // Restaurar el estado del contexto para evitar afectar otros dibujos
             this.ctx.restore();
         }

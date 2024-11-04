@@ -11,6 +11,7 @@ let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
+let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
 
 let imagenFondo = new Image();
 imagenFondo.src = 'assets/fondo-canva.png';
@@ -121,6 +122,7 @@ function showConfig() {
         jugador1Texto.draw();
         jugador2Texto.draw();
         setFichas(ronda);
+        crono.iniciar();
         
     }
 
@@ -280,5 +282,5 @@ function onMouseUp(e) {
 
 }
 function showGanador() {
-
+    crono.detener();
 }

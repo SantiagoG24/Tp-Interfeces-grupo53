@@ -57,22 +57,22 @@ function showConfig() {
         CaptainAmericaImg = "assets/captain-america-logo2.png";
     });
 
-    
-    
-   
+
+
+
     btn_modo.addEventListener('click', showSelecionFicha);
     start_game.addEventListener('click', startGame)
-    selecionModo.addEventListener('click', selecionFicha);   
-    back_modo.addEventListener('click',showSelecionFicha );
-   
-  function showMode() {
+    selecionModo.addEventListener('click', selecionFicha);
+    back_modo.addEventListener('click', showSelecionFicha);
+
+    function showMode() {
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
 
-        
+
 
         buttonMode4.addEventListener("click", () => {
             mode = 4;
@@ -87,15 +87,15 @@ function showConfig() {
             mode = 7;
         });
     }
-     
-    
 
-       
-  showMode();
 
-  
 
-  
+
+    showMode();
+
+
+
+
 
 
     function showSelecionFicha() {
@@ -104,7 +104,7 @@ function showConfig() {
     }
 
     function startGame() {
-        console.log("juego inicado");
+
         selecionFicha.classList.toggle("sacar");
         armarTablero(mode);
 
@@ -121,11 +121,11 @@ function showConfig() {
         jugador1Texto.draw();
         jugador2Texto.draw();
         setFichas(ronda);
-        
+
     }
 
-    
-    
+
+
 
 
     function armarTablero(mode) {
@@ -154,7 +154,7 @@ function cambiarRonda() {
         ronda = 'capitanamerica';
         jugador1Texto.setText('Jugador 1');
         jugador2Texto.setText('¡Es tu turno!');
-         
+
     } else {
         ronda = 'ironman'
         jugador1Texto.setText('¡Es tu turno!');
@@ -162,7 +162,7 @@ function cambiarRonda() {
     }
     actualizar();
     setFichas(ronda);
-    
+
 }
 function play() {
 }
@@ -201,13 +201,13 @@ function clearCanvas() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
     ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
-    
-        if (tablero) {
-        tablero.drawTablero();   
+
+    if (tablero) {
+        tablero.drawTablero();
         jugador1Texto.draw();
         jugador2Texto.draw();
-        }
-    
+    }
+
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz[i].length; j++) {
             matriz[i][j].draw();
@@ -262,7 +262,7 @@ function onMouseUp(e) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
-                console.log(ganador);
+
                 borrarFichaPartida(lastCircleCliked);
                 actualizar();
                 if (ganador) {

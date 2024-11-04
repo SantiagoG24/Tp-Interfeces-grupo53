@@ -13,7 +13,7 @@ class Casillero {
         this.imgFicha = null;
         this.imgOcupacion = null;
         this.imgCasillero = new Image();
-        this.imgCasillero.src = "../..//assets/casillero.jpg";
+        this.imgCasillero.src = "casillero.jpg";
         this.imgCasillero.onload = () => {
             this.draw();
         };

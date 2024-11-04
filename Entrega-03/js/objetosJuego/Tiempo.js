@@ -41,6 +41,7 @@ class Tiempo {
         let minutos = Math.floor(this.tiempoRestante / 60);
         let segundos = this.tiempoRestante % 60;
         let tiempoFormateado = `${this.formatoDobleDigito(minutos)}:${this.formatoDobleDigito(segundos)}`;
+        console.log(`${this.formatoDobleDigito(minutos)}:${this.formatoDobleDigito(segundos)}`);
 
         
         this.ctx.font = '700 30px Arial';  

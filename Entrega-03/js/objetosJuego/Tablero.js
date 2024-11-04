@@ -136,6 +136,9 @@ class Tablero {
     }
 
     drawTablero() {
+        this.ctx.fillStyle = "black";
+        this.ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+        ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
         for (let i = 0; i < this.tablero.length; i++) {
             for (let j = 0; j < this.tablero[i].length; j++) {
                 this.tablero[i][j].draw();

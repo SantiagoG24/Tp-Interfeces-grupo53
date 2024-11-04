@@ -12,6 +12,8 @@ let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
 
+let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
+
 let imagenFondo = new Image();
 imagenFondo.src = 'assets/fondo-canva.png';
 
@@ -121,6 +123,7 @@ function showConfig() {
         jugador1Texto.draw();
         jugador2Texto.draw();
         setFichas(ronda);
+        crono.iniciar()
 
     }
 
@@ -207,7 +210,7 @@ function clearCanvas() {
         jugador1Texto.draw();
         jugador2Texto.draw();
     }
-
+    
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz[i].length; j++) {
             matriz[i][j].draw();
@@ -313,6 +316,6 @@ function showGanador() {
         console.log("Ganó Capitán América");
     }
     
-
+    crono.detener();
     
 }

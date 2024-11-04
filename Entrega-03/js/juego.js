@@ -7,11 +7,14 @@ let canvasHeight = canvas.height;
 let fichasEnPartida = [];
 let matriz = [];
 let mode = 0;
-let buttonMode4, buttonMode5, buttonMode6, buttonMode7;
 let tablero;
 let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
+
+let imagenFondo = new Image();
+imagenFondo.src = 'assets/fondo-canva.png';
+
 
 function textGame(texto, x, y) {
     ctx.font = '700 30px Arial';
@@ -41,15 +44,18 @@ function showConfig() {
     });
 
     document.getElementById("buttonOpcionB").addEventListener("click", () => {
-        IronmanImg = "assets/ironman-logo2.png";
+        IronmanImg = "assets/ironman-B.png";
         CaptainAmericaImg = "assets/captain-america-logo2.png";
     });
+
+    
+
 
     btn_modo.addEventListener('click', showSelecionFicha);
     start_game.addEventListener('click', startGame)
     selecionModo.addEventListener('click', selecionFicha);
 
-
+   
    
   function showMode() {
         selecionModo.classList.toggle("active");
@@ -77,6 +83,8 @@ function showConfig() {
 
        
   showMode();
+
+  
 
 
     function showSelecionFicha() {
@@ -164,7 +172,7 @@ function actualizar() {
 function clearCanvas() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-
+    ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
     if (tablero) {
         tablero.drawTablero();
         textGame('Jugador 1', canvasWidth / 8, canvasHeight / 8);

@@ -13,7 +13,7 @@ class Casillero {
         this.imgFicha = null;
         this.imgOcupacion = null;
         this.imgCasillero = new Image();
-        this.imgCasillero.src = "../../assets/casillero.jpg";
+        this.imgCasillero.src = "../..//assets/casillero.jpg";
         this.imgCasillero.onload = () => {
             this.draw();
         };
@@ -22,8 +22,6 @@ class Casillero {
     getOcupado() {
         return this.ocupado;
     }
-
-
 
     draw() {
         this.ctx.fillStyle = "#757575";

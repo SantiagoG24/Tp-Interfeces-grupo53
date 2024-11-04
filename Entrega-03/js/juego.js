@@ -279,6 +279,40 @@ function onMouseUp(e) {
     isMouseDown = false;
 
 }
-function showGanador() {
 
+function borrarTodasLasFichas() {
+    while (fichasEnPartida.length > 0) {
+        fichasEnPartida.pop(); 
+    }
+}
+
+
+function showGanador() {
+    let ganador = document.getElementById('ganador'); 
+    let ficha_ganadora = document.getElementById('ficha-ganadora');
+    let reiniciar = document.getElementById('reiniciar');
+    ganador.classList.toggle("active");
+    
+    reiniciar.addEventListener('click', showConfig);
+
+    
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
+    tablero = null;
+    borrarTodasLasFichas();
+    mode=0;
+    
+    ganador.style.display = "block"; 
+
+    if (ronda === "ironman") {
+        ficha_ganadora.innerHTML = "Ganó IronMan";
+        console.log("Ganó IronMan");
+    } else {
+        ficha_ganadora.innerHTML = "Ganó Capitán América";
+        console.log("Ganó Capitán América");
+    }
+    
+
+    
 }

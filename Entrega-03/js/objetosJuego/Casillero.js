@@ -18,6 +18,7 @@ class Casillero {
         };
     }
 
+
     getOcupado() {
         return this.ocupado;
     }

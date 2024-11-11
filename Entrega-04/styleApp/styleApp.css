@@ -1,0 +1,37 @@
+body {
+    font-family:"Lato", sans-serif
+}
+
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/*bloque 3d*/ 
+
+.objeto-3d{
+    display: flex;
+    flex-direction: row;
+}
+
+#h1-3d{
+    width: 736px;
+    height: 285px;
+    color: #9D2121;
+}
+
+#p-3d{
+    width: 467px;
+    height: 190px;
+}
+
+.bloque-imagenes {
+    display: flex;
+    flex-direction: row;  
+}
+
+.bloque-imagenes img {
+    padding: 2%;
+}
+

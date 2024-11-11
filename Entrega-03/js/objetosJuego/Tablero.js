@@ -117,7 +117,7 @@ class Tablero {
             this.tableroYF = inicioY;
         }
     }
-    
+
     whereClick(x, y) {
         if (x > this.tableroXI && x < this.tableroXF && y > this.tableroYI && y < this.tableroYF) {
             let res = this.buscarColumnaPos(x);
@@ -312,4 +312,5 @@ class Tablero {
         }
         return false;
     }
+
 }

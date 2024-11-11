@@ -12,12 +12,8 @@ let isMouseDown = false;
 let lastCircleCliked = null;
 let ronda = "ironman";
 let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
-
-
-
 let imagenFondo = new Image();
 imagenFondo.src = 'assets/fondo-canva.png';
-
 
 /*function textGame(texto, x, y,color) {
     ctx.font = '700 30px Arial';
@@ -33,16 +29,15 @@ bienvenida.draw();
 let jugador1Texto = new Text(canvasWidth / 8, canvasHeight / 8, ctx, 'white', 'Jugador 1');
 let jugador2Texto = new Text((canvasWidth / 8) * 7, canvasHeight / 8, ctx, 'white', 'Jugador 2');
 
-
 //textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2,"white");
 
 /*Imagenes Fichas*/
 let IronmanImg = "assets/ironman-logo.png";
 let CaptainAmericaImg = "assets/captain-america-logo.png";
 
-
-
 function showConfig() {
+    canvas.removeEventListener("click", showConfig)
+
     let selecionModo = document.getElementById("selecionModo");
     let selecionFicha = document.getElementById("fichasEleccion");
     let btn_modo = document.getElementById("btn-modo");
@@ -60,22 +55,18 @@ function showConfig() {
         CaptainAmericaImg = "assets/captain-america-logo2.png";
     });
 
-
-
-
     btn_modo.addEventListener('click', showSelecionFicha);
     start_game.addEventListener('click', startGame)
-    selecionModo.addEventListener('click', selecionFicha);
+    // selecionModo.addEventListener('click', selecionFicha);
     back_modo.addEventListener('click', showSelecionFicha);
 
     function showMode() {
+
         selecionModo.classList.toggle("active");
         let buttonMode4 = document.getElementById("mode4");
         let buttonMode5 = document.getElementById("mode5");
         let buttonMode6 = document.getElementById("mode6");
         let buttonMode7 = document.getElementById("mode7");
-
-
 
         buttonMode4.addEventListener("click", () => {
             mode = 4;
@@ -91,24 +82,16 @@ function showConfig() {
         });
     }
 
-
-
-
     showMode();
 
-
-
-
-
-
     function showSelecionFicha() {
-        selecionModo.classList.toggle("sacar");
-        selecionFicha.classList.toggle("active");
+        selecionModo.classList.remove("active");
+        selecionFicha.classList.add("active");
     }
 
     function startGame() {
 
-        selecionFicha.classList.toggle("sacar");
+        selecionFicha.classList.remove("active");
         armarTablero(mode);
 
 
@@ -128,10 +111,6 @@ function showConfig() {
 
     }
 
-
-
-
-
     function armarTablero(mode) {
         tablero = new Tablero(ctx, mode, 5, 67);
     }
@@ -148,10 +127,6 @@ function setFichas(ronda) {
         }
     }
 }
-
-
-
-
 function cambiarRonda() {
     setFichas(ronda);
     if (ronda == 'ironman') {
@@ -197,10 +172,9 @@ function actualizar() {
     clearCanvas();
     for (let i = 0; i < fichasEnPartida.length; i++) {
         fichasEnPartida[i].draw();
-        crono.mostrarTiempo(); 
+        crono.mostrarTiempo();
     }
 }
-
 
 function clearCanvas() {
     ctx.fillStyle = "black";
@@ -212,7 +186,7 @@ function clearCanvas() {
         jugador1Texto.draw();
         jugador2Texto.draw();
     }
-    
+
     for (let i = 0; i < matriz.length; i++) {
         for (let j = 0; j < matriz[i].length; j++) {
             matriz[i][j].draw();
@@ -267,7 +241,6 @@ function onMouseUp(e) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
-
                 borrarFichaPartida(lastCircleCliked);
                 actualizar();
                 if (ganador) {
@@ -287,37 +260,35 @@ function onMouseUp(e) {
 
 function borrarTodasLasFichas() {
     while (fichasEnPartida.length > 0) {
-        fichasEnPartida.pop(); 
+        fichasEnPartida.pop();
     }
 }
 
-
 function showGanador() {
-    let ganador = document.getElementById('ganador'); 
+    let ganador = document.getElementById('ganador');
     let ficha_ganadora = document.getElementById('ficha-ganadora');
     let reiniciar = document.getElementById('reiniciar');
     ganador.classList.toggle("active");
-    
-    reiniciar.addEventListener('click', showConfig);
 
-    
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvasWidth, canvasHeight);
     ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
     tablero = null;
     borrarTodasLasFichas();
-    mode=0;
-    
-    ganador.style.display = "block"; 
+    mode = 0;
+    ganador.style.display = "block";
 
     if (ronda === "ironman") {
         ficha_ganadora.innerHTML = "Ganó IronMan";
-        console.log("Ganó IronMan");
     } else {
         ficha_ganadora.innerHTML = "Ganó Capitán América";
-        console.log("Ganó Capitán América");
     }
-    
+
     crono.detener();
-    
+    reiniciar.addEventListener('click', resetGame);
+}
+function resetGame() {
+    let ganador = document.getElementById("ganador");
+    ganador.classList.remove("active");
+    showConfig();
 }

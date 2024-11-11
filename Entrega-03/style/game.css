@@ -505,7 +505,7 @@ canvas {
     align-items: center;
     text-align: center;
     gap: 1rem;
-    /* display: none; */
+    display: none;
 }
 
 .buttonsGame h1,
@@ -642,11 +642,6 @@ h2 {
     color: #f4f4f7;
 }
 
-
-
-
-
-
 .active {
     width: 600px;
     height: 130px;
@@ -664,8 +659,38 @@ h2 {
 .desactive {
     z-index: -1;
     opacity: 0;
+    display: block;
 }
 
 .sacar {
     display: none;
+}
+
+#ganador {
+    display: flex;
+    position: absolute;
+    bottom: 50%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+#ganador h1 {
+    color: #f1f0f3;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#reiniciar {
+    width: 45%;
+    padding: 10px;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
 }

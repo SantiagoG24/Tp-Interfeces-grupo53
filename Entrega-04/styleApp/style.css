@@ -3,15 +3,43 @@
     margin: 0 auto;
 }
 
-nav {
+header {
     height: 103px;
-    width: 100%;
+    width: 1080px;
     background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 87.91%, rgba(1, 208, 213, 0) 100%);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    box-sizing: border-box;
+    margin-top: -8px;
+}
 
+nav {
+    top: 95px;
+    display: none;
+    background-color: #1F1E1E;
+    opacity: 0%;
+    position: fixed;
+}
+
+@keyframes nav-visible {
+    0% {
+
+        display: block;
+        width: 160px;
+        height: 1180px;
+    }
+
+    100% {
+        display: block;
+        width: 160px;
+        height: 1180px;
+        opacity: 90%;
+    }
 }
 
 .menu {
@@ -39,4 +67,10 @@ nav {
     border-radius: 111px;
     background-color: #83c252;
     /* box-shadow: 8px #02187E; */
+}
+
+section {
+    background-image: url(../assets/fondo.png);
+    width: 100%;
+    height: 1000px;
 }

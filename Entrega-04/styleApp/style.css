@@ -73,6 +73,9 @@ nav {
     border: white 8px solid;
     border-radius: 111px;
     background-color: #83c252;
+    font-family: "Lato", sans-serif;
+    size: 20px;
+    font-weight: 1000;
     /* box-shadow: 8px #02187E; */
 }
 

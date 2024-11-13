@@ -1,0 +1,209 @@
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    height: 103px;
+    width: 1080px;
+    background: linear-gradient(180deg, #00D1D5 0%, rgba(0, 209, 213, 0.12) 87.91%, rgba(1, 208, 213, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    box-sizing: border-box;
+    margin-top: -8px;
+    z-index: 1;
+}
+
+nav {
+    top: 95px;
+    display: none;
+    background-color: #1F1E1E;
+    opacity: 0%;
+    position: fixed;
+}
+
+
+@keyframes nav-visible {
+    0% {
+
+        display: block;
+        width: 160px;
+        height: 1180px;
+    }
+
+    100% {
+        display: block;
+        width: 160px;
+        height: 1180px;
+        opacity: 90%;
+    }
+}
+
+.menu {
+    width: 200px;
+    height: 40px;
+    z-index: 3;
+}
+
+.bar {
+    width: 34px;
+    height: 4px;
+    border: white solid 4px;
+    border-radius: 111px;
+    background-color: #F39E46;
+}
+
+.logo {
+    width: 200px;
+}
+
+.logo img {
+    width: 150px;
+    height: 86px;
+}
+
+.btn-comprar {
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: white 8px solid;
+    border-radius: 111px;
+    background-color: #83c252;
+    /* box-shadow: 8px #02187E; */
+}
+
+section {
+    background-image: url(../assets/fondo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 90px;
+    position: relative;
+}
+
+.ini-izq {
+    width: 33%;
+    height: 900px;
+}
+
+.arbusto4izq {
+    width: 239px;
+    height: 140px;
+    position: absolute;
+    top: 587px;
+    z-index: 0;
+    left: 150px;
+}
+
+.arIzq {
+    width: 41%;
+    position: absolute;
+    left: -86px;
+    z-index: 0;
+    top: 20px;
+}
+
+.piedraizq {
+    width: 113px;
+    height: 74px;
+    position: absolute;
+    top: 640px;
+    left: 120px;
+}
+
+.arbusto1izq {
+    width: 155px;
+    height: 102px;
+    position: absolute;
+    top: 662px;
+    left: 162px;
+}
+
+.arDer {
+    width: 37%;
+    position: absolute;
+    top: 39px;
+    right: -44;
+}
+
+.ini-centro {
+    width: 33%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-pj {
+    width: 240px;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    overflow: visible;
+}
+
+img.pj_uno {
+    position: absolute;
+    width: 240px;
+    height: 314px;
+    top: 70px;
+    right: -68px;
+    z-index: 2;
+    rotate: -6deg;
+}
+
+img.pj_dos {
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 197px;
+    height: 270px;
+    rotate: -6deg;
+    z-index: 1;
+}
+
+.img-pjtres {
+    width: 240px;
+    height: 515px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+img.pj_tres {
+    position: absolute;
+    width: 174px;
+    height: 384px;
+    top: -68px;
+    left: -106px;
+    rotate: 8deg;
+}
+
+#pj-1 {}
+
+.ini-der {
+    width: 33%;
+    height: 900px;
+}
+
+.ini-abajo {
+    position: absolute;
+    top: 346px;
+    left: 27%;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+
+}

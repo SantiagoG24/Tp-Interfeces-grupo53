@@ -223,51 +223,64 @@
 
 
                                             <! Bloque -->
+    </div>
 
-      <div class="objeto-3d">
-             <div id="texto-3d">
+      <div class="container">
+            <div class="objeto-3d">
+                <div id="texto-3d">
             <h1 id="h1-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura Matemática Inmersiva!</h1>
             <p id="p-3d">En NumberBlocks, la aventura no solo está en el aprendizaje, ¡sino también en la experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a cada número y desafío, haciendo que las matemáticas cobren una nueva dimensión. A medida que los niños interactúan con los personajes y los bloques, verán cómo sus acciones tienen un impacto real en el entorno, creando un aprendizaje dinámico y emocionante. ¡Cada sesión de juego se convierte en una experiencia inolvidable llena de color y diversión!</p>
-             </div>
-             <div>
-                <img id="img-3d" src="/Entrega-04/assets/image239.png">
+                </div>
+                <div>
+                <model-viewer id="muñeco-3d" loading="eager" camera-controls touch-action="pan-y" 
+                auto-rotate poster="/Entrega-04/assets/image239.png" 
+                tone-mapping="aces" src=" /Entrega-04/assets/one.glb" 
+                shadow-intensity="1" alt="A 3D model of a shishkebab">
+                </model-viewer>         
             </div>
+           </div>
       </div>
       
 
       <! Bloque personajes-->
-     <div class="bloque-personajes" >
-        <div class="bloque-imagenes" id="bloque-1">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/455.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/456.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/457.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/458.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/459.png">
-          </div>
-    
-          <div class="bloque-imagenes" id="bloque-2">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/460.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/461.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/462.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/463.png">
-            <img class="personaje" src="/Entrega-04/assets/img-personajes/464.png">
-          </div>
+     <div class="gradiente-bloque">
+        <div class="container">
+            <div class="bloque-personajes" >
+                <div class="bloque-imagenes" id="bloque-1">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/455.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/456.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/457.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/458.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/459.png">
+                  </div>
+            
+                  <div class="bloque-imagenes" id="bloque-2">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/460.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/461.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/462.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/463.png">
+                    <img class="personaje" src="/Entrega-04/assets/img-personajes/464.png">
+                  </div>
+             </div>
+        </div>
      </div>
 
       <! PRE FOOTER -->
 
-      <div class="prefooter">
-        <div id="h1-prefooter"><h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1></div>
-        <div>
-            <div class="suscripcion">
-                <form>
-                    <input type="email" placeholder="Ingresa aquí tu correo">
-                    <button type="submit">SUSCRIBIRSE</button>
-                </form>
-            </div>            
-        </div>
-        <div><p id="p-prefooter">Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico, y también acepta nuestra Política de privacidad y las Condiciones del servicio.</p></div>
-      </div>
+     <div class="prefooter">
+        <div class="conteiner">
+            <div id="h1-prefooter"><h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1></div>
+            <div>
+                <div class="suscripcion">
+                    <form>
+                        <input type="email" placeholder="Ingresa aquí tu correo">
+                        <button type="submit">SUSCRIBIRSE</button>
+                    </form>
+                </div>            
+            </div>
+            <div><p id="p-prefooter">Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico, y también acepta nuestra Política de privacidad y las Condiciones del servicio.</p></div>
+          </div>
+     </div>
 
 
 
@@ -282,7 +295,7 @@
             <img src="/Entrega-04/assets/footer-2.png">
         </div>
     </footer>
-    </div>
+
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>

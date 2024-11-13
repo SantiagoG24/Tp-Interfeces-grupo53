@@ -1,41 +1,80 @@
 body {
     font-family:"Lato", sans-serif;
+    align-items: center;
     
     
 }
-
 
 .container {
-    max-width: 1080px;  
+    max-width: 1080px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    
 }
+
+
 
 /*bloque 3d*/ 
 
 .objeto-3d{
     display: flex;
     flex-direction: row;
-    
+    align-self: center;    
+}
+
+#texto-3d {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 518px;
 }
 
 #h1-3d{
-    width: 736px;
+    width: 600px;
     height: 285px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 94.5%;
+    /* or 57px */
+   
     color: #9D2121;
+    
 }
 
 #p-3d{
-    width: 467px;
-    height: 190px;
+width: 467px;
+height: 200px;
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 94.5%;
+/* or 19px */
+margin-bottom: 10%;
+}
+
+#muñeco-3d{
+    
+    width:487px;
+    height: 773px;
+    margin-right: 25%;
 }
 /*Bloque personajes */
-.bloque-personajes {
-    width: 1280px;  
-    align-self: center;
+
+.gradiente-bloque {
+    width: 1280px; /* Ancho fijo de 1280px */
     background: linear-gradient(to right, #8f1010, #cc1f1d, #dbc51d, #58e009, #38f3fc);
-    
+    margin: 0 auto; /* Centra el bloque de fondo en la pantalla */
+    padding: 20px 0; /* Espaciado superior e inferior opcional */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del fondo */
+}
+
+.bloque-personajes {
+    margin: 0 auto; /* Centra el bloque en la pantalla */
+    margin-right: auto;
+  
 }
 
 
@@ -43,14 +82,13 @@ body {
 .bloque-imagenes {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centers images within the container */
+    justify-content: center;
     
 }
 
 
 .bloque-imagenes img {
-   padding: 1.5%; 
-    
+   padding: 1%;   
 }
 
 .personaje {
@@ -78,14 +116,18 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 
 /*Pre footer*/
 
-.prefooter {
-    height: 1296px;
-    width: 1280px;  
-    align-self: center;
+.prefooter-gradiente {
+    width: 1280px;
     background: linear-gradient(to bottom, #FFFFFF, #EDFDFF, #ADF8FD, #E0D299);
    
-    
 }
+
+.prefooter {
+    width: 1080px;
+    height: 1296px;
+    margin: 0 auto; /* Centra el elemento */
+}
+
 
 
 #h1-prefooter{

@@ -1,11 +1,15 @@
 body {
-    font-family:"Lato", sans-serif
+    font-family:"Lato", sans-serif;
+    
+    
 }
 
 
 .container {
-    max-width: 1080px;
+    max-width: 1080px;  
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /*bloque 3d*/ 
@@ -13,6 +17,7 @@ body {
 .objeto-3d{
     display: flex;
     flex-direction: row;
+    
 }
 
 #h1-3d{
@@ -25,13 +30,181 @@ body {
     width: 467px;
     height: 190px;
 }
+/*Bloque personajes */
+.bloque-personajes {
+    width: 1280px;  
+    align-self: center;
+    background: linear-gradient(to right, #8f1010, #cc1f1d, #dbc51d, #58e009, #38f3fc);
+    
+}
+
+
 
 .bloque-imagenes {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
+    justify-content: center; /* Centers images within the container */
+    
 }
 
+
 .bloque-imagenes img {
-    padding: 2%;
+   padding: 1.5%; 
+    
 }
+
+.personaje {
+    transition: transform 0.3s ease, filter 0.3s ease; /
+}
+
+.personaje:hover {
+    animation: crecerYBrillar 0.3s forwards; 
+}
+
+@keyframes crecerYBrillar {
+    from {
+        transform: scale(1); 
+        filter: brightness(1); 
+    }
+    to {
+        transform: scale(1.1); 
+        filter: brightness(1.2); 
+    }
+}
+
+/*linear-gradient(to right, #8f1010,#cc1f1d,#dbc51d,#58e009,#38f3fc, #38f3fc),
+linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
+
+
+/*Pre footer*/
+
+.prefooter {
+    height: 1296px;
+    width: 1280px;  
+    align-self: center;
+    background: linear-gradient(to bottom, #FFFFFF, #EDFDFF, #ADF8FD, #E0D299);
+   
+    
+}
+
+
+#h1-prefooter{
+    width: 816px;
+    height: 171px;
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+
+#p-prefooter {
+    width: 578px;
+    height: 95px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5%;
+
+}
+.suscripcion {
+    display: flex;
+    margin-top: 10%;
+       
+}
+
+.suscripcion form {
+    display: flex;
+    align-items: center;
+    border: 3px solid white; 
+    border-radius: 50px;
+    overflow: hidden; 
+    box-shadow: 4px 5px 0px #02187E;
+}
+
+.suscripcion input[type="email"] {
+    width: 400px;
+    height: 60px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px 0 0 50px;
+    background-color: #F0F0F0; 
+    color: #7A7A7A; 
+}
+
+
+.suscripcion input[type="email"]::placeholder {
+    color: #A0A0A0;
+    font-size: 20px;
+}
+
+
+.suscripcion button {
+    width: 150px;
+    height: 60px;
+    border: none;
+    background-color: #83C252; 
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    border-radius: 0 50px 50px 0;
+}
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+.footer-1 {  
+   height: 80px ;
+   background-color: #242424;
+}
+
+.footer-2 {
+    display: flex;
+    flex-direction: column;
+    height: 515px;
+    background-color: #5E5E5D;
+}
+
+.footer-2 p {
+    width: 820px;
+   height: 361px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 94.5%;
+    /* or 19px */
+    letter-spacing: 0.11em;
+    color: #FFFFFF;
+    padding-left: 2%;
+
+}
+
+.footer-2 span {
+    text-decoration: underline;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 94.5%;
+    /* or 19px */
+    letter-spacing: 0.11em;
+    color: #FFFFFF;
+}
+
+.footer-2 img {
+    width: 212px;
+    padding-left: 2%;
+    padding-bottom: 5%;
+}
+
+
+
+
+
+    
 

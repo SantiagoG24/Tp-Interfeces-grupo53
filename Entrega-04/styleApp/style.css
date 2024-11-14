@@ -58,6 +58,8 @@ nav {
 
 .logo {
     width: 200px;
+    display: flex;
+    justify-content: center;
 }
 
 .logo img {
@@ -78,38 +80,39 @@ nav {
     /* box-shadow: 8px #02187E; */
 }
 
-section {
+section.sec-inicio {
     background-image: url(../assets/fondo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
-    height: 1000px;
+    height: 720px;
     display: flex;
     flex-direction: row;
     padding-top: 90px;
     position: relative;
+    z-index: -2;
 }
 
 .ini-izq {
     width: 33%;
-    height: 900px;
+    height: 720px;
 }
 
 .arbusto4izq {
     width: 239px;
     height: 140px;
     position: absolute;
-    top: 587px;
+    top: 563px;
     z-index: 0;
     left: 150px;
 }
 
 .arIzq {
-    width: 41%;
+    width: 42%;
     position: absolute;
-    left: -86px;
+    left: -115px;
     z-index: 0;
-    top: 20px;
+    top: 8px;
 }
 
 .piedraizq {
@@ -128,16 +131,69 @@ section {
     left: 162px;
 }
 
-.arDer {
-    width: 37%;
+.arDer2 {
     position: absolute;
     top: 39px;
-    right: -44;
+    right: -41px;
+    z-index: 1;
+}
+
+.arDer3 {
+    position: absolute;
+    top: 252px;
+    right: -84px;
+    z-index: 0;
+}
+
+
+.piedraDer4 {
+    position: absolute;
+    width: 59px;
+    height: 35px;
+    right: 172px;
+    top: 677px;
+    z-index: 3;
+}
+
+.piedraDer3 {
+    position: absolute;
+    width: 66px;
+    height: 56px;
+    right: 176px;
+    top: 628px;
+    z-index: 1;
+}
+
+.piedraDer1 {
+    position: absolute;
+    width: 113px;
+    height: 74px;
+    right: 100px;
+    top: 628px;
+    z-index: 2;
+}
+
+.arbusto3der {
+    position: absolute;
+    width: 244px;
+    height: 107px;
+    right: -52px;
+    top: 573px;
+    z-index: 0;
+}
+
+.arbusto2der {
+    position: absolute;
+    width: 191px;
+    height: 63px;
+    right: 50px;
+    top: 544px;
+    z-index: -1;
 }
 
 .ini-centro {
     width: 33%;
-    height: 900px;
+    height: 720px;
     display: flex;
     flex-direction: column;
 }
@@ -186,10 +242,10 @@ img.pj_dos {
 
 img.pj_tres {
     position: absolute;
-    width: 174px;
-    height: 384px;
+    width: 215px;
+    height: 379px;
     top: -68px;
-    left: -106px;
+    left: -73px;
     rotate: 8deg;
 }
 
@@ -197,7 +253,7 @@ img.pj_tres {
 
 .ini-der {
     width: 33%;
-    height: 900px;
+    height: 720px;
 }
 
 .ini-abajo {
@@ -208,4 +264,93 @@ img.pj_tres {
     display: flex;
     flex-direction: row;
 
+}
+
+section.sec-app {
+    width: 1280px;
+    height: 994px;
+    background: linear-gradient(180deg, #88DE7F 0%, #A8EBEC 46%);
+    margin-top: -20px;
+    color: #1B428F;
+    clip-path: path("M0,0 L1280,0 L1280,944 C960,994 320,894 0,944 Z");
+    margin-bottom: 220px;
+}
+
+.titulo-app {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 95px;
+    width: 508px;
+    height: 132px;
+}
+
+.text-app {
+    padding-top: 30px;
+    padding-left: 95px;
+    width: 680px;
+    height: 154px;
+}
+
+.sec-app h1 {
+    font-size: 47px;
+    overflow-wrap: break-word;
+}
+
+.sec-app p {
+    font-size: 20px;
+}
+
+.img-app {
+    width: 576px;
+    height: 324px;
+    border-radius: 77px;
+    border: #1B5F99 29px solid;
+    position: absolute;
+    left: 26.55%;
+}
+
+.img-app img {
+    width: auto;
+    height: 100%;
+    border-radius: 47px;
+}
+
+.pj_cuatro {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 1420px;
+    left: 360px;
+}
+
+.pj_cinco {
+    height: 1200px;
+    width: 550px;
+    position: absolute;
+    right: 230px;
+    top: 845px;
+    z-index: 2;
+}
+
+.cards-div {
+    padding-top: 50px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    width: 330px;
+    height: 100%;
+}
+
+.card img {
+    width: 330px;
+    height: 300px;
+    box-sizing: border-box;
+    border: #2982FF 9px solid;
+    border-radius: 41px;
+    box-shadow: 4px 5px #02187E;
 }

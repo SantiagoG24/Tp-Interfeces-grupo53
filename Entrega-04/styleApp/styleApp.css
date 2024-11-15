@@ -18,7 +18,9 @@ body {
 .objeto-3d{
     display: flex;
     flex-direction: row;
-    align-self: center;    
+    align-self: center;
+    align-items:flex-start;  
+      
 }
 
 #texto-3d {
@@ -35,7 +37,7 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
-    line-height: 94.5%;
+    line-height: 47px;
     /* or 57px */
    
     color: #9D2121;
@@ -53,25 +55,26 @@ line-height: 94.5%;
 margin-bottom: 10%;
 }
 
-#muñeco-3d{
-    
-    width:487px;
-    height: 773px;
-    margin-right: 25%;
+#muñeco-3d{   
+    width:600px;
+    height: 600px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
 }
 /*Bloque personajes */
 
 .gradiente-bloque {
-    width: 100vw; /* Ancho fijo de 1280px */
+    width: 100vw; 
     background: linear-gradient(to right, #8f1010, #cc1f1d, #dbc51d, #58e009, #38f3fc);
-    margin: 0 auto; /* Centra el bloque de fondo en la pantalla */
-    padding: 20px 0; /* Espaciado superior e inferior opcional */
+    margin: 0 auto; 
+    padding: 20px 0; 
     display: flex;
-    justify-content: center; /* Centra el contenido dentro del fondo */
+    justify-content: center; 
 }
 
 .bloque-personajes {
-    margin: 0 auto; /* Centra el bloque en la pantalla */
+    margin: 0 auto; 
     margin-right: auto;
   
 }
@@ -121,7 +124,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     height: 1296px;
     display: flex;
     flex-direction: column;
-    z-index: -2; /* Envía el gradiente al fondo */
+    z-index: -2;
 }
 
 .prefooter {
@@ -141,6 +144,8 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     width: 387px;
     height: 181px;
     top: 10px;
+    z-index: -1;
+    animation: movimientoNubeIzquierda  30s infinite linear;
 }
 #nube2 {
     position: relative;
@@ -148,6 +153,8 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     height: 124px;
     left: 480px;
     bottom: 380px;
+    z-index: -1;
+    animation: movimientoNubeDerecha  70s infinite linear;
 
 }
 #nube3 {
@@ -156,11 +163,38 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     height: 181px;
     left: 315px;
     bottom: 250px;
+    animation: movimientoNubeDerecha  50s infinite linear;
+
 }
 
-@keyframes scroll {
-    0% {background-position-x: 0px;}
-    100% {background-position-x: -1920px;}
+@keyframes movimientoNubeIzquierda {
+    0% { transform: translateX(0);
+        opacity: 0.1;
+     }
+     25% {
+        opacity: 1;
+     }
+     75%{
+        opacity: 0.5;
+     }
+    100% { transform: translateX(1000px);
+        opacity: 0;
+     }
+}
+
+@keyframes movimientoNubeDerecha {
+    0% { transform: translateX(0);
+        opacity: 0.10;
+     }
+     25% {
+        opacity: 1;
+     }
+     75%{
+        opacity: 0.5;
+     }
+    100% { transform: translateX(-1000px);
+        opacity: 0;
+     }
 }
 
 #piso-prefooter {
@@ -175,10 +209,10 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 .muñecos-container {
    display: flex;
    flex-direction: row;
-   justify-content: space-between; /* Espaciado uniforme entre los muñecos */
-    align-items: flex-end; /* Asegura que los muñecos toquen el piso */
-    position: relative; /* Asegura que los muñecos se posicionen dentro de este contenedor */
-    z-index: 2; /* Coloca los muñecos sobre el piso */
+   justify-content: space-between; 
+    align-items: flex-end; 
+    position: relative; 
+    z-index: 2; 
 
 }
 
@@ -227,7 +261,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 94.5%;
+    line-height: 20px;
    margin-top: 5%;
 
 }
@@ -289,9 +323,11 @@ footer {
     display: flex;
     flex-direction: column;
 }
-.footer-1 {  
-   height: 80px ;
-   background-color: #242424;
+
+.footer-1 {
+    height: 80px;
+    width: 100vw;
+    background-color: #242424;
 }
 
 .footer-2 {
@@ -299,40 +335,21 @@ footer {
     flex-direction: column;
     height: 515px;
     background-color: #5E5E5D;
+    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
 }
 
 .footer-2 p {
     width: 820px;
-   height: 361px;
+    margin-right: 500px;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 94.5%;
-    /* or 19px */
+    line-height: 20px;
     letter-spacing: 0.11em;
     color: #FFFFFF;
-    padding-left: 2%;
+    }
 
-}
-
-.footer-2 span {
-    text-decoration: underline;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 94.5%;
-    /* or 19px */
-    letter-spacing: 0.11em;
-    color: #FFFFFF;
-}
-
-.footer-2 img {
-    width: 212px;
-    padding-left: 2%;
-    padding-bottom: 5%;
-}
 
 
 

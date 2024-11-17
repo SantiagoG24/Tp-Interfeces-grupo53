@@ -497,7 +497,8 @@ section.sec-app {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
+    max-width: 1080px;
+    margin: 0;
 }
 
 .card {
@@ -520,6 +521,10 @@ section.sec-app {
         opacity: 0.0;
     }
 
+    50% {
+        opacity: 0.9;
+    }
+
     100% {
         opacity: 1;
     }
@@ -529,17 +534,16 @@ section.sec-app {
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 50%;
-
 }
 
 #card-2 {
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 40% cover 50%;
+    animation-range: entry 40% cover 70%;
 }
 
 #card-3 {
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 45% cover 50%;
+    animation-range: entry 50% cover 75%;
 }

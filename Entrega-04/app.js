@@ -12,6 +12,24 @@ function changeImage() {
 
 // Cambia la imagen cada 3 segundos
 setInterval(changeImage, 3000);
+let menu = document.querySelector('.menu');
+menu.addEventListener('click', toggleMenu);
+
+
+function toggleMenu() {
+    let nav = document.querySelector('.nav-bar');
+    let menu = document.querySelector('.menu');
+    // menu.classList.remove('active', 'reverse');
+    menu.classList.toggle('active');
+    nav.classList.toggle('visible');
+    let categorias = document.querySelectorAll('.categoria');
+    categorias.forEach((categoria, index) => {
+        setTimeout(() => {
+            categoria.classList.add('ver-categoria'); // Agrega la clase 'ver-categoria' con un retraso
+        }, index * 500);
+    });
+}
+
 
 
 let arbusto4 = document.getElementsByClassName(".")

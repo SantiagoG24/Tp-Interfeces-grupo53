@@ -64,27 +64,61 @@ header {
     margin-top: -8px;
 }
 
-nav {
-    top: 95px;
-    display: none;
-    background-color: #1F1E1E;
-    opacity: 0%;
-    position: fixed;
+.categoria {
+    width: 100%;
+    height: 46px;
+    border-bottom: #656565;
+    color: white;
+    opacity: 0;
 }
 
+nav {
+    background: linear-gradient(180deg, #88DE7F 0%, #A8EBEC 46%);
+    opacity: 0;
+    position: fixed;
+    z-index: 2;
+    left: 1px;
+    top: 72px;
+    transition: opacity;
+    display: flex;
+    flex-direction: column;
+}
+
+.visible {
+    animation: nav-visible .5s ease both;
+}
+
+.categoria.ver-categoria {
+    animation: ver-categoria 0.3s linear both;
+}
+
+@keyframes ver-categoria {
+    from {
+        opacity: .5;
+        padding-right: 130px;
+        transform: translateX(-100%);
+
+    }
+
+    to {
+        opacity: .9;
+        padding-right: 0px;
+        transform: translateX(-0);
+    }
+
+}
 
 @keyframes nav-visible {
     0% {
-
-        display: block;
-        width: 160px;
-        height: 1180px;
+        opacity: 0;
+        width: 130px;
+        height: 100vw;
     }
 
     100% {
-        display: block;
-        width: 160px;
-        height: 1180px;
+        opacity: 1;
+        width: 130px;
+        height: 100vw;
         opacity: 90%;
     }
 }
@@ -93,8 +127,11 @@ nav {
     width: 200px;
     height: 40px;
     z-index: 3;
+}
 
 
+.sacar-menu {
+    display: none;
 }
 
 .bar {
@@ -107,6 +144,48 @@ nav {
     animation: scroll-menu auto linear;
     animation-timeline: scroll(root);
     animation-range: 200px;
+}
+
+
+.menu.active #bar1 {
+    animation: bar1-rotate 0.3s linear both;
+    animation-direction: alternate;
+}
+
+@keyframes bar1-rotate {
+    from {}
+
+    to {
+        transform: rotate(45deg) translate(7px, 7px);
+        box-shadow: none;
+    }
+
+}
+
+.menu.active #bar2 {
+    animation: bar2-rotate .5s linear both;
+    animation-direction: alternate;
+
+}
+
+@keyframes bar2-rotate {
+    to {
+        transform: rotate(45deg) translate(4px, -1.5px);
+        box-shadow: none;
+        border: none;
+    }
+}
+
+.menu.active #bar3 {
+    animation: bar3-rotate .6s linear both;
+    animation-direction: alternate;
+}
+
+@keyframes bar3-rotate {
+    to {
+        transform: rotate(-45deg) translate(4px, -4px);
+        box-shadow: none;
+    }
 }
 
 .logo {
@@ -165,6 +244,14 @@ nav {
     animation-range: 200px;
     /* box-shadow: 8px #02187E; */
 }
+
+
+.text-categoria h2 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 
 
 
@@ -423,7 +510,7 @@ section.sec-app {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-left: 188px;
+
 }
 
 .card {

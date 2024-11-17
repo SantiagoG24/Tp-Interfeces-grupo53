@@ -325,6 +325,8 @@ footer {
 }
 
 .footer-1 {
+    display: flex;
+    flex-direction: row;
     height: 80px;
     width: 100vw;
     background-color: #242424;
@@ -333,7 +335,7 @@ footer {
 .footer-2 {
     display: flex;
     flex-direction: column;
-    height: 515px;
+    height: 100%;
     background-color: #5E5E5D;
     align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
 }
@@ -349,11 +351,41 @@ footer {
     letter-spacing: 0.11em;
     color: #FFFFFF;
     }
+    .dino-txt {
+        display: flex; 
+        flex-direction: row; 
+        align-items: center; 
+        gap: 10px; 
+    }
+    
+    #dinosaurio {
+        background: url(/Entrega-04/assets/dino.jpg);
+        border-radius: 100%;
+        width: 76px;
+        height: 76px;
+        animation: correr 0.5s steps(12) infinite; 
+        margin-bottom: 1%;
+    }
+    
+    .dino-txt p {
+        margin: 0; 
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+    
 
-
-
-
-
-
+    @keyframes correr {
+        0% {
+            background-position: 0px;
+        }
+        100% {
+            background-position: -959px;
+        }
+        
+    }
     
 

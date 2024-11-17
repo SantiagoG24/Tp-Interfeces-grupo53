@@ -49,3 +49,26 @@ let arbusto2 = document.getElementsByClassName(".")
 //     logo.style.marginTop = valor * 2.5 + 'px'
 //     logo.style.Top = valor * -1.5 + 'px'
 // })
+
+// let sec_card = document.querySelector('.cards-div ');
+// sec_card.addEventListener('')
+
+// // Crear un observer para detectar cuando el div entra en la pantalla
+// const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             // Cuando el div entra en la pantalla, añade una clase "visible"
+//             entry.target.classList.add('visible');
+//         } else {
+//             // Si el div sale de la pantalla, puedes quitar la clase "visible"
+//             entry.target.classList.remove('visible');
+//         }
+//     });
+// }, {
+//     threshold: 0.5  // Esto hace que el evento se dispare cuando el 50% del div es visible
+// });
+
+// // Seleccionamos todos los divs con la clase "card" y los observamos
+// document.querySelectorAll('.card').forEach(card => {
+//     observer.observe(card);
+// });

@@ -6,6 +6,7 @@ body {
 .container {
     max-width: 1080px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .header-fondo {
@@ -70,6 +71,7 @@ header {
     border-bottom: #656565;
     color: white;
     opacity: 0;
+    transform: translateX(-100%);
 }
 
 nav {
@@ -82,6 +84,7 @@ nav {
     transition: opacity;
     display: flex;
     flex-direction: column;
+
 }
 
 .visible {
@@ -89,21 +92,19 @@ nav {
 }
 
 .categoria.ver-categoria {
-    animation: ver-categoria 0.3s linear both;
+    animation: ver-categoria 0.3s linear forwards;
 }
 
 @keyframes ver-categoria {
     from {
         opacity: .5;
         padding-right: 130px;
-        transform: translateX(-100%);
-
     }
 
     to {
         opacity: .9;
         padding-right: 0px;
-        transform: translateX(-0);
+        transform: translateX(0%);
     }
 
 }
@@ -127,6 +128,9 @@ nav {
     width: 200px;
     height: 40px;
     z-index: 3;
+    animation: scroll-header auto linear;
+    animation-timeline: scroll(root);
+    animation-range: 200px;
 }
 
 
@@ -141,9 +145,6 @@ nav {
     border-radius: 111px;
     background-color: #F39E46;
     box-shadow: #02187E 4px 5px;
-    animation: scroll-menu auto linear;
-    animation-timeline: scroll(root);
-    animation-range: 200px;
 }
 
 
@@ -190,38 +191,24 @@ nav {
 
 .logo {
     width: 200px;
+    height: 86px;
     display: flex;
     justify-content: center;
+    animation: scroll-header auto linear;
+    animation-timeline: scroll(root);
+    animation-range: 200px;
 }
 
 .logo img {
-    width: 150px;
-    height: 86px;
-    animation: scroll-logo auto linear;
-    animation-timeline: scroll(root);
-    animation-range: 200px;
+    width: auto;
+    height: auto;
+
     /* s */
 }
 
-@keyframes scroll-logo {
+@keyframes scroll-header {
     to {
-        width: 100px;
-        height: 78px;
-    }
-
-}
-
-@keyframes scroll-menu {
-    to {
-        width: 32px;
-    }
-
-}
-
-@keyframes scroll-btn {
-    to {
-        width: 150px;
-        height: 40px;
+        scale: 0.8;
     }
 
 }
@@ -239,7 +226,7 @@ nav {
     line-height: 18.9px;
 
     box-shadow: #02187E 4px 5px;
-    animation: scroll-btn auto linear;
+    animation: scroll-header auto linear;
     animation-timeline: scroll(root);
     animation-range: 200px;
     /* box-shadow: 8px #02187E; */
@@ -533,10 +520,6 @@ section.sec-app {
         opacity: 0.0;
     }
 
-    50% {
-        opacity: 0.9;
-    }
-
     100% {
         opacity: 1;
     }
@@ -546,16 +529,17 @@ section.sec-app {
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 50%;
+
 }
 
 #card-2 {
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 40% cover 70%;
+    animation-range: entry 40% cover 50%;
 }
 
 #card-3 {
     animation: reveal linear both;
     animation-timeline: view();
-    animation-range: entry 50% cover 75%;
+    animation-range: entry 45% cover 50%;
 }

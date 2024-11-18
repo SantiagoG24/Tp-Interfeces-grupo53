@@ -269,9 +269,9 @@ section.sec-inicio {
 .arIzq {
     width: 42%;
     position: absolute;
-    left: -116px;
+    left: -190px;
     z-index: 0;
-    top: 9px;
+    top: 10px;
 }
 
 .piedraizq {
@@ -570,13 +570,18 @@ section.sec-app {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100vw;
     height: 100vw;
     z-index: 9;
     background-color: #2982FF;
     transition: 0.2s;
+}
+
+.logo-carga {
+    width: 50vw;
+    height: 30vw;
 }
 
 .desaparecer {
@@ -590,8 +595,8 @@ section.sec-app {
 
 .area-cargado {
     display: flex;
-    width: 100%;
-    height: 10%;
+    width: 50vw;
+    height: 10vw;
     justify-content: center;
     align-items: center;
     gap: 3rem;

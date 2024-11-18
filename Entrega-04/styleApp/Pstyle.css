@@ -1,0 +1,217 @@
+.seccion-descargar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.container-azul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 1280px;
+}
+.seccion-azul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.img-fondo-azul {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+  }
+
+.seccion-azul h1{
+    width: 950px;
+    height: 153px;
+    color: white;
+    font-family: "Lato", sans-serif;;
+    font-size: 62px;
+    text-align: center;
+    font-weight:500;
+    margin-top: 180px;
+    margin-bottom: 31.54px;
+}
+.seccion-azul h1 span{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.seccion-azul #img-123459{
+    width: 1280px;
+    transition: transform 0.1s ease-out;
+
+}
+
+.btn-descargar{
+    color: white;
+    width: 540px;
+    height: 66px;
+    border: white 8px solid;
+    border-radius: 111px;
+    background-color: #83c252;
+    font-family: "Lato", sans-serif;
+    font-weight: 1000;
+    font-size: 31.14px;
+    cursor: pointer;
+}
+
+/* MAS AMIGOS MAS DIVERSION*/
+
+.seccion-mas-amigos{
+    margin-top: 174px;
+    width: 1080px;
+}
+.seccion-mas-amigos h1{
+    font-family: "Lato", sans-serif;;
+    font-size: 60px;
+    font-weight: 500;
+}
+.cards-amigos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-suma{
+    font-family: "Lato", sans-serif;;
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 267px;
+}
+.container-img{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-card{
+    width: 540px;
+}
+.texto-card h1{
+    font-family: "Lato", sans-serif;;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+.texto-card p{
+    font-family: "Lato", sans-serif;;
+    font-size: 20px;
+    font-weight:400;
+    max-width: 467px;
+    line-height: 0.9;
+    word-wrap: break-word;
+    margin-top: 0px;
+}
+
+.seccion-mas-amigos img{
+
+}
+
+.suma-img-0{
+    width: 291px;
+
+}
+.suma-img-1{
+    width: 379px;
+    border: 1opx solid blue;
+}
+.suma-img-2{
+    width: 266px;
+}
+.suma-img-3{
+    width: 187px;
+}
+.suma-img-4{
+    width: 475px;
+}
+.suma-img-5{
+    width: 231px;
+}
+.suma-img-6{
+    width: 338px;
+}
+.suma-img-7{
+    width: 134px;
+}
+.suma-img-8{
+    width: 437px;
+}
+.suma-img-9{
+    width: 485px;
+}
+.suma-img-10{
+    width: 459px;
+}
+
+/* BLOQUE AMARILLO */
+.seccion-amarillo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fondo-amarillito{
+    position: absolute;
+    z-index: 0;
+}
+.container-data{
+    position: relative;
+    z-index: 0;
+    width: 1280px; 
+}
+#img3-amarillo{
+    width: 638px; 
+    height: 989px;
+    position: relative;
+    z-index: 1;
+    bottom: 180px;
+    animation: mover-arriba-abajo  3s infinite linear;
+}
+@keyframes mover-arriba-abajo {
+    0% { transform: translateY(0px);
+     }
+     66%{
+        transform: translateY(20px);
+     }
+    100% { transform: translateY(0px);
+     }
+}
+.seccion-amarillo h1{
+    margin-top: 321px;
+    font-family: "Lato", sans-serif;;
+    font-size: 60px;
+    font-weight: 500;
+    max-width: 732px;
+    color: white;
+    position: relative;
+    z-index: 0;
+    margin-left: 100px;
+    line-height: 94%; 
+}
+.container-video{
+    width: 804px;
+    height: 452px;
+    border: white 30px solid;
+    border-radius: 60px;
+    margin-left: 100px;
+    animation: mover-arriba-abajo  4.5s infinite linear;
+}
+.container-video iframe{
+    width: 100%;
+    height: 100%;
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}

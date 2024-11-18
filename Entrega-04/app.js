@@ -45,7 +45,7 @@ function incrementarHasta100(porcentaje) {
     let valor = 0;
 
     const interval = setInterval(() => {
-        if (valor >= 1000) {
+        if (valor >= 100) {
             clearInterval(interval);
             document.querySelector(".seccion-carga").classList.add("desaparecer");
 

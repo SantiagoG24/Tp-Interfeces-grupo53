@@ -30,45 +30,46 @@ function toggleMenu() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", loading);
 
 
-let arbusto4 = document.getElementsByClassName(".")
-let logo = document.getElementsByClassName(".logo-centro")
-console.log(logo);
-let arbol1 = document.getElementsByClassName(".")
-let piedra2 = document.getElementsByClassName(".")
-let arbusto1 = document.getElementsByClassName(".")
-let arbol2 = document.getElementsByClassName(".")
-let piedra3 = document.getElementsByClassName(".")
-let piedra1 = document.getElementsByClassName(".")
-let arbol3 = document.getElementsByClassName(".")
-let arbusto2 = document.getElementsByClassName(".")
+function loading() {
 
-// window.addEventListener('scroll', () => {
-//     let valor = window.scrollY;
-//     logo.style.marginTop = valor * 2.5 + 'px'
-//     logo.style.Top = valor * -1.5 + 'px'
-// })
+    let porcentaje = document.querySelector("#porcentaje-carga");
+    incrementarHasta100(porcentaje);
 
-// let sec_card = document.querySelector('.cards-div ');
-// sec_card.addEventListener('')
+}
 
-// // Crear un observer para detectar cuando el div entra en la pantalla
-// const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             // Cuando el div entra en la pantalla, añade una clase "visible"
-//             entry.target.classList.add('visible');
-//         } else {
-//             // Si el div sale de la pantalla, puedes quitar la clase "visible"
-//             entry.target.classList.remove('visible');
-//         }
-//     });
-// }, {
-//     threshold: 0.5  // Esto hace que el evento se dispare cuando el 50% del div es visible
+
+function incrementarHasta100(porcentaje) {
+    let valor = 0;
+
+    const interval = setInterval(() => {
+        if (valor >= 1000) {
+            clearInterval(interval);
+            document.querySelector(".seccion-carga").classList.add("desaparecer");
+
+            setTimeout(() => {
+                document.querySelector(".seccion-carga").remove();
+            }, 200);
+
+
+
+
+        } else {
+            valor += 0.1;
+            porcentaje.textContent = valor.toFixed(0) + '%';
+        }
+    }, 1); //
+}
+
+
+// const div_der = document.querySelector('.ini-der');
+// const arbol2 = document.querySelector('.arDer2');
+
+// div_der.addEventListener('scroll', () => {
+//     const scrollProgress = div_der.scrollTop / div_der.scrollHeight;
+//     const offsetX = scrollProgress * div_der.offsetWidth;
+//     arbol2.style.transform = `translateX(${offsetX}px)`; // Mover solo dentro del contenedor
 // });
 
-// // Seleccionamos todos los divs con la clase "card" y los observamos
-// document.querySelectorAll('.card').forEach(card => {
-//     observer.observe(card);
-// });

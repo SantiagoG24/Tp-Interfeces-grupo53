@@ -263,45 +263,57 @@ section.sec-inicio {
     position: absolute;
     top: 563px;
     z-index: 0;
-    left: 40px;
+    left: 124px;
 }
 
 .arIzq {
     width: 42%;
     position: absolute;
-    left: -210px;
+    left: -116px;
     z-index: 0;
-    top: 20px;
+    top: 9px;
 }
 
 .piedraizq {
     width: 113px;
     height: 74px;
     position: absolute;
-    top: 654px;
-    left: 21px;
+    top: 645px;
+    left: 93px;
 }
 
 .arbusto1izq {
     width: 155px;
     height: 102px;
     position: absolute;
-    top: 677px;
-    left: 58px;
+    top: 664px;
+    left: 117px;
 }
 
 .arDer2 {
     position: absolute;
-    top: 39px;
-    right: -100px;
+    top: 84px;
+    right: -132px;
     z-index: 1;
 }
 
 .arDer3 {
     position: absolute;
-    top: 252px;
-    right: -135px;
+    top: 269px;
+    right: -180px;
     z-index: 0;
+
+}
+
+@keyframes parallax-effect1 {
+    from {
+        transform: translateX(0);
+
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -309,17 +321,20 @@ section.sec-inicio {
     position: absolute;
     width: 59px;
     height: 35px;
-    right: 115px;
-    top: 6px;
+    right: 83px;
+    bottom: 30px;
     z-index: 3;
+    animation: parallax-effect1 linear infinite;
+    animation-timeline: scroll();
+    animation-range: 300px;
 }
 
 .piedraDer3 {
     position: absolute;
     width: 66px;
     height: 56px;
-    right: 112px;
-    top: 632px;
+    right: 86px;
+    bottom: 56px;
     z-index: 1;
 }
 
@@ -327,8 +342,8 @@ section.sec-inicio {
     position: absolute;
     width: 113px;
     height: 74px;
-    right: 30px;
-    top: 628px;
+    right: 15px;
+    bottom: 45px;
     z-index: 2;
 }
 
@@ -336,8 +351,8 @@ section.sec-inicio {
     position: absolute;
     width: 244px;
     height: 107px;
-    right: -52px;
-    top: 573px;
+    right: -143px;
+    bottom: 80px;
     z-index: 0;
 }
 
@@ -345,8 +360,8 @@ section.sec-inicio {
     position: absolute;
     width: 191px;
     height: 63px;
-    right: 50px;
-    top: 544px;
+    bottom: 144px;
+    right: -42px;
     z-index: -1;
 }
 
@@ -485,7 +500,7 @@ section.sec-app {
     height: 1200px;
     width: 550px;
     position: absolute;
-    right: -90px;
+    right: -170px;
     top: 845px;
     z-index: 2;
 }
@@ -546,4 +561,96 @@ section.sec-app {
     animation: reveal linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 75%;
+}
+
+
+.seccion-carga {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 9;
+    background-color: #2982FF;
+    transition: 0.2s;
+}
+
+.desaparecer {
+    opacity: 0;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+.area-cargado {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.area-cargado div {
+    min-width: 3rem;
+    min-height: 3rem;
+    border-radius: 5%;
+    background-color: #88DE7F;
+
+    /*Animaciones*/
+    transform: scale(0);
+    animation: cargar 3s ease-in-out infinite;
+}
+
+
+.area-cargado div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.area-cargado div:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.area-cargado div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.area-cargado div:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.area-cargado div:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.area-cargado div:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.area-cargado div:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+
+@keyframes cargar {
+
+    10%,
+    80% {
+        transform: scale(0.1);
+        background-color: #F39E46;
+    }
+
+    40% {
+        transform: scale(1);
+        background-color: #88DE7F;
+    }
+
 }

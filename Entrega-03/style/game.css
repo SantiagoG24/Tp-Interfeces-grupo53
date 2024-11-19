@@ -550,22 +550,22 @@ h2 {
     margin-top: 3%;
 }
 
-#mode4:hover {
+#mode4.marcar {
     background-color: #0b771d;
     color: #f4f4f7;
 }
 
-#mode5:hover {
+#mode5.marcar {
     background-color: #2887D1;
     color: #f4f4f7;
 }
 
-#mode6:hover {
+#mode6.marcar {
     background-color: #AD1C21;
     color: #f4f4f7;
 }
 
-#mode7:hover {
+#mode7.marcar {
     background-color: #C85336;
     color: #f4f4f7;
 }

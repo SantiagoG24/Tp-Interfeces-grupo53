@@ -21,7 +21,6 @@ bienvenida.draw();
 let jugador1Texto = new Text(canvasWidth / 8, canvasHeight / 8, ctx, 'white', 'Jugador 1');
 let jugador2Texto = new Text((canvasWidth / 8) * 7, canvasHeight / 8, ctx, 'white', 'Jugador 2');
 
-//textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2,"white");
 
 /*Imagenes Fichas*/
 let player1Img;
@@ -78,22 +77,21 @@ function showConfig() {
     function showMode() {
 
         selecionModo.classList.toggle("active");
-        let buttonMode4 = document.getElementById("mode4");
-        let buttonMode5 = document.getElementById("mode5");
-        let buttonMode6 = document.getElementById("mode6");
-        let buttonMode7 = document.getElementById("mode7");
+        // Botones
+        let botones = document.querySelectorAll("#mode4, #mode5, #mode6, #mode7");
 
-        buttonMode4.addEventListener("click", () => {
-            mode = 4;
-        });
-        buttonMode5.addEventListener("click", () => {
-            mode = 5;
-        });
-        buttonMode6.addEventListener("click", () => {
-            mode = 6;
-        });
-        buttonMode7.addEventListener("click", () => {
-            mode = 7;
+        // Agregar evento a cada botón
+        botones.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // Remover la clase 'marcar' de todos los botones
+                botones.forEach(btn => btn.classList.remove("marcar"));
+
+                // Agregar la clase 'marcar' al botón clickeado
+                btn.classList.add("marcar");
+
+                // Cambiar el modo según el botón clickeado
+                mode = parseInt(btn.id.replace("mode", ""), 10); // Extraer el número del ID
+            });
         });
     }
 

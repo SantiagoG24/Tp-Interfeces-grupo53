@@ -15,14 +15,6 @@ let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
 let imagenFondo = new Image();
 imagenFondo.src = 'assets/fondo-canva.png';
 
-/*function textGame(texto, x, y,color) {
-    ctx.font = '700 30px Arial';
-    ctx.fillStyle = color;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    let txt = texto;
-    ctx.fillText(txt, x, y);
-}*/
 
 let bienvenida = new Text(canvas.width / 2, canvas.height / 2, ctx, 'white', '¡Haz Click para Comenzar a Jugar!');
 bienvenida.draw();
@@ -32,28 +24,51 @@ let jugador2Texto = new Text((canvasWidth / 8) * 7, canvasHeight / 8, ctx, 'whit
 //textGame('¡Haz Click para Comenzar a Jugar!', canvas.width / 2, canvas.height / 2,"white");
 
 /*Imagenes Fichas*/
-let IronmanImg = "assets/ironman-logo.png";
-let CaptainAmericaImg = "assets/captain-america-logo.png";
+let player1Img;
+let player2Img;
 
+// variables de configfuracion del juego 
+let selecionModo = document.getElementById("selecionModo");// cuantas fichas 
+let btn_modo = document.getElementById("btn-modo");// btn para confirmar las fichas
+let selecionFicha = document.getElementById("fichasEleccion");//estilo de las fichas
+
+let start_game = document.getElementById("start-game");// btn para empezar el juego 
+let back_modo = document.getElementById("back");//btn para volver a selecionar modo
+
+let turnoElegir = 1;
 function showConfig() {
-    canvas.removeEventListener("click", showConfig)
+    canvas.removeEventListener("click", showConfig);
 
-    let selecionModo = document.getElementById("selecionModo");
-    let selecionFicha = document.getElementById("fichasEleccion");
-    let btn_modo = document.getElementById("btn-modo");
-    let start_game = document.getElementById("start-game");
-    let back_modo = document.getElementById("back");
 
     // Eventos para las opciones de fichas
-    document.getElementById("buttonOpcionA").addEventListener("click", () => {
-        IronmanImg = "assets/ironman-logo.png";
-        CaptainAmericaImg = "assets/captain-america-logo.png";
-    });
+    let opcionesSeleccionadas = new Set(); // Almacena opciones ya seleccionadas
+    let a = document.getElementById("buttonOpcionA");
+    let b = document.getElementById("buttonOpcionB");
+    let c = document.getElementById("buttonOpcionC");
+    let d = document.getElementById("buttonOpcionD");
+    function seleccionarOpcion(opcion, img) {
 
-    document.getElementById("buttonOpcionB").addEventListener("click", () => {
-        IronmanImg = "assets/ironman-B.png";
-        CaptainAmericaImg = "assets/captain-america-logo2.png";
-    });
+        // Limpiar selección previa del jugador actual
+        if (turnoElegir === 1) {
+            [a, b, c, d].forEach(btn => btn.classList.remove('marcar1'));
+            opcion.classList.add('marcar1');
+            player1Img = img;
+        } else if (turnoElegir === 2) {
+            [a, b, c, d].forEach(btn => btn.classList.remove('marcar2'));
+            opcion.classList.add('marcar2');
+            player2Img = img;
+        }
+
+        // Añadir la opción seleccionada al conjunto y cambiar el turno
+        opcionesSeleccionadas.add(opcion);
+        turnoElegir = turnoElegir === 1 ? 2 : 1;
+    }
+
+    // Eventos para las opciones
+    a.addEventListener("click", () => seleccionarOpcion(a, "assets/ironman-logo.png"));
+    b.addEventListener("click", () => seleccionarOpcion(b, "assets/captain-america-logo.png"));
+    c.addEventListener("click", () => seleccionarOpcion(c, "assets/ironman-B.png"));
+    d.addEventListener("click", () => seleccionarOpcion(d, "assets/captain-america-logo2.png"));
 
     btn_modo.addEventListener('click', showSelecionFicha);
     start_game.addEventListener('click', startGame)
@@ -292,3 +307,14 @@ function resetGame() {
     ganador.classList.remove("active");
     showConfig();
 }
+function cambiarTurno() {
+    let div_turno = document.getElementById('turno');
+    if (turnoElegir == 1) {
+        turnoElegir = 2;
+        div_turno.innerHTML = "Jugador 2";
+    } else {
+        turnoElegir = 1;
+        div_turno.innerHTML = "Jugador 1";
+    }
+}
+

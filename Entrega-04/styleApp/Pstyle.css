@@ -113,9 +113,6 @@
     margin-top: 0px;
 }
 
-.seccion-mas-amigos img{
-
-}
 
 .suma-img-0{
     width: 291px;
@@ -169,18 +166,18 @@
     width: 1280px; 
 }
 #img3-amarillo{
-    width: 638px; 
     height: 989px;
     position: relative;
     z-index: 1;
-    bottom: 180px;
+    bottom: 636px;
+    left: 732px;
     animation: mover-arriba-abajo  3s infinite linear;
 }
 @keyframes mover-arriba-abajo {
     0% { transform: translateY(0px);
      }
      66%{
-        transform: translateY(20px);
+        transform: translateY(25px);
      }
     100% { transform: translateY(0px);
      }
@@ -198,12 +195,13 @@
     line-height: 94%; 
 }
 .container-video{
-    width: 804px;
-    height: 452px;
+    width: 744px;
+    height: 392px;
     border: white 30px solid;
-    border-radius: 60px;
+    border-radius: 42px;
     margin-left: 100px;
-    animation: mover-arriba-abajo  4.5s infinite linear;
+    overflow: hidden;
+    animation: mover-arriba-abajo  4.5s infinite linear reverse;
 }
 .container-video iframe{
     width: 100%;

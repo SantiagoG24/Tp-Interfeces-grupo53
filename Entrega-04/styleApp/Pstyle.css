@@ -20,7 +20,7 @@
 }
 .img-fondo-azul {
     width: 100%;
-    height: 100%;
+    height: 1157px;
     object-fit: cover; 
     position: absolute;
     top: 0;
@@ -47,7 +47,8 @@
 .seccion-azul #img-123459{
     width: 1280px;
     transition: transform 0.1s ease-out;
-
+    position: relative;
+    bottom: 105px;
 }
 
 .btn-descargar{
@@ -66,7 +67,6 @@
 /* MAS AMIGOS MAS DIVERSION*/
 
 .seccion-mas-amigos{
-    margin-top: 174px;
     width: 1080px;
 }
 .seccion-mas-amigos h1{
@@ -152,6 +152,7 @@
 
 /* BLOQUE AMARILLO */
 .seccion-amarillo{
+    height: 1443px; 
     display: flex;
     flex-direction: column;
     align-items: center;

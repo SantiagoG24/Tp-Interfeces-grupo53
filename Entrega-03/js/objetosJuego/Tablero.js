@@ -43,7 +43,15 @@ class Tablero {
         }
         return -1;
     }
+    getPosColumna(col) {
+        let elem = this.tablero[0][col];
+        return elem.getXCentro();
+    }
+    getPosFila(fila) {
+        let elem = this.tablero[fila][0];
+        return elem.getYCentro();
 
+    }
     InsertColumna(c, f, nueva) {
         let casillero = this.tablero[f][c];
         casillero.setOcupado(nueva);

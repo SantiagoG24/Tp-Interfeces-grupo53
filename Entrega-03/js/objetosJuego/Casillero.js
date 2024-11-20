@@ -16,6 +16,7 @@ class Casillero {
         this.imgCasillero.onload = () => {
             this.draw();
         };
+
     }
 
 
@@ -23,7 +24,14 @@ class Casillero {
         return this.ocupado;
     }
 
+    getXCentro() {
 
+        return (this.finX + this.inicioX) / 2;
+    }
+    getYCentro() {
+
+        return (this.finY + this.inicioY) / 2;
+    }
 
     draw() {
         this.ctx.fillStyle = "#757575";

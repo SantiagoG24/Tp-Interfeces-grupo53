@@ -5,9 +5,13 @@ let currentImageIndex = 0;
 // Función para cambiar la imagen
 function changeImage() {
     const slider = document.getElementById("slider");
+    slider.classList.remove('active')
     currentImageIndex = (currentImageIndex + 1) % images.length;
-    slider.src = images[currentImageIndex];
-
+    let imgActual = images[currentImageIndex];
+    slider.src = imgActual;
+    setTimeout(() => {
+        slider.classList.add('active');
+    }, 50);
 }
 
 // Cambia la imagen cada 3 segundos

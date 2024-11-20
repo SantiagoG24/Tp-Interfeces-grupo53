@@ -239,9 +239,11 @@ nav {
     width: 200px;
     height: 40px;
     z-index: 3;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+    scale: 1.2;
 }
 
 
@@ -264,9 +266,11 @@ nav {
     height: 86px;
     display: flex;
     justify-content: center;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+    scale: 1.5;
 }
 
 #logo {
@@ -287,9 +291,12 @@ nav {
     line-height: 18.9px;
 
     box-shadow: #02187E 4px 5px;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+
+    scale: 1.2;
 
     &:hover {
         transition: ease 1s;
@@ -299,6 +306,13 @@ nav {
     }
 
     /* box-shadow: 8px #02187E; */
+}
+
+@keyframes scroll-header {
+    to {
+        scale: 1;
+    }
+
 }
 
 .text-categoria h2 {
@@ -548,7 +562,25 @@ section.sec-app {
 }
 
 #slider {
-    transition: ease-in 0.5s;
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+
+}
+
+#slider.active {
+    animation: car-opacity 0.3s ease-in both;
+}
+
+@keyframes car-opacity {
+    from {
+        transform: translateX(-15%);
+        opacity: 0.01;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 .img-app img {
@@ -656,7 +688,7 @@ section.sec-app {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: -500px;
+    top: -350px;
     left: 0px;
     width: 100vw;
     height: 100vw;
@@ -750,12 +782,19 @@ section.sec-app {
 }
 
 #logo-centro {
-    transition: opacity 0.5s ease;
+    animation: logo-centro linear both;
+    animation-timeline: scroll(root);
+    animation-range-end: 150px;
 }
 
-@keyframes logo-scroll {
+@keyframes logo-centro {
+    90% {
+        scale: 0.5;
+        opacity: 0.88;
+    }
+
     to {
+        scale: .5;
         opacity: 0;
-        top: -10px;
     }
 }

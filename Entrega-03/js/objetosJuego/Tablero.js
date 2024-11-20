@@ -15,8 +15,16 @@ class Tablero {
         this.tableroXI;
         this.tableroXF;
         this.tableroYI;
-        this.tableroXF;
+        this.tableroYF;
 
+    }
+    getPos() {
+        return {
+            xi: this.tableroXI,
+            xf: this.tableroXF,
+            yi: this.tableroYI,
+            yf: this.tableroYF
+        }
     }
 
     getFilas() {

@@ -14,8 +14,6 @@ let ronda = "ironman";
 let crono = new Tiempo(5, ctx, canvas.width / 2, 30);
 let imagenFondo = new Image();
 imagenFondo.src = 'assets/fondo-canva.png';
-
-
 let bienvenida = new Text(canvas.width / 2, canvas.height / 2, ctx, 'white', '¡Haz Click para Comenzar a Jugar!');
 bienvenida.draw();
 let jugador1Texto = new Text(canvasWidth / 8, canvasHeight / 8, ctx, 'white', 'Jugador 1');
@@ -23,8 +21,8 @@ let jugador2Texto = new Text((canvasWidth / 8) * 7, canvasHeight / 8, ctx, 'whit
 
 
 /*Imagenes Fichas*/
-let player1Img;
-let player2Img;
+let player1Img = null;
+let player2Img = null;
 
 // variables de configfuracion del juego 
 let selecionModo = document.getElementById("selecionModo");// cuantas fichas 
@@ -35,9 +33,10 @@ let start_game = document.getElementById("start-game");// btn para empezar el ju
 let back_modo = document.getElementById("back");//btn para volver a selecionar modo
 
 let turnoElegir = 1;
+let restart = document.getElementById('reset');
 function showConfig() {
     canvas.removeEventListener("click", showConfig);
-
+    selecionFicha.classList.remove("active");
 
     // Eventos para las opciones de fichas
     let opcionesSeleccionadas = new Set(); // Almacena opciones ya seleccionadas
@@ -45,7 +44,12 @@ function showConfig() {
     let b = document.getElementById("buttonOpcionB");
     let c = document.getElementById("buttonOpcionC");
     let d = document.getElementById("buttonOpcionD");
+
     function seleccionarOpcion(opcion, img) {
+        // Si la opción ya está seleccionada, desmarcarla
+        if (opcion.classList.contains('marcar1') || opcion.classList.contains('marcar2')) {
+            limpiarOpciones();
+        }
 
         // Limpiar selección previa del jugador actual
         if (turnoElegir === 1) {
@@ -62,6 +66,11 @@ function showConfig() {
         opcionesSeleccionadas.add(opcion);
         turnoElegir = turnoElegir === 1 ? 2 : 1;
     }
+    function limpiarOpciones() {
+        opcion.classList.remove('marcar1', 'marcar2');
+        opcionesSeleccionadas.delete(opcion); // Eliminarla del conjunto
+        return; // No cambiar el turno si se desmarcó
+    }
 
     // Eventos para las opciones
     a.addEventListener("click", () => seleccionarOpcion(a, "assets/ironman-logo.png"));
@@ -70,58 +79,88 @@ function showConfig() {
     d.addEventListener("click", () => seleccionarOpcion(d, "assets/captain-america-logo2.png"));
 
     btn_modo.addEventListener('click', showSelecionFicha);
-    start_game.addEventListener('click', startGame)
-    // selecionModo.addEventListener('click', selecionFicha);
-    back_modo.addEventListener('click', showSelecionFicha);
+    start_game.addEventListener('click', startGame);
+    back_modo.addEventListener('click', showConfig);
 
     function showMode() {
-
         selecionModo.classList.toggle("active");
-        // Botones
-        let botones = document.querySelectorAll("#mode4, #mode5, #mode6, #mode7");
-
-        // Agregar evento a cada botón
-        botones.forEach(btn => {
-            btn.addEventListener("click", () => {
-                // Remover la clase 'marcar' de todos los botones
-                botones.forEach(btn => btn.classList.remove("marcar"));
-
-                // Agregar la clase 'marcar' al botón clickeado
-                btn.classList.add("marcar");
-
-                // Cambiar el modo según el botón clickeado
-                mode = parseInt(btn.id.replace("mode", ""), 10); // Extraer el número del ID
-            });
+        document.getElementById("mode4").addEventListener("click", function () {
+            manejarBoton(this);
         });
+        document.getElementById("mode5").addEventListener("click", function () {
+            manejarBoton(this);
+        });
+        document.getElementById("mode6").addEventListener("click", function () {
+            manejarBoton(this);
+        });
+        document.getElementById("mode7").addEventListener("click", function () {
+            manejarBoton(this);
+        });
+
+        function manejarBoton(btn) {
+            // Si el botón ya tiene la clase 'marcar', desmarcarlo
+            if (btn.classList.contains("marcar")) {
+                btn.classList.remove("marcar");
+                return;
+            }
+
+            // Remover la clase 'marcar' de todos los botones
+            document.getElementById("mode4").classList.remove("marcar");
+            document.getElementById("mode5").classList.remove("marcar");
+            document.getElementById("mode6").classList.remove("marcar");
+            document.getElementById("mode7").classList.remove("marcar");
+
+            // Agregar la clase 'marcar' al botón clickeado
+            btn.classList.add("marcar");
+
+            // Cambiar el modo según el botón clickeado
+            mode = parseInt(btn.id.replace("mode", ""), 10); // Extraer el número del ID
+        }
     }
 
     showMode();
 
     function showSelecionFicha() {
-        selecionModo.classList.remove("active");
-        selecionFicha.classList.add("active");
+        if (mode !== 0) {
+            selecionModo.classList.remove("active");
+            selecionFicha.classList.add("active");
+        }
     }
 
     function startGame() {
+        console.log("p1 " + player1Img);
+        console.log("p2 " + player2Img);
+        restart.addEventListener('click', () => {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+            ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
+            mode = 0;
+            player1Img = null;
+            player2Img = null;
+            turnoElegir = 1;
+            crono.resetear();
+            limpiarOpciones()
+            showConfig();
+        });
+        if (player1Img !== null && player2Img !== null) {
+            selecionFicha.classList.remove("active");
+            armarTablero(mode);
 
-        selecionFicha.classList.remove("active");
-        armarTablero(mode);
 
+            tablero.drawTablero();
 
-        tablero.drawTablero();
+            let cantFichas = tablero.getFilas() * tablero.getColumnas();
 
-        let cantFichas = tablero.getFilas() * tablero.getColumnas();
+            for (let i = 0; i < cantFichas / 2; i++) {
+                let f1 = drawFicha("ironman", canvasWidth / 8, canvasHeight / 4 + i * 10, "red", player1Img);
+                let f2 = drawFicha("capitanamerica", (canvasWidth / 8) * 7, canvasHeight / 4 + i * 10, "blue", player2Img);
+            }
 
-        for (let i = 0; i < cantFichas / 2; i++) {
-            let f1 = drawFicha("ironman", canvasWidth / 8, canvasHeight / 4 + i * 10, "red", IronmanImg);
-            let f2 = drawFicha("capitanamerica", (canvasWidth / 8) * 7, canvasHeight / 4 + i * 10, "blue", CaptainAmericaImg);
+            jugador1Texto.draw();
+            jugador2Texto.draw();
+            setFichas(ronda);
+            crono.iniciar()
         }
-
-        jugador1Texto.draw();
-        jugador2Texto.draw();
-        setFichas(ronda);
-        crono.iniciar()
-
     }
 
     function armarTablero(mode) {
@@ -155,8 +194,6 @@ function cambiarRonda() {
     actualizar();
     setFichas(ronda);
 
-}
-function play() {
 }
 
 function createTablero(inicioTable) {
@@ -221,20 +258,21 @@ canvas.addEventListener("mousedown", onMouseDown, false);
 function onMouseDown(e) {
     isMouseDown = true;
 
-    if (lastCircleCliked != null) {
-        lastCircleCliked = null;
+    // Busca si el clic está sobre una ficha
+    let clickedFicha = findClickedCircle(e.layerX, e.layerY);
+
+    // Solo reasigna lastCircleCliked si encuentra una ficha válida
+    if (clickedFicha && clickedFicha.getActivado()) {
+        lastCircleCliked = clickedFicha; // Asigna nueva ficha
     }
-    let clickFig = findClickedCircle(e.layerX, e.layerY);
-    if (clickFig != null && clickFig.getActivado() == true) {
-        lastCircleCliked = clickFig;
-    }
+
     actualizar();
 }
 
 canvas.addEventListener("mousemove", onMouseMove, false);
 
 function onMouseMove(e) {
-    if (isMouseDown && lastCircleCliked != null) {
+    if (isMouseDown && lastCircleCliked) {
         lastCircleCliked.setPosition(e.layerX, e.layerY);
         actualizar();
     }
@@ -248,9 +286,10 @@ function borrarFichaPartida(ficha) {
 canvas.addEventListener("mouseup", onMouseUp, false);
 
 function onMouseUp(e) {
-    if (tablero && lastCircleCliked !== null) {
+    isMouseDown = false;
+    if (tablero && lastCircleCliked) {
         let col = tablero.whereClick(e.layerX, e.layerY);
-        if (col !== null) {
+        if (col != null) {
             let filaAinsertar = tablero.tenesEspacioColumna(col);
             if (filaAinsertar > 0) {
                 let ganador = tablero.InsertColumna(col, filaAinsertar, lastCircleCliked);
@@ -259,15 +298,16 @@ function onMouseUp(e) {
                 if (ganador) {
                     showGanador();
                 } else {
-                    cambiarRonda()
+                    cambiarRonda();
                 }
             }
         } else {
-            lastCircleCliked.returPosIni();
+            lastCircleCliked.returPosIni(); // Regresa a la posición inicial
+            actualizar();
         }
     }
     lastCircleCliked = null;
-    isMouseDown = false;
+
 
 }
 

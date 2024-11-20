@@ -23,7 +23,10 @@ class Tiempo {
             }
         }, 1000);
     }
-
+    resetear() {
+        this.detener();
+        this.tiempoRestante = this.duracion;
+    }
 
     detener() {
         if (this.intervalo) {

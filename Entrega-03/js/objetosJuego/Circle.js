@@ -20,6 +20,7 @@ class Circle {
     }
     returPosIni() {
         this.setPosition(this.posIni.x, this.posIni.y);
+        return true;
     }
     getActivado() {
         return this.activado;

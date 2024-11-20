@@ -486,6 +486,27 @@ footer a:hover {
 
 }
 
+#reset {
+    z-index: 1;
+    width: 120px;
+    height: 39px;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 5px;
+}
+
+#reset.marcar {
+    background-color: #0b771d;
+    color: #f4f4f7;
+}
+
 canvas {
     background-color: #010B2A;
     border-radius: 12px;

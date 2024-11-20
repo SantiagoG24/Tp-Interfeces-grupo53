@@ -139,22 +139,7 @@ function showMode() {
     selecionModo.classList.toggle("active");
 }
 function startGame() {
-    restart.addEventListener('click', () => {
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-        ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
-        tablero = null;
-        fichasEnPartida = [];
-        mode = 0;
-        player1Img = null;
-        player2Img = null;
-        turnoElegir = 1;
-        ronda = 'ironman';
-        crono.resetear();
-        limpiarOpcionesFicha();
-        limpiarOpcionesModo();
-        showConfig();
-    });
+    restart.addEventListener('click', resetGame);
     if (player1Img !== null && player2Img !== null) {
         selecionFicha.classList.remove("active");
 
@@ -394,8 +379,21 @@ function showGanador() {
     reiniciar.addEventListener('click', resetGame);
 }
 function resetGame() {
-    let ganador = document.getElementById("ganador");
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    ctx.drawImage(imagenFondo, 0, 0, canvasWidth, canvasHeight);
+    tablero = null;
+    fichasEnPartida = [];
+    mode = 0;
+    player1Img = null;
+    player2Img = null;
+    turnoElegir = 1;
+    ronda = 'ironman';
+    crono.resetear();
+    let ganador = document.getElementById('ganador');
     ganador.classList.remove("active");
+    limpiarOpcionesFicha();
+    limpiarOpcionesModo();
     showConfig();
 }
 function cambiarTurno() {

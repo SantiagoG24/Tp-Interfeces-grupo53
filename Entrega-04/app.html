@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="seccion-carga container">
+    <div class="seccion-carga ">
         <div class="logo-carga"><img src="assets/logo1.png" alt=""></div>
         <div class="area-cargado">
             <div></div>
@@ -38,7 +38,7 @@
                 <div class="bar" id="bar2"></div>
                 <div class="bar" id="bar3"></div>
             </div>
-            <div class="logo"><img src="assets/logo1.png" alt=""></div>
+            <div class="logo"><img id="logo" src="assets/logo1.png" alt=""></div>
             <button class="btn-comprar">COMPRAR</button>
         </header>
     </div>
@@ -68,7 +68,7 @@
                 <img src="assets/arbusto1.png" alt="" class="arbusto1izq">
             </div>
             <div class="ini-centro">
-                <img src="assets/logo1.png" alt="" class="logo-centro">
+                <img id="logo-centro" src="assets/logo1.png" alt="" class="logo-centro">
 
             </div>
             <div class="ini-der">
@@ -345,35 +345,36 @@
 
                 <! Experimenta Efectos 3D -->
 
-                <div class="container">
-                   <div class="objeto-3d">
-                       <div id="texto-3d">
-                        <h1 id="h1-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura Matemática Inmersiva! </h1>
-                            <p id="p-3d">En NumberBlocks, la aventura no solo está en el
-                                        aprendizaje, ¡sino también en la
-                                        experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a
-                                        cada número y desafío, haciendo
-                                        que las matemáticas cobren una nueva dimensión. A medida que los
-                                        niños interactúan con los
-                                        personajes y los bloques, verán cómo sus acciones tienen un impacto
-                                        real en el entorno, creando un
-                                        aprendizaje dinámico y emocionante. ¡Cada sesión de juego se
-                                       convierte en una experiencia
-                                        inolvidable llena de color y diversión!</p>
-                       </div>
-                    <div>
-                <model-viewer id="muñeco-3d" loading="eager" camera-controls touch-action="pan-y" auto-rotate
-               poster="/Entrega-04/assets/image239.png" tone-mapping="aces"
-               src=" /Entrega-04/assets/one.glb" shadow-intensity="1"
-                alt="A 3D model of a shishkebab"></model-viewer>
-                                               </div>
-                   </div>
-                </div>
-   
-   
-               <! Bloque personajes-->
-                   <div class="gradiente-bloque">
-                           <div class="bloque-personajes">
+                    <div class="container">
+                        <div class="objeto-3d">
+                            <div id="texto-3d">
+                                <h1 id="h1-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura
+                                    Matemática Inmersiva! </h1>
+                                <p id="p-3d">En NumberBlocks, la aventura no solo está en el
+                                    aprendizaje, ¡sino también en la
+                                    experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a
+                                    cada número y desafío, haciendo
+                                    que las matemáticas cobren una nueva dimensión. A medida que los
+                                    niños interactúan con los
+                                    personajes y los bloques, verán cómo sus acciones tienen un impacto
+                                    real en el entorno, creando un
+                                    aprendizaje dinámico y emocionante. ¡Cada sesión de juego se
+                                    convierte en una experiencia
+                                    inolvidable llena de color y diversión!</p>
+                            </div>
+                            <div>
+                                <model-viewer id="muñeco-3d" loading="eager" camera-controls touch-action="pan-y"
+                                    auto-rotate poster="/Entrega-04/assets/image239.png" tone-mapping="aces"
+                                    src=" /Entrega-04/assets/one.glb" shadow-intensity="1"
+                                    alt="A 3D model of a shishkebab"></model-viewer>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <! Bloque personajes-->
+                        <div class="gradiente-bloque">
+                            <div class="bloque-personajes">
                                 <div class="bloque-imagenes" id="bloque-1">
                                     <img class="personaje" src="assets/img-personajes/455.png">
                                     <img class="personaje" src="assets/img-personajes/456.png">
@@ -381,92 +382,114 @@
                                     <img class="personaje" src="assets/img-personajes/458.png">
                                     <img class="personaje" src="assets/img-personajes/459.png">
                                 </div>
-   
-                            <div class="bloque-imagenes" id="bloque-2">
-                                   <img class="personaje" src="assets/img-personajes/460.png">
-                                   <img class="personaje" src="assets/img-personajes/461.png">
-                                   <img class="personaje" src="assets/img-personajes/462.png">
-                                   <img class="personaje" src="assets/img-personajes/463.png">
-                                  <img class="personaje" src="assets/img-personajes/464.png">
+
+                                <div class="bloque-imagenes" id="bloque-2">
+                                    <img class="personaje" src="assets/img-personajes/460.png">
+                                    <img class="personaje" src="assets/img-personajes/461.png">
+                                    <img class="personaje" src="assets/img-personajes/462.png">
+                                    <img class="personaje" src="assets/img-personajes/463.png">
+                                    <img class="personaje" src="assets/img-personajes/464.png">
+                                </div>
+
                             </div>
-                        
-                             </div>
-                     </div>                            
-   
-           <! PRE FOOTER -->
-   
-               <div class="prefooter-gradiente">
-                   <div class="container">
-                           <div class="prefooter">
-                               <div id="h1-prefooter">
-                                   <h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1>
-                           </div>
-                       
-                           <div class="suscripcion">
-                           <form>
-                           <input type="email"placeholder="Ingresa aquí tu correo">
-                           <button type="submit">SUSCRIBIRSE</button>
-                           </form>
-                           </div>
-                       
-                           <div>
-                           <p id="p-prefooter">Al inscribirse en nuestra lista de correo, nos autoriza a ponernos 
-                                               en contacto con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico, 
-                                               y también acepta nuestra <span>Política de privacidad</span>  y las <span>Condiciones del servicio</span>.
-                           </p>
-                           </div>
-   
-                           <div><img src="assets/disclaimer.png" alt=""></div>
-                           </div>
-                   </div>
-                   <div class="nubes">
-                       <img src="assets/nube1.png"  id="nube1">
-                       <img src="assets/nube2.png" id="nube2" alt="">
-                       <img src="assets/nube3.png" id="nube3" alt="">
-                   </div>
-                   <div class="container">
-                       <div class="muñecos-container">  
-                           <iframe src="https://giphy.com/embed/5ddqGqO8x5rrJ7v5tf"  id="prefooter-muñeco2" frameBorder="0"  allowFullScreen></iframe>
-                           <iframe src="https://giphy.com/embed/HuocoB7MEUeLMifGFN"  id="prefooter-muñeco3"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                           <iframe src="https://giphy.com/embed/fuTByMqFxstXjmDSYm"  id="prefooter-muñeco7"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe>                       
-                       </div>
-                   </div>
-                   <div id="piso-prefooter"><img src="assets/piso-prefooter.png" alt=""></div>
-                   </div>
-                  
-                  
-               </div>
-   
-   
-           <! FOOTER -->
-          
-   
-            <footer>
-               <div>
-                   <div class="footer-1">
-                       <div class="container">
-                           <img src="assets/footer-1.png">
-                       </div>
-                   </div>
-                   <div class="footer-2">
-                       <div class="container">
-                           <p>©SEGA. All rights reserved. SEGA is registered in the U.S.
-                               Patent and Trademark Office. SEGA, the SEGA logo and SONIC SUPERSTARS are either registered trademarks or trademarks of SEGA CORPORATION or its affiliates. All other trademarks, logos and copyrights are property of their respective owners.©2023 The LEGO Group. LEGO, the LEGO logo, the Minifigure, and the Brick and Knob configurations are trademarks and/or copyrights of the LEGO Group. All other marks and trademarks are the property of their respective owners. All rights reserved."PS", "PS5" and "PS4" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.Microsoft, the Xbox Sphere mark, the Series X logo, Xbox One, and Xbox Series X are trademarks of the Microsoft group of companies.Nintendo Switch is a trademark of NintendoEPIC GAMES and the EPIC STORE LOGO are trademarks or registered trademarks of EPIC GAMES INC.©2023 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.
-                              The ESRB rating icons are registered trademarks of the Entertainment Software Association.
-                              </p>
-                              <div class="dino-txt">
-                               <div id="dinosaurio"></div>
-                               <p><span>COOKIE POLICY PRIVACY POLICY</span></p>
-                           </div>
-                           
-                           <img src="assets/footer-2.png" alt="">
-                       </div>
-                        
-       
-                       
-                </div>
-               </div>
-            </footer>
+                        </div>
+
+                        <! PRE FOOTER -->
+
+                            <div class="prefooter-gradiente">
+                                <div class="container">
+                                    <div class="prefooter">
+                                        <div id="h1-prefooter">
+                                            <h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1>
+                                        </div>
+
+                                        <div class="suscripcion">
+                                            <form>
+                                                <input type="email" placeholder="Ingresa aquí tu correo">
+                                                <button type="submit">SUSCRIBIRSE</button>
+                                            </form>
+                                        </div>
+
+                                        <div>
+                                            <p id="p-prefooter">Al inscribirse en nuestra lista de correo, nos autoriza
+                                                a ponernos
+                                                en contacto con usted para enviarle ofertas y actualizaciones de
+                                                marketing por correo electrónico,
+                                                y también acepta nuestra <span>Política de privacidad</span> y las
+                                                <span>Condiciones del servicio</span>.
+                                            </p>
+                                        </div>
+
+                                        <div><img src="assets/disclaimer.png" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="nubes">
+                                    <img src="assets/nube1.png" id="nube1">
+                                    <img src="assets/nube2.png" id="nube2" alt="">
+                                    <img src="assets/nube3.png" id="nube3" alt="">
+                                </div>
+                                <div class="container">
+                                    <div class="muñecos-container">
+                                        <iframe src="https://giphy.com/embed/5ddqGqO8x5rrJ7v5tf" id="prefooter-muñeco2"
+                                            frameBorder="0" allowFullScreen></iframe>
+                                        <iframe src="https://giphy.com/embed/HuocoB7MEUeLMifGFN" id="prefooter-muñeco3"
+                                            frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                        <iframe src="https://giphy.com/embed/fuTByMqFxstXjmDSYm" id="prefooter-muñeco7"
+                                            frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                    </div>
+                                </div>
+                                <div id="piso-prefooter"><img src="assets/piso-prefooter.png" alt=""></div>
+                            </div>
+
+
+                            </div>
+
+
+                            <! FOOTER -->
+
+
+                                <footer>
+                                    <div>
+                                        <div class="footer-1">
+                                            <div class="container">
+                                                <img src="assets/footer-1.png">
+                                            </div>
+                                        </div>
+                                        <div class="footer-2">
+                                            <div class="container">
+                                                <p>©SEGA. All rights reserved. SEGA is registered in the U.S.
+                                                    Patent and Trademark Office. SEGA, the SEGA logo and SONIC
+                                                    SUPERSTARS are either registered trademarks or trademarks of SEGA
+                                                    CORPORATION or its affiliates. All other trademarks, logos and
+                                                    copyrights are property of their respective owners.©2023 The LEGO
+                                                    Group. LEGO, the LEGO logo, the Minifigure, and the Brick and Knob
+                                                    configurations are trademarks and/or copyrights of the LEGO Group.
+                                                    All other marks and trademarks are the property of their respective
+                                                    owners. All rights reserved."PS", "PS5" and "PS4" are registered
+                                                    trademarks or trademarks of Sony Interactive Entertainment
+                                                    Inc.Microsoft, the Xbox Sphere mark, the Series X logo, Xbox One,
+                                                    and Xbox Series X are trademarks of the Microsoft group of
+                                                    companies.Nintendo Switch is a trademark of NintendoEPIC GAMES and
+                                                    the EPIC STORE LOGO are trademarks or registered trademarks of EPIC
+                                                    GAMES INC.©2023 Valve Corporation. Steam and the Steam logo are
+                                                    trademarks and/or registered trademarks of Valve Corporation in the
+                                                    U.S. and/or other countries.
+                                                    The ESRB rating icons are registered trademarks of the Entertainment
+                                                    Software Association.
+                                                </p>
+                                                <div class="dino-txt">
+                                                    <div id="dinosaurio"></div>
+                                                    <p><span>COOKIE POLICY PRIVACY POLICY</span></p>
+                                                </div>
+
+                                                <img src="assets/footer-2.png" alt="">
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </footer>
                                 <script type="module"
                                     src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
                                 <script src="app.js"></script>

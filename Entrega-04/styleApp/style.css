@@ -626,7 +626,6 @@ section.sec-app {
 }
 
 .cards-div {
-    padding-top: 50px;
     width: 100%;
     height: 500px;
     display: flex;
@@ -637,22 +636,24 @@ section.sec-app {
 }
 
 .card {
-    width: 332.96px;
+    margin-left: 41px;
+    width: 32%;
     height: 302.69px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
-    
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
 .card img {
-    width: 332.96px;
-    height: 302.69px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
     box-sizing: border-box;
     border: #2982FF 9px solid;
-    border-radius: 41px;
+    border-radius: 20px; 
     box-shadow: 4px 5px #02187E;
 }
+
 
 
 

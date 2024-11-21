@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="seccion-carga container">
+    <div class="seccion-carga ">
         <div class="logo-carga"><img src="assets/logo1.png" alt=""></div>
         <div class="area-cargado">
             <div></div>
@@ -38,7 +38,7 @@
                 <div class="bar" id="bar2"></div>
                 <div class="bar" id="bar3"></div>
             </div>
-            <div class="logo"><img src="assets/logo1.png" alt=""></div>
+            <div class="logo"><img id="logo" src="assets/logo1.png" alt=""></div>
             <button class="btn-comprar">COMPRAR</button>
         </header>
     </div>
@@ -68,7 +68,7 @@
                 <img src="assets/arbusto1.png" alt="" class="arbusto1izq">
             </div>
             <div class="ini-centro">
-                <img src="assets/logo1.png" alt="" class="logo-centro">
+                <img id="logo-centro" src="assets/logo1.png" alt="" class="logo-centro">
 
             </div>
             <div class="ini-der">
@@ -115,7 +115,7 @@
             <path fill="#A8EBEC" fill-opacity="1"
                 d="M0,224L80,213.3C160,203,320,181,480,197.3C640,213,800,267,960,266.7C1120,267,1280,213,1360,186.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
             </path>
-        </svg>
+        </svg> 
     </div>
     <img src="assets/5.png" alt="" class="pj_cinco">
     <img src="assets/4.png" alt="" class="pj_cuatro">
@@ -342,8 +342,9 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <img src="/Entrega-04/assets/3-video.png" alt="" id="img3-amarillo">
+                            
                         </div>
+                        <img src="/Entrega-04/assets/3-video.png" alt="" id="img3-amarillo">
                     </div>
                     </div>
 
@@ -354,35 +355,36 @@
 
                 <! Experimenta Efectos 3D -->
 
-                <div class="container">
-                   <div class="objeto-3d">
-                       <div id="texto-3d">
-                        <h1 id="h1-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura Matemática Inmersiva! </h1>
-                            <p id="p-3d">En NumberBlocks, la aventura no solo está en el
-                                        aprendizaje, ¡sino también en la
-                                        experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a
-                                        cada número y desafío, haciendo
-                                        que las matemáticas cobren una nueva dimensión. A medida que los
-                                        niños interactúan con los
-                                        personajes y los bloques, verán cómo sus acciones tienen un impacto
-                                        real en el entorno, creando un
-                                        aprendizaje dinámico y emocionante. ¡Cada sesión de juego se
-                                       convierte en una experiencia
-                                        inolvidable llena de color y diversión!</p>
-                       </div>
-                    <div>
-                <model-viewer id="muñeco-3d" loading="eager" camera-controls touch-action="pan-y" auto-rotate
-               poster="/Entrega-04/assets/image239.png" tone-mapping="aces"
-               src=" /Entrega-04/assets/one.glb" shadow-intensity="1"
-                alt="A 3D model of a shishkebab"></model-viewer>
-                                               </div>
-                   </div>
-                </div>
-   
-   
-               <! Bloque personajes-->
-                   <div class="gradiente-bloque">
-                           <div class="bloque-personajes">
+                    <div class="container">
+                        <div class="objeto-3d">
+                            <div id="texto-3d">
+                                <h1 id="h1-3d">¡Experimenta Efectos 3D Asombrosos en NumberBlocks: Una Aventura
+                                    Matemática Inmersiva! </h1>
+                                <p id="p-3d">En NumberBlocks, la aventura no solo está en el
+                                    aprendizaje, ¡sino también en la
+                                    experiencia visual! Disfruta de efectos 3D asombrosos que dan vida a
+                                    cada número y desafío, haciendo
+                                    que las matemáticas cobren una nueva dimensión. A medida que los
+                                    niños interactúan con los
+                                    personajes y los bloques, verán cómo sus acciones tienen un impacto
+                                    real en el entorno, creando un
+                                    aprendizaje dinámico y emocionante. ¡Cada sesión de juego se
+                                    convierte en una experiencia
+                                    inolvidable llena de color y diversión!</p>
+                            </div>
+                            <div>
+                                <model-viewer id="muñeco-3d" loading="eager" camera-controls touch-action="pan-y"
+                                    auto-rotate poster="/Entrega-04/assets/image239.png" tone-mapping="aces"
+                                    src=" /Entrega-04/assets/one.glb" shadow-intensity="1"
+                                    alt="A 3D model of a shishkebab"></model-viewer>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <! Bloque personajes-->
+                        <div class="gradiente-bloque">
+                            <div class="bloque-personajes">
                                 <div class="bloque-imagenes" id="bloque-1">
                                     <img class="personaje" src="assets/img-personajes/455.png">
                                     <img class="personaje" src="assets/img-personajes/456.png">
@@ -390,13 +392,15 @@
                                     <img class="personaje" src="assets/img-personajes/458.png">
                                     <img class="personaje" src="assets/img-personajes/459.png">
                                 </div>
-   
-                            <div class="bloque-imagenes" id="bloque-2">
-                                   <img class="personaje" src="assets/img-personajes/460.png">
-                                   <img class="personaje" src="assets/img-personajes/461.png">
-                                   <img class="personaje" src="assets/img-personajes/462.png">
-                                   <img class="personaje" src="assets/img-personajes/463.png">
-                                  <img class="personaje" src="assets/img-personajes/464.png">
+
+                                <div class="bloque-imagenes" id="bloque-2">
+                                    <img class="personaje" src="assets/img-personajes/460.png">
+                                    <img class="personaje" src="assets/img-personajes/461.png">
+                                    <img class="personaje" src="assets/img-personajes/462.png">
+                                    <img class="personaje" src="assets/img-personajes/463.png">
+                                    <img class="personaje" src="assets/img-personajes/464.png">
+                                </div>
+
                             </div>
                         
                              </div>
@@ -485,6 +489,7 @@
                                 <script type="module"
                                     src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
                                 <script src="app.js"></script>
+                                <script src="azul.js"></script>
 </body>
 
 </html>

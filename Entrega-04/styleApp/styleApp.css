@@ -1,8 +1,8 @@
 body {
-    font-family:"Lato", sans-serif;
+    font-family: "Lato", sans-serif;
     align-items: center;
-    
-    
+
+
 }
 
 .container {
@@ -13,14 +13,14 @@ body {
 
 
 
-/*bloque 3d*/ 
+/*bloque 3d*/
 
-.objeto-3d{
+.objeto-3d {
     display: flex;
     flex-direction: row;
     align-self: center;
-    align-items:flex-start;  
-      
+    align-items: flex-start;
+
 }
 
 #texto-3d {
@@ -30,7 +30,7 @@ body {
     height: 518px;
 }
 
-#h1-3d{
+#h1-3d {
     width: 600px;
     height: 285px;
     font-family: 'Lato';
@@ -39,44 +39,47 @@ body {
     font-size: 40px;
     line-height: 47px;
     /* or 57px */
-   
+
     color: #9D2121;
-    
+
 }
 
-#p-3d{
-width: 467px;
-height: 200px;
-font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 94.5%;
-margin-bottom: 10%;
+#p-3d {
+    width: 467px;
+    height: 200px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 94.5%;
+    margin-bottom: 10%;
 }
 
-#muñeco-3d{   
-    width:600px;
+#muñeco-3d {
+    width: 600px;
     height: 600px;
     padding-bottom: 5%;
     padding-top: 5%;
     padding-right: 5%;
+    touch-action: none;
+    pointer-events: none;
 }
+
 /*Bloque personajes */
 
 .gradiente-bloque {
-    width: 100vw; 
+    width: 100vw;
     background: linear-gradient(to right, #8f1010, #cc1f1d, #dbc51d, #58e009, #38f3fc);
-    margin: 0 auto; 
-    padding: 20px 0; 
+    margin: 0 auto;
+    padding: 20px 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .bloque-personajes {
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-right: auto;
-  
+
 }
 
 
@@ -85,30 +88,31 @@ margin-bottom: 10%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+
 }
 
 
 .bloque-imagenes img {
-   padding: 1%;   
+    padding: 1%;
 }
 
 .personaje {
-    transition: transform 0.3s ease, filter 0.3s ease; /
+    transition: transform 0.3s ease, filter 0.3s ease;/
 }
 
 .personaje:hover {
-    animation: crecerYBrillar 0.3s forwards; 
+    animation: crecerYBrillar 0.3s forwards;
 }
 
 @keyframes crecerYBrillar {
     from {
-        transform: scale(1); 
-        filter: brightness(1); 
+        transform: scale(1);
+        filter: brightness(1);
     }
+
     to {
-        transform: scale(1.1); 
-        filter: brightness(1.2); 
+        transform: scale(1.1);
+        filter: brightness(1.2);
     }
 }
 
@@ -131,7 +135,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 .prefooter {
     width: 1080px;
     margin: 0 auto;
-    
+
 }
 
 #piso-prefooter {
@@ -166,6 +170,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
    animation: movimientoNubeDerecha  100s infinite linear;
 
 }
+
 #nube3 {
     position: absolute;
     width: 387px;
@@ -176,33 +181,39 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 }
 
 @keyframes movimientoNubeIzquierda {
-    0% { transform: translateX(0);
+    0% {
+        transform: translateX(0);
         opacity: 0.1;
-     }
-     25% {
+    }
+
+    25% {
         opacity: 1;
-     }
-     75%{
+    }
+
+    75% {
         opacity: 0.5;
      }
     100% { transform: translateX(700px);
         opacity: 0;
-     }
+    }
 }
 
 @keyframes movimientoNubeDerecha {
-    0% { transform: translateX(0);
+    0% {
+        transform: translateX(0);
         opacity: 0.10;
-     }
-     25% {
+    }
+
+    25% {
         opacity: 1;
-     }
-     75%{
+    }
+
+    75% {
         opacity: 0.5;
      }
     100% { transform: translateX(-700px);
         opacity: 0;
-     }
+    }
 }
 
 
@@ -241,7 +252,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
   
 
 
-#h1-prefooter{
+#h1-prefooter {
     width: 816px;
     height: 171px;
     font-weight: 600;
@@ -265,20 +276,20 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 #p-prefooter span {
     text-decoration: underline;
 }
- 
+
 .suscripcion {
     display: flex;
     margin-top: 10%;
     z-index: -1;
-       
+
 }
 
 .suscripcion form {
     display: flex;
     align-items: center;
-    border: 3px solid white; 
+    border: 3px solid white;
     border-radius: 50px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 4px 5px 0px #02187E;
 }
 
@@ -290,8 +301,8 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     outline: none;
     font-size: 18px;
     border-radius: 50px 0 0 50px;
-    background-color: #F0F0F0; 
-    color: #7A7A7A; 
+    background-color: #F0F0F0;
+    color: #7A7A7A;
 }
 
 
@@ -305,7 +316,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     width: 150px;
     height: 60px;
     border: none;
-    background-color: #83C252; 
+    background-color: #83C252;
     color: white;
     font-family: "Lato", sans-serif;
     font-weight: 900;
@@ -333,7 +344,8 @@ footer {
     flex-direction: column;
     height: 100%;
     background-color: #5E5E5D;
-    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio horizontalmente */
 }
 
 .footer-2 p {
@@ -385,3 +397,33 @@ footer {
     }
     
 
+#dinosaurio {
+    background: url(/Entrega-04/assets/dino.jpg);
+    border-radius: 100%;
+    width: 76px;
+    height: 76px;
+    animation: correr 0.5s steps(12) infinite;
+    margin-bottom: 1%;
+}
+
+.dino-txt p {
+    margin: 0;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+
+@keyframes correr {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -959px;
+    }
+
+}

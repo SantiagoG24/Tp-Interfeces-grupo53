@@ -486,6 +486,27 @@ footer a:hover {
 
 }
 
+#reset {
+    z-index: 1;
+    width: 120px;
+    height: 39px;
+    background-color: #f4f4f7;
+    color: #310b77;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 95%;
+    letter-spacing: 0.02em;
+    border: none;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 5px;
+}
+
+#reset.marcar {
+    background-color: #0b771d;
+    color: #f4f4f7;
+}
+
 canvas {
     background-color: #010B2A;
     border-radius: 12px;
@@ -510,6 +531,14 @@ canvas {
 
 .buttonsGame h1,
 h2 {
+    margin-bottom: 5%;
+    width: 100%;
+    color: #f1f0f3;
+    font-family: "Roboto Condensed", sans-serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#turno {
     margin-bottom: 10%;
     width: 100%;
     color: #f1f0f3;
@@ -542,28 +571,28 @@ h2 {
     margin-top: 3%;
 }
 
-#mode4:hover {
+#mode4.marcar {
     background-color: #0b771d;
     color: #f4f4f7;
 }
 
-#mode5:hover {
-    background-color: #2887D1;
+#mode5.marcar {
+    background-color: #0b771d;
     color: #f4f4f7;
 }
 
-#mode6:hover {
-    background-color: #AD1C21;
+#mode6.marcar {
+    background-color: #0b771d;
     color: #f4f4f7;
 }
 
-#mode7:hover {
-    background-color: #C85336;
+#mode7.marcar {
+    background-color: #0b771d;
     color: #f4f4f7;
 }
 
 #btn-modo:hover {
-    background-color: #310b77;
+    background-color: #0b771d;
     color: #f4f4f7;
 }
 
@@ -576,10 +605,11 @@ h2 {
 }
 
 #buttonOpcionA,
-#buttonOpcionB {
-    width: 40%;
+#buttonOpcionB,
+#buttonOpcionC,
+#buttonOpcionD {
+    width: 25%;
     padding: 10px;
-    background-color: #f4f4f7;
     color: #310b77;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: bold;
@@ -589,17 +619,14 @@ h2 {
     border-radius: 12px;
 }
 
-#buttonOpcionA:hover {
-
-    background-color: #0b771d;
-    color: #f4f4f7;
+.opcion div.marcar1 {
+    background-color: #AD1C21;
 }
 
-#buttonOpcionB:hover {
-
-    background-color: #0b771d;
-    color: #f4f4f7;
+.opcion div.marcar2 {
+    background-color: #182097;
 }
+
 
 
 .buttonBack {

@@ -15,8 +15,16 @@ class Tablero {
         this.tableroXI;
         this.tableroXF;
         this.tableroYI;
-        this.tableroXF;
+        this.tableroYF;
 
+    }
+    getPos() {
+        return {
+            xi: this.tableroXI,
+            xf: this.tableroXF,
+            yi: this.tableroYI,
+            yf: this.tableroYF
+        }
     }
 
     getFilas() {
@@ -35,7 +43,15 @@ class Tablero {
         }
         return -1;
     }
+    getPosColumna(col) {
+        let elem = this.tablero[0][col];
+        return elem.getXCentro();
+    }
+    getPosFila(fila) {
+        let elem = this.tablero[fila][0];
+        return elem.getYCentro();
 
+    }
     InsertColumna(c, f, nueva) {
         let casillero = this.tablero[f][c];
         casillero.setOcupado(nueva);

@@ -6,7 +6,6 @@ body {
 .container {
     max-width: 1080px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .header-fondo {
@@ -79,8 +78,10 @@ nav {
     opacity: 0;
     position: fixed;
     z-index: 2;
-    left: 1px;
+    left: 100px;
     top: 72px;
+    border-radius: 20px;
+    padding-left: 5px;
     transition: opacity;
     display: flex;
     flex-direction: column;
@@ -95,6 +96,10 @@ nav {
     animation: ver-categoria 0.3s linear forwards;
 }
 
+.categoria.ver-categoria-reversa {
+    animation: ocultar-categoria 0.5s ease;
+}
+
 @keyframes ver-categoria {
     from {
         opacity: .5;
@@ -107,6 +112,20 @@ nav {
         transform: translateX(0%);
     }
 
+}
+
+@keyframes ocultar-categoria {
+    from {
+        opacity: .9;
+        padding-right: 0px;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: .5;
+        padding-right: 130px;
+        transform: translateX(-20%);
+    }
 }
 
 @keyframes nav-visible {
@@ -124,13 +143,107 @@ nav {
     }
 }
 
+.menu.active #bar1 {
+    animation: bar1-open 0.3s ease forwards;
+}
+
+.menu.active #bar2 {
+    animation: bar2-open 0.3s ease forwards;
+}
+
+.menu.active #bar3 {
+    animation: bar3-open 0.3s ease forwards;
+}
+
+/* Animación al cerrar */
+.menu.closing #bar1 {
+
+    animation: bar1-close 0.3s ease forwards;
+}
+
+.menu.closing #bar2 {
+
+    animation: bar2-close 0.3s ease forwards;
+}
+
+.menu.closing #bar3 {
+
+    animation: bar3-close 0.3s ease forwards;
+}
+
+/* Keyframes para abrir */
+@keyframes bar1-open {
+    from {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    to {
+        transform: rotate(45deg) translate(7px, 7px);
+        box-shadow: none;
+    }
+}
+
+@keyframes bar2-open {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bar3-open {
+    from {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(10px, -9px);
+        box-shadow: none;
+    }
+}
+
+/* Keyframes para cerrar */
+@keyframes bar1-close {
+    from {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    to {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
+@keyframes bar2-close {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bar3-close {
+    from {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    to {
+        transform: rotate(0) translate(0, 0);
+    }
+}
+
 .menu {
     width: 200px;
     height: 40px;
     z-index: 3;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+    scale: 1.2;
 }
 
 
@@ -148,69 +261,21 @@ nav {
 }
 
 
-.menu.active #bar1 {
-    animation: bar1-rotate 0.3s linear both;
-    animation-direction: alternate;
-}
-
-@keyframes bar1-rotate {
-    from {}
-
-    to {
-        transform: rotate(45deg) translate(7px, 7px);
-        box-shadow: none;
-    }
-
-}
-
-.menu.active #bar2 {
-    animation: bar2-rotate .5s linear both;
-    animation-direction: alternate;
-
-}
-
-@keyframes bar2-rotate {
-    to {
-        transform: rotate(45deg) translate(4px, -1.5px);
-        box-shadow: none;
-        border: none;
-    }
-}
-
-.menu.active #bar3 {
-    animation: bar3-rotate .6s linear both;
-    animation-direction: alternate;
-}
-
-@keyframes bar3-rotate {
-    to {
-        transform: rotate(-45deg) translate(4px, -4px);
-        box-shadow: none;
-    }
-}
-
 .logo {
     width: 200px;
     height: 86px;
     display: flex;
     justify-content: center;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+    scale: 1.5;
 }
 
-.logo img {
+#logo {
     width: auto;
     height: auto;
-
-    /* s */
-}
-
-@keyframes scroll-header {
-    to {
-        scale: 0.8;
-    }
-
 }
 
 .btn-comprar {
@@ -226,21 +291,35 @@ nav {
     line-height: 18.9px;
 
     box-shadow: #02187E 4px 5px;
-    animation: scroll-header auto linear;
+    animation: scroll-header auto linear both;
     animation-timeline: scroll(root);
-    animation-range: 200px;
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+
+    scale: 1.2;
+
+    &:hover {
+        transition: ease 1s;
+        background-color: #81cc48;
+        scale: 1.1;
+
+    }
+
     /* box-shadow: 8px #02187E; */
 }
 
+@keyframes scroll-header {
+    to {
+        scale: 1;
+    }
+
+}
 
 .text-categoria h2 {
     width: 100%;
     font-size: 16px;
     font-weight: bold;
 }
-
-
-
 
 section.sec-inicio {
     width: 100%;
@@ -482,6 +561,28 @@ section.sec-app {
     left: 96px;
 }
 
+#slider {
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+
+}
+
+#slider.active {
+    animation: car-opacity 0.3s ease-in both;
+}
+
+@keyframes car-opacity {
+    from {
+        transform: translateX(-15%);
+        opacity: 0.01;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 .img-app img {
     width: auto;
     height: 100%;
@@ -494,6 +595,22 @@ section.sec-app {
     position: absolute;
     top: 1443px;
     left: 75px;
+    animation: mover-lado-lado 3s infinite linear alternate-reverse;
+}
+
+@keyframes mover-lado-lado {
+    0% {
+        transform: translateX(0px);
+    }
+
+    66% {
+        transform: translateX(30px);
+
+    }
+
+    100% {
+        transform: translateX(40px);
+    }
 }
 
 .pj_cinco {
@@ -503,6 +620,7 @@ section.sec-app {
     right: -170px;
     top: 845px;
     z-index: 2;
+    animation: mover-arriba-abajo 3s infinite linear;
 }
 
 .cards-div {
@@ -540,6 +658,7 @@ section.sec-app {
     opacity: 1;
     transform: translateY(0); 
 }
+
 /*@keyframes reveal {
     0% {
         opacity: 0;
@@ -579,7 +698,7 @@ section.sec-app {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0px;
+    top: -350px;
     left: 0px;
     width: 100vw;
     height: 100vw;
@@ -591,6 +710,9 @@ section.sec-app {
 .logo-carga {
     width: 50vw;
     height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .desaparecer {
@@ -616,7 +738,7 @@ section.sec-app {
 .area-cargado div {
     min-width: 3rem;
     min-height: 3rem;
-    border-radius: 5%;
+    border-radius: 20%;
     background-color: #88DE7F;
 
     /*Animaciones*/
@@ -667,4 +789,22 @@ section.sec-app {
         background-color: #88DE7F;
     }
 
+}
+
+#logo-centro {
+    animation: logo-centro linear both;
+    animation-timeline: scroll(root);
+    animation-range-end: 150px;
+}
+
+@keyframes logo-centro {
+    90% {
+        scale: 0.5;
+        opacity: 0.88;
+    }
+
+    to {
+        scale: .5;
+        opacity: 0;
+    }
 }

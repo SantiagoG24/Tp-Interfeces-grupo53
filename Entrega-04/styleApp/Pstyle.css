@@ -76,26 +76,30 @@
 }
 .cards-amigos{
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.card-suma{
-    font-family: "Lato", sans-serif;;
-    font-size: 40px;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 267px;
-}
+
 .container-img{
+    position: sticky;
+    top: 200px; /* Ajusta este valor para controlar la posición fija */
+    width: 50%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea la imagen verticalmente */
+}
+
+.aside-card{
     width: 540px;
+    height: 4469px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
+    margin-top: 159px;
+    letter-spacing: 0;
 }
 .texto-card{
-    width: 540px;
+    margin-bottom: 270px;
 }
 .texto-card h1{
     font-family: "Lato", sans-serif;;
@@ -114,41 +118,7 @@
 }
 
 
-.suma-img-0{
-    width: 291px;
 
-}
-.suma-img-1{
-    width: 379px;
-    border: 1opx solid blue;
-}
-.suma-img-2{
-    width: 266px;
-}
-.suma-img-3{
-    width: 187px;
-}
-.suma-img-4{
-    width: 475px;
-}
-.suma-img-5{
-    width: 231px;
-}
-.suma-img-6{
-    width: 338px;
-}
-.suma-img-7{
-    width: 134px;
-}
-.suma-img-8{
-    width: 437px;
-}
-.suma-img-9{
-    width: 485px;
-}
-.suma-img-10{
-    width: 459px;
-}
 
 /* BLOQUE AMARILLO */
 .seccion-amarillo{

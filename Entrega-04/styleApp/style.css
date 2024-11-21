@@ -301,8 +301,6 @@ nav {
     &:hover {
         transition: ease 1s;
         background-color: #81cc48;
-        scale: 1.1;
-
     }
 
     /* box-shadow: 8px #02187E; */
@@ -639,8 +637,9 @@ section.sec-app {
     height: 302.69px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
-    
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Animación suave */
+
 }
 
 .card img {
@@ -656,7 +655,7 @@ section.sec-app {
 
 .card.paralax {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
 }
 
 /*@keyframes reveal {

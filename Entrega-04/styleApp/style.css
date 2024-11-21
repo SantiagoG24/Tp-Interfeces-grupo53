@@ -383,16 +383,8 @@ section.sec-inicio {
     z-index: 0;
 
 }
-
-@keyframes parallax-effect1 {
-    from {
-        transform: translateX(0);
-
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+.arbusto4izq, .arIzq, .piedraizq, .arDer2, .arDer3, .piedraDer4, .piedraDer3, .piedraDer1,.arbusto3der, .arbusto2der {
+    transition: transform 0.3s ease-out;
 }
 
 

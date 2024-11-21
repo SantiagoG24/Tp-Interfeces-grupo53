@@ -1,57 +1,62 @@
-.seccion-descargar{
+.seccion-descargar {
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
 }
-.container-azul{
+
+.container-azul {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 1280px;
 }
-.seccion-azul{
+
+.seccion-azul {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 0;
 }
+
 .img-fondo-azul {
     width: 100%;
     height: 1157px;
-    object-fit: cover; 
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0; 
-  }
+    z-index: 0;
+}
 
-.seccion-azul h1{
+.seccion-azul h1 {
     width: 950px;
     height: 153px;
     color: white;
-    font-family: "Lato", sans-serif;;
+    font-family: "Lato", sans-serif;
+    ;
     font-size: 62px;
     text-align: center;
-    font-weight:500;
+    font-weight: 500;
     margin-top: 180px;
     margin-bottom: 31.54px;
 }
-.seccion-azul h1 span{
+
+.seccion-azul h1 span {
     font-weight: bold;
     font-style: italic;
 }
 
-.seccion-azul #img-123459{
+.seccion-azul #img-123459 {
     width: 1280px;
     transition: transform 0.1s ease-out;
     position: relative;
     bottom: 105px;
 }
 
-.btn-descargar{
+.btn-descargar {
     color: white;
     width: 540px;
     height: 66px;
@@ -66,51 +71,133 @@
 
 /* MAS AMIGOS MAS DIVERSION*/
 
-.seccion-mas-amigos{
+.seccion-mas-amigos {
     width: 1080px;
 }
-.seccion-mas-amigos h1{
-    font-family: "Lato", sans-serif;;
+
+.seccion-mas-amigos h1 {
+    font-family: "Lato", sans-serif;
+    ;
     font-size: 60px;
     font-weight: 500;
 }
-.cards-amigos{
+
+.cards-amigos {
     display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
 }
 
-.container-img{
-    position: sticky;
-    top: 200px; /* Ajusta este valor para controlar la posición fija */
+/* santi */
+.container-img {
     width: 50%;
-    height: 450px;
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; /* Alinea la imagen verticalmente */
+    align-items: center;
+    transition: top 0.3s ease;
+    gap: 90px;
 }
 
-.aside-card{
-    width: 540px;
-    height: 4469px;
+.aside-card {
+    width: 50%;
+    height: 5500px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 159px;
+    margin-top: 70px;
     letter-spacing: 0;
+    align-items: flex-end;
 }
-.texto-card{
-    margin-bottom: 270px;
+
+.img {
+    width: 100%;
+    min-height: 420px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.texto-card h1{
-    font-family: "Lato", sans-serif;;
+
+.img.active {
+    opacity: 1;
+    transform: scale(1);
+    /* Escala normal */
+    animation: ver-img 1s ease-in-out both;
+    /* Se asegura de que la animación dure más tiempo */
+}
+
+/* Animación para la imagen */
+@keyframes ver-img {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.img img {
+    max-width: 500px;
+    max-height: 400px;
+}
+
+
+.ocultar {
+    display: none;
+}
+
+.texto-card {
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-card.active {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.img.active {
+    animation: slideIn 0.5s ease;
+}
+
+/* santi */
+.texto-card h1 {
+    font-family: "Lato", sans-serif;
+    ;
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 13px;
 }
-.texto-card p{
-    font-family: "Lato", sans-serif;;
+
+.texto-card p {
+    font-family: "Lato", sans-serif;
+    ;
     font-size: 20px;
-    font-weight:400;
+    font-weight: 400;
     max-width: 467px;
     line-height: 0.9;
     word-wrap: break-word;
@@ -121,41 +208,51 @@
 
 
 /* BLOQUE AMARILLO */
-.seccion-amarillo{
-    height: 1443px; 
+.seccion-amarillo {
+    height: 1443px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.fondo-amarillito{
+
+.fondo-amarillito {
     position: absolute;
     z-index: 0;
 }
-.container-data{
+
+.container-data {
     position: relative;
     z-index: 0;
-    width: 1280px; 
+    width: 1280px;
 }
-#img3-amarillo{
+
+#img3-amarillo {
     height: 989px;
     position: relative;
     z-index: 1;
     bottom: 636px;
     left: 732px;
-    animation: mover-arriba-abajo  3s infinite linear;
+    animation: mover-arriba-abajo 3s infinite linear;
 }
+
 @keyframes mover-arriba-abajo {
-    0% { transform: translateY(0px);
-     }
-     66%{
+    0% {
+        transform: translateY(0px);
+    }
+
+    66% {
         transform: translateY(25px);
-     }
-    100% { transform: translateY(0px);
-     }
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
-.seccion-amarillo h1{
+
+.seccion-amarillo h1 {
     margin-top: 321px;
-    font-family: "Lato", sans-serif;;
+    font-family: "Lato", sans-serif;
+    ;
     font-size: 60px;
     font-weight: 500;
     max-width: 732px;
@@ -163,22 +260,25 @@
     position: relative;
     z-index: 0;
     margin-left: 100px;
-    line-height: 94%; 
+    line-height: 94%;
 }
-.container-video{
+
+.container-video {
     width: 744px;
     height: 392px;
     border: white 30px solid;
     border-radius: 42px;
     margin-left: 100px;
     overflow: hidden;
-    animation: mover-arriba-abajo  4.5s infinite linear reverse;
+    animation: mover-arriba-abajo 4.5s infinite linear reverse;
 }
-.container-video iframe{
+
+.container-video iframe {
     width: 100%;
     height: 100%;
 }
-.data{
+
+.data {
     display: flex;
     align-items: center;
     justify-content: space-between;

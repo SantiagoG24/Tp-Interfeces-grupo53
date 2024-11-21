@@ -89,29 +89,19 @@ function incrementarHasta100(porcentaje) {
     }, 1); //
 }
 
-
-// const div_der = document.querySelector('.ini-der');
-// const arbol2 = document.querySelector('.arDer2');
-
-// div_der.addEventListener('scroll', () => {
-//     const scrollProgress = div_der.scrollTop / div_der.scrollHeight;
-//     const offsetX = scrollProgress * div_der.offsetWidth;
-//     arbol2.style.transform = `translateX(${offsetX}px)`; // Mover solo dentro del contenedor
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
-    let items = document.querySelectorAll(".cards-div .card"); 
-  
+    let items = document.querySelectorAll(".cards-div .card");
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add("paralax");
-                }, index * 300); 
+                }, index * 300);
             }
         });
-    }, { threshold: 0.5 }); 
-  
+    }, { threshold: 0.5 });
+
     items.forEach(item => observer.observe(item));
 });
 
@@ -133,3 +123,30 @@ window.addEventListener('scroll', () => {
         headerLogo.style.transform = 'scale(0.8)'; // Vuelve a su tamaño inicial
     }
 });
+
+const textoCards = document.querySelectorAll('.texto-card');
+const imgWrappers = document.querySelectorAll('.img');
+
+// Configuración del Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        const imgWrapper = document.querySelector(`.img[data-img="${entry.target.dataset.img}"]`);
+
+        if (entry.isIntersecting) {
+            // Cuando el texto entra en pantalla, muestra la imagen correspondiente
+            imgWrapper.classList.add('active');
+            entry.target.classList.add('active');
+        } else {
+            // Cuando el texto sale de pantalla, oculta la imagen
+            imgWrapper.classList.remove('active');
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    root: null, // Observar en relación al viewport
+    threshold: 1.0, // Se activa cuando el 50% del texto es visible
+});
+
+// Observa cada bloque de texto
+textoCards.forEach((card) => observer.observe(card));
+

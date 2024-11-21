@@ -301,8 +301,6 @@ nav {
     &:hover {
         transition: ease 1s;
         background-color: #81cc48;
-        scale: 1.1;
-
     }
 
     /* box-shadow: 8px #02187E; */
@@ -384,15 +382,17 @@ section.sec-inicio {
 
 }
 
-@keyframes parallax-effect1 {
-    from {
-        transform: translateX(0);
-
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
+.arbusto4izq,
+.arIzq,
+.piedraizq,
+.arDer2,
+.arDer3,
+.piedraDer4,
+.piedraDer3,
+.piedraDer1,
+.arbusto3der,
+.arbusto2der {
+    transition: transform 0.3s ease-out;
 }
 
 
@@ -559,12 +559,14 @@ section.sec-app {
     border: #1B5F99 29px solid;
     position: absolute;
     left: 96px;
+    overflow: hidden;
 }
 
 #slider {
     opacity: 0;
     transition: opacity ease-in-out 0.5s;
-
+    position: relative;
+    z-index: -1;
 }
 
 #slider.active {
@@ -624,7 +626,6 @@ section.sec-app {
 }
 
 .cards-div {
-    padding-top: 50px;
     width: 100%;
     height: 500px;
     display: flex;
@@ -635,62 +636,31 @@ section.sec-app {
 }
 
 .card {
-    width: 332.96px;
+    margin-left: 41px;
+    width: 32%;
     height: 302.69px;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
-    
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .card img {
-    width: 332.96px;
-    height: 302.69px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     box-sizing: border-box;
     border: #2982FF 9px solid;
-    border-radius: 41px;
+    border-radius: 20px;
     box-shadow: 4px 5px #02187E;
 }
 
 
 
+
 .card.paralax {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
 }
-
-/*@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#card-1 {
-    
-    animation: reveal 0.6s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 10% cover 40%;
-}
-
-#card-2 {
-    
-    animation: reveal 0.9s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 40% cover 70%;
-}
-
-#card-3 {
-   
-    animation: reveal 0.11s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 50% cover 75%;
-}
-*/
 
 .seccion-carga {
     display: flex;
@@ -698,10 +668,10 @@ section.sec-app {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: -350px;
+    top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     z-index: 9;
     background-color: #2982FF;
     transition: 0.2s;

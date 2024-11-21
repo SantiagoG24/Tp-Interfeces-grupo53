@@ -150,3 +150,41 @@ const observer = new IntersectionObserver((entries) => {
 // Observa cada bloque de texto
 textoCards.forEach((card) => observer.observe(card));
 
+////////////////////////////////////////////////////
+const configuraciones = [
+    { selector: '.arbusto4izq', velocidad: -0.3 },
+    { selector: '.arIzq', velocidad: -0.3 },
+    { selector: '.piedraizq', velocidad: -0.35 },
+    { selector: '.arbusto1izq', velocidad: -0.3 },
+    { selector: '.arDer2', velocidad: 0.3 },
+    { selector: '.piedraDer4', velocidad: 0.4 },
+    { selector: '.piedraDer3', velocidad: 0.4 },
+    { selector: '.piedraDer1', velocidad: 0.4 },
+    { selector: '.arDer3', velocidad: 0.2 },
+    { selector: '.arbusto3der', velocidad: 0.2 },
+    { selector: '.arbusto2der', velocidad: 0.2 }
+];
+
+const personaejes_img = [
+    { selector: '.pj_uno', velocidad: -0.3 },
+    { selector: '.pj_dos', velocidad: -0.4 },
+    { selector: '.pj_tres', velocidad: -0.4 }
+]
+
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+
+    configuraciones.forEach(config => {
+        const element = document.querySelector(config.selector);
+        if (element) {
+            element.style.transform = `translateX(${scrollPos * config.velocidad}px)`;
+        }
+    });
+
+    personaejes_img.forEach(config => {
+        const element = document.querySelector(config.selector);
+        if (element) {
+            element.style.transform = `translateY(${scrollPos * config.velocidad}px)`;
+        }
+    });
+});

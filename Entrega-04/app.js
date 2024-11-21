@@ -73,3 +73,18 @@ function incrementarHasta100(porcentaje) {
 //     arbol2.style.transform = `translateX(${offsetX}px)`; // Mover solo dentro del contenedor
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll(".cards-div .card"); 
+  
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("paralax");
+                }, index * 300); 
+            }
+        });
+    }, { threshold: 0.5 }); 
+  
+    items.forEach(item => observer.observe(item));
+});

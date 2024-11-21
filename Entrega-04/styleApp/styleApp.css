@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 1080px;
     margin: 0 auto;
-    
+   
 }
 
 
@@ -119,12 +119,13 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
 /*Pre footer*/
 
 .prefooter-gradiente {
+    position: relative;
     width: 100vw ;
     background: linear-gradient(to bottom, #FFFFFF, #EDFDFF, #ADF8FD, #E0D299);
     height: 1296px;
     display: flex;
     flex-direction: column;
-    z-index: -2;
+    
 }
 
 .prefooter {
@@ -133,38 +134,45 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     
 }
 
+#piso-prefooter {
+    position: absolute;
+    align-self: center;
+    top: 906px;
+    
+}
+
 .nubes {
+    max-width: 1080px;
+    position: relative; /* Define un contexto de posicionamiento */
     margin: 0 auto;
-    width: 1280px;
+    z-index: 0;
 
 }
 
 #nube1 {
-    position: relative;
+    position: absolute;
     width: 387px;
     height: 181px;
-    top: 10px;
-    z-index: -1;
-    animation: movimientoNubeIzquierda  30s infinite linear;
+    right: 200px;
+    animation: movimientoNubeIzquierda  20s infinite linear;
 }
+
 #nube2 {
-    position: relative;
+    position: absolute;
     width: 265px;
     height: 124px;
-    left: 480px;
-    bottom: 380px;
-    z-index: -1;
-    animation: movimientoNubeDerecha  70s infinite linear;
+    bottom: 170px;
+    left: 50px;
+   animation: movimientoNubeDerecha  100s infinite linear;
 
 }
 #nube3 {
-    position: relative;
+    position: absolute;
     width: 387px;
     height: 181px;
-    left: 315px;
-    bottom: 250px;
-    animation: movimientoNubeDerecha  50s infinite linear;
-
+    bottom: 70px;
+    left: 90px;
+   animation: movimientoNubeDerecha  90s infinite linear;
 }
 
 @keyframes movimientoNubeIzquierda {
@@ -177,7 +185,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
      75%{
         opacity: 0.5;
      }
-    100% { transform: translateX(1000px);
+    100% { transform: translateX(700px);
         opacity: 0;
      }
 }
@@ -192,57 +200,45 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
      75%{
         opacity: 0.5;
      }
-    100% { transform: translateX(-1000px);
+    100% { transform: translateX(-700px);
         opacity: 0;
      }
 }
 
-#piso-prefooter {
-    position: relative;
-    align-self: center;
-    z-index: 0; 
-    bottom: 978px;
-    
-}
+
 
 
 .muñecos-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between; 
-    align-items: flex-end; 
-    position: relative; 
-    z-index: 2; 
-
-}
-
-
-
-#prefooter-muñeco2{
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
     position: relative;
+    align-items: flex-start; 
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  #prefooter-muñeco2 {
+    position: absolute;
     width: 480px;
-    height: 480px;  
-    bottom: 600px;
-}
-
-#prefooter-muñeco3{
-    position: relative;
-    width: 509px;
-    height: 509px;
-    bottom: 600px;
-}
-
-#prefooter-muñeco7{
-    width: 561px;
-    height: 997px;
-    position: relative;
-    z-index: 0;
-    bottom: 400px;
-
-}
-
-
-
+    height: 480px;
+    right: 700px;
+  }
+  
+  #prefooter-muñeco3 {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 300px;
+  }
+  
+  #prefooter-muñeco7 {
+    position: absolute;
+    width: 600px;
+    left: 660px;
+    bottom: -600px;
+  }
+  
 
 
 #h1-prefooter{
@@ -262,7 +258,7 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-   margin-top: 5%;
+    margin-top: 5%;
 
 }
 
@@ -359,12 +355,12 @@ footer {
     }
     
     #dinosaurio {
-        background: url(/Entrega-04/assets/dino.jpg);
-        border-radius: 100%;
-        width: 76px;
-        height: 76px;
-        animation: correr 0.5s steps(12) infinite; 
+        background: url(/Entrega-04/assets/block-rojo-spritesheet.png);
+        width: 155px;
+        height: 255px;
+        animation: correr 1.6s steps(40) infinite; 
         margin-bottom: 1%;
+        background-color: #58e009;
     }
     
     .dino-txt p {
@@ -383,7 +379,7 @@ footer {
             background-position: 0px;
         }
         100% {
-            background-position: -959px;
+            background-position: -20000px;
         }
         
     }

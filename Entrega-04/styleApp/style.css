@@ -517,52 +517,61 @@ section.sec-app {
 }
 
 .card {
-    width: 330px;
-    height: 100%;
+    width: 332.96px;
+    height: 302.69px;
     opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
+    
 }
 
 .card img {
-    width: 330px;
-    height: 300px;
+    width: 332.96px;
+    height: 302.69px;
     box-sizing: border-box;
     border: #2982FF 9px solid;
     border-radius: 41px;
     box-shadow: 4px 5px #02187E;
 }
 
-@keyframes reveal {
+
+
+.card.paralax {
+    opacity: 1;
+    transform: translateY(0); 
+}
+/*@keyframes reveal {
     0% {
-        opacity: 0.0;
+        opacity: 0;
+        transform: translateY(50px);
     }
-
-    50% {
-        opacity: 0.9;
-    }
-
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 #card-1 {
-    animation: reveal linear both;
+    
+    animation: reveal 0.6s ease forwards;
     animation-timeline: view();
-    animation-range: entry 20% cover 50%;
+    animation-range: entry 10% cover 40%;
 }
 
 #card-2 {
-    animation: reveal linear both;
+    
+    animation: reveal 0.9s ease forwards;
     animation-timeline: view();
     animation-range: entry 40% cover 70%;
 }
 
 #card-3 {
-    animation: reveal linear both;
+   
+    animation: reveal 0.11s ease forwards;
     animation-timeline: view();
     animation-range: entry 50% cover 75%;
 }
-
+*/
 
 .seccion-carga {
     display: flex;

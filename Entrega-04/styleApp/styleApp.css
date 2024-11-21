@@ -56,13 +56,14 @@ body {
 }
 
 #muñeco-3d {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     padding-bottom: 5%;
     padding-top: 5%;
-    padding-right: 5%;
+    padding-right: 8%;
     touch-action: none;
     pointer-events: none;
+    
 }
 
 /*Bloque personajes */
@@ -393,7 +394,7 @@ footer {
 
 
 #muñeco-violeta {
-    background: url(/Entrega-04/assets/img-personajes/coso-violeta.png);
+    background: url("../assets/img-personajes/coso-violeta.png");
     width: 480px; /* Ancho del frame individual */
     height: 270px; /* Alto del frame individual */
     background-repeat: no-repeat;
@@ -412,7 +413,7 @@ footer {
 }
 
 #muñeco-rojo {
-    background: url(/Entrega-04/assets/img-personajes/muñeco-rojo.png);
+    background: url("../assets/img-personajes/muñeco-rojo.png");
     width: 480px; /* Ancho del frame individual */
     height: 270px; /* Alto del frame individual */
     background-repeat: no-repeat;
@@ -431,7 +432,7 @@ footer {
 }
 
 #muñeco-rosa {
-    background: url(/Entrega-04/assets/img-personajes/muñeco-rosa.png);
+    background: url("../assets/img-personajes/muñeco-rosa.png");
     width: 480px; /* Ancho del frame individual */
     height: 270px; /* Alto del frame individual */
     background-repeat: no-repeat;

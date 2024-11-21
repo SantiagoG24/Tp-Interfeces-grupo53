@@ -658,6 +658,7 @@ section.sec-app {
     opacity: 1;
     transform: translateY(0); 
 }
+
 /*@keyframes reveal {
     0% {
         opacity: 0;

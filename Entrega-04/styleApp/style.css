@@ -559,12 +559,14 @@ section.sec-app {
     border: #1B5F99 29px solid;
     position: absolute;
     left: 96px;
+    overflow: hidden;
 }
 
 #slider {
     opacity: 0;
     transition: opacity ease-in-out 0.5s;
-
+    position: relative;
+    z-index: -1; 
 }
 
 #slider.active {

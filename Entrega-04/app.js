@@ -163,14 +163,14 @@ const configuraciones = [
     { selector: '.arDer3', velocidad: 0.2 },
     { selector: '.arbusto3der', velocidad: 0.2 },
     { selector: '.arbusto2der', velocidad: 0.2 }
-]; 
- 
+];
+
 const personaejes_img = [
     { selector: '.pj_uno', velocidad: -0.3 },
     { selector: '.pj_dos', velocidad: -0.4 },
     { selector: '.pj_tres', velocidad: -0.4 }
 ]
- 
+
 window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY;
 

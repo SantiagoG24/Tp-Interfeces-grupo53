@@ -662,49 +662,16 @@ section.sec-app {
     transform: translateY(0);
 }
 
-/*@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#card-1 {
-    
-    animation: reveal 0.6s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 10% cover 40%;
-}
-
-#card-2 {
-    
-    animation: reveal 0.9s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 40% cover 70%;
-}
-
-#card-3 {
-   
-    animation: reveal 0.11s ease forwards;
-    animation-timeline: view();
-    animation-range: entry 50% cover 75%;
-}
-*/
-
 .seccion-carga {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: -350px;
+    top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     z-index: 9;
     background-color: #2982FF;
     transition: 0.2s;

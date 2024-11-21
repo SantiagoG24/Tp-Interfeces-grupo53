@@ -11,6 +11,8 @@
     align-items: center;
     position: relative;
     width: 1280px;
+    overflow: hidden;
+    height: 1157px ;
 }
 
 .seccion-azul {

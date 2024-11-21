@@ -114,6 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
     items.forEach(item => observer.observe(item));
 });
+
+
 const centerLogo = document.getElementById('logo-centro');
 const headerLogo = document.getElementById('logo');
 

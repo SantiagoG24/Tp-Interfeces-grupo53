@@ -323,7 +323,9 @@ linear-gradient(to right, #5e3c9e,#35e8a7,#de3394,#82817f,#fafffe);*/
     font-size: 18px;
     border-radius: 0 50px 50px 0;
 }
-
+.suscripcion button:hover{
+    background-color: #468f0e
+}
 /*FOOTER*/
 
 footer {
@@ -359,71 +361,91 @@ footer {
     letter-spacing: 0.11em;
     color: #FFFFFF;
     }
-    .dino-txt {
-        display: flex; 
-        flex-direction: row; 
-        align-items: center; 
-        gap: 10px; 
-    }
+   
+ 
+.footer-contenido {
+    display: flex;
+    flex-direction: row;
     
-    #dinosaurio {
-        background: url(/Entrega-04/assets/block-rojo-spritesheet.png);
-        width: 155px;
-        height: 255px;
-        animation: correr 1.6s steps(40) infinite; 
-        margin-bottom: 1%;
-        background-color: #58e009;
-    }
-    
-    .dino-txt p {
-        margin: 0; 
-        font-family: 'Lato';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 20px;
-        color: #FFFFFF;
-    }
-    
+}
 
-    @keyframes correr {
-        0% {
-            background-position: 0px;
-        }
-        100% {
-            background-position: -20000px;
-        }
-        
-    }
-    
+.spritesheet{
+  position: relative;
+}
 
-#dinosaurio {
-    background: url(/Entrega-04/assets/dino.jpg);
-    border-radius: 100%;
-    width: 76px;
-    height: 76px;
-    animation: correr 0.5s steps(12) infinite;
+#muñeco-violeta {
+    position: absolute;
+    right: 130px;
+}
+
+#muñeco-rojo {
+    position: absolute;
+    right: 30px;
+    top: 70px;
+}
+
+#muñeco-rosa {
+    position: absolute;
+    top:190px;
+    right: 80px;
+}
+
+
+
+#muñeco-violeta {
+    background: url(/Entrega-04/assets/img-personajes/coso-violeta.png);
+    width: 480px; /* Ancho del frame individual */
+    height: 270px; /* Alto del frame individual */
+    background-repeat: no-repeat;
+    animation: bailar 1.6s steps(40)infinite; /* Duración ajustada a 40 frames */
     margin-bottom: 1%;
 }
 
-.dino-txt p {
-    margin: 0;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    color: #FFFFFF;
-}
-
-
-@keyframes correr {
+/* Animación para el sprite */
+@keyframes bailar {
     0% {
-        background-position: 0px;
+        background-position: 0px; /* Empieza en el primer frame */
     }
-
     100% {
-        background-position: -959px;
+        background-position: -20000px; /* Se mueve horizontalmente hasta el último frame */
     }
-
 }
+
+#muñeco-rojo {
+    background: url(/Entrega-04/assets/img-personajes/muñeco-rojo.png);
+    width: 480px; /* Ancho del frame individual */
+    height: 270px; /* Alto del frame individual */
+    background-repeat: no-repeat;
+    animation: bailarRojo 1.8s steps(40)infinite; /* Duración ajustada a 40 frames */
+    margin-bottom: 1%;
+}
+
+/* Animación para el sprite */
+@keyframes bailarRojo {
+    0% {
+        background-position: 0px; /* Empieza en el primer frame */
+    }
+    100% {
+        background-position: -19200px; /* Se mueve horizontalmente hasta el último frame */
+    }
+}
+
+#muñeco-rosa {
+    background: url(/Entrega-04/assets/img-personajes/muñeco-rosa.png);
+    width: 480px; /* Ancho del frame individual */
+    height: 270px; /* Alto del frame individual */
+    background-repeat: no-repeat;
+    animation: bailarRosa 1.8s steps(40)infinite; /* Duración ajustada a 40 frames */
+    margin-bottom: 1%;
+}
+
+/* Animación para el sprite */
+@keyframes bailarRosa {
+    0% {
+        background-position: 0px; /* Empieza en el primer frame */
+    }
+    100% {
+        background-position: -19200px; /* Se mueve horizontalmente hasta el último frame */
+    }
+}
+
